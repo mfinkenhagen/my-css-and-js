@@ -1,0 +1,91 @@
+﻿@import "_variables_mychart.scss";
+
+/* SCHEDULING V2 
+========================================================================== */
+
+/* Schedule workflow timeline */
+.summary {
+    border-top: 4px solid rgba(0, 193, 222, 0.4);
+}
+
+.summaryInfo:before {
+    background-color: $dk-teal;
+}
+
+.summaryInfo.summaryActive .subtle.edit, .summaryInfo.summaryComplete .subtle, .summaryInfo.summaryIncomplete .subtle, a.summaryInfo {
+    color: $dk-gray;
+}
+
+.summaryInfo.summaryComplete:not(.summaryActive) .subtle.editText {
+    display: none;
+}
+
+a.summaryInfo:hover, a.summaryInfo.summaryActive {
+    background-color: rgba(0, 193, 222, 0.4);
+}
+
+.summaryInfo span {
+    font-size: 14px;
+}
+
+.summaryInfo:first-child {
+    padding-left: 5px !important;
+}
+
+a.summaryInfo {
+    padding: 5px !important;
+}
+
+.summaryInfo.summaryComplete .summaryIcon:before {
+
+    @media screen and (max-width: 768px) {
+        left: 104%;
+        bottom: 2%;
+    }
+}
+
+.extrasContainer input.buttoncheck + label.buttoncheck {
+    padding: 0 0px 3px 25px;
+}
+
+/* INFO BUBBLE ====== */
+
+.md_scheduling_index {
+    #SelfPayHelpBubble {
+        .infoBubbleWrapper {
+            display: none;
+        }
+    }
+}
+
+/* LOCATION FILTERS ====== */
+
+.chip .chipIcon {
+    &.nearZip, &.nearHome, &.allLocations, &.nearMe {
+        background-color: transparent;
+    }
+}
+
+.chip.hasInput input[type=button] {
+    background-color: transparent;
+}
+
+.chip.selected {
+    background-color: $BSWH_Light_Teal;
+    box-shadow: 0px 0px 0px 1px $BSWH_Teal;
+}
+
+/* Mammo */
+div#standardworkflowselector div.row div.col-6:nth-child(2), div#reasonforvisitworkflow {
+    display: none;
+}
+
+div#scheduling-workflow div.separator {
+    display: none;
+}
+
+div#standardworkflowselector div.row div.col-6:nth-child(1) {
+    flex: 1 1 0;
+    width: 100%;
+    max-width: 100%;
+}

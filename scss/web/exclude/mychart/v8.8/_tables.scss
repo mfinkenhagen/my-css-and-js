@@ -1,0 +1,152 @@
+﻿@import "_new_variables.scss";
+
+/* TABLES
+   ========================================================================== */
+
+.section table {
+    thead {
+        tr th {
+            background-color: $dk-teal;
+        }
+
+        tr:first-child {
+            th:first-child {
+                //border-top-left-radius: $border-radius;
+            }
+
+            th:last-child {
+                //border-top-right-radius: $border-radius;
+            }
+        }
+    }
+}
+
+.section .content > table:not(.report) {
+    tbody {
+        tr:last-child {
+            td:first-child {
+                //border-bottom-left-radius: $border-radius;
+            }
+
+            td:last-child {
+                //border-bottom-right-radius: $border-radius;
+            }
+        }
+    }
+
+    tfoot {
+        tr:last-child {
+            td:first-child {
+                //border-bottom-left-radius: $border-radius;
+            }
+
+            td:last-child {
+                //border-bottom-right-radius: $border-radius;
+            }
+        }
+    }
+}
+
+body:not(.md_preadmission_ldregistration) div#main .section > *:not(.report) thead tr {
+    background-color: $dk-teal;
+}
+
+.section .content table.indent {
+    border-radius: $border-radius;
+}
+
+.section .content table thead tr th input.radio, .section .content table tbody tr td input.radio {
+    width: $form-checkbox-dimensions;
+    margin-top: 0.5rem;
+}
+
+.section > *:not(.report) tr td {
+    border-color: $border-grey;
+}
+
+/* MOBILE TABLES
+   ========================================================================== */
+
+/* LETTERS LIST TABLE ====== */
+.mobile {
+    #letterstable {
+        td[headers='letterstable_col0'] {
+            word-break: break-word;
+            min-width: 4rem;
+        }
+    }
+}
+
+/* REFERRAL LIST TABLE ======= */
+
+.mobile {
+    table[id^='referrallist'] {
+        td[headers$='_col2'],
+        td[headers$='_col3'],
+        td[headers$='_col4'] {
+            word-break: break-word;
+            min-width: 65px;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        table[id^='referrallist'] {
+            td[headers$='_col2'],
+            td[headers$='_col3'],
+            td[headers$='_col4'] {
+                word-break: normal;
+            }
+        }
+    }
+}
+
+
+/* SEARCH RESULT LIST TABLE ======= */
+
+@media screen and (max-width: 667px) {
+    .mobile {
+        .md_provsrch table[id^='searchresults'] {
+            td[headers$='_col1'] {
+                background-color: $border-grey;
+            }
+
+            thead {
+                display: none;
+            }
+
+            td {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* PERSONALIZE TABLE ====== */
+.mobile {
+    #proxyprefform table[id^='mysubjects'] {
+        td[headers$='_col1'],
+        td[headers$='_col2'] {
+            word-break: break-word;
+            min-width: 65px;
+        }
+
+        .colorpreview {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        #proxyprefform table[id^='mysubjects'] {
+            td[headers$='_col1'],
+            td[headers$='_col2'] {
+                word-break: normal;
+            }
+        }
+    }
+}
+

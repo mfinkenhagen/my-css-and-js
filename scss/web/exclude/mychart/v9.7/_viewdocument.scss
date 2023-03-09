@@ -1,0 +1,50 @@
+﻿@import "_variables_mychart.scss";
+
+/* VIEW DOCUMENTS WIDGET
+   ========================================================================== */
+
+#viewdocumentwidget .document:hover {
+    background-color: $hover-tile !important;
+}
+
+.documenttable .documents .document {
+    img {
+        padding: 5px;
+        height: 50px;
+        width: 50px;
+        vertical-align: middle;
+        float: left;
+    }
+
+    .docsummary {
+        display: block;
+        padding-left: 50px;
+    }
+}
+
+/* MOBILE VIEW DOCUMENTS WIDGET
+   ========================================================================== */
+.mobile {
+    #viewdocumentwidget {
+        .component[data-component='viewdocuments'] {
+            height: auto !important;
+        }
+
+        .documenttable .documents .document {
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        #viewdocumentwidget {
+            .documenttable .documents .document {
+                display: table-cell;
+                width: 50%;
+                position: relative;
+            }
+        }
+    }
+}

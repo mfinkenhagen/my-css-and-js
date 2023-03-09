@@ -1,0 +1,45 @@
+﻿@import "_new_variables.scss";
+
+/* BILLING ACCOUNT SUMMARY
+   ========================================================================== */
+
+.ba_card_header_paperless_icon {
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.ba_paperless_icon_container {
+    .ba_card_header_paperless_icon {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+
+.ba_saIcon {
+    max-width: 50px;
+}
+
+.ba_card_header_paperless {
+    border-top-color: transparent;
+}
+
+/* Card links */
+.ba_card_actions_link:hover, .ba_card_actions_link:focus, .ba_card_actions_link:active {
+    color: $dk-navy;
+    background-color: $common-bg;
+
+    img {
+        filter: invert(0.4) sepia(1) saturate(8.9) hue-rotate(183.6deg) brightness(0.5);
+    }
+}
+
+.ba_card_actions_link {
+    color: $md-navy;
+}
+
+.ba_card_status .ba_up_to_date,
+.ba_card_status .ba_up_to_date_until,
+.ba_details_payment_plan_status .positive,
+.ba_details_plan_up_to_date {
+    color: $dk-green;
+}

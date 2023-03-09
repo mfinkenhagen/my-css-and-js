@@ -1,0 +1,169 @@
+﻿@import "_variables_mychart.scss";
+
+@mixin default-button-style {
+    background-color: $default-button-bg-color;
+    border: $default-button-border;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $default-button-label-color;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $default-button-bg-color--hover;
+        border: $default-border-style $default-button-border-color--hover;
+        color: $default-button-label-color--hover;
+    }
+}
+
+@mixin default-button-style--negative {
+    background-color: $default-button-bg-color__neg;
+    border: $default-border-style $default-button-border-color__neg;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $default-button-label-color__neg;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $default-button-label-color__neg--hover;
+        background-color: $default-button-bg-color__neg--hover;
+        border: $default-border-style $default-button-border-color__neg--hover;
+    }
+}
+
+@mixin default-button-style--negative-ghost {
+    background-color: $default-button-label-color__neg;
+    border: $default-border-style $default-button-border-color__neg;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $default-button-bg-color__neg;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $default-button-label-color__neg--hover;
+        background-color: $default-button-bg-color__neg--hover;
+        border: $default-border-style $default-button-border-color__neg--hover;
+    }
+}
+
+@mixin default-button-style--positive {
+    background-color: $default-button-bg-color__pos;
+    border: $default-border-style $default-button-border-color__pos;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $default-button-label-color__pos;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $default-button-label-color__pos--hover;
+        background-color: $default-button-bg-color__pos--hover;
+        border: $default-border-style $default-button-border-color__pos--hover;
+    }
+}
+
+@mixin default-highcontrast-button-style {
+    background-color: $white;
+    border: $default-border-style $hc-button-default;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $hc-button-default;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $hc-button-default-hover;
+        border: $default-border-style $hc-button-default-hover;
+        color: $white;
+    }
+}
+
+@mixin default-highcontrast-button-style--negative {
+    background-color: $default-button-bg-color__neg;
+    border: $default-border-style $default-button-border-color__neg;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $default-button-label-color__neg;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $default-button-label-color__neg--hover;
+        background-color: $default-button-bg-color__neg--hover;
+        border: $default-border-style $default-button-border-color__neg--hover;
+    }
+}
+
+@mixin default-highcontrast-button-style--negative-ghost {
+    background-color: $default-button-label-color__neg;
+    border: $default-border-style $default-button-border-color__neg;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $default-button-bg-color__neg;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $default-button-label-color__neg--hover;
+        background-color: $default-button-bg-color__neg--hover;
+        border: $default-border-style $default-button-border-color__neg--hover;
+    }
+}
+
+@mixin default-highcontrast-button-style--positive {
+    background-color: $hc-button-default;
+    border: $default-border-style $hc-button-default;
+    border-radius: $border-radius;
+    box-shadow: none;
+    color: $white;
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0px);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $white;
+        background-color: $hc-button-default-hover;
+        border: $default-border-style $hc-button-default-hover;
+    }
+}

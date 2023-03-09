@@ -1,0 +1,31 @@
+﻿@import "_new_variables.scss";
+
+/* PRINT
+   ========================================================================== */
+
+div:not(#printbar).printheader {
+    background-color: $white;
+
+    + #main {
+        background-color: $white !important;
+    }
+}
+
+@media print {
+    #nonProdBanner {
+        top: 0px;
+    }
+}
+
+//Keep cards from getting cut off
+@media print {
+    div.cardlist.matchHeights {
+        float: none;
+        display: block;
+    }
+}
+
+/* LETTERS ====== */
+.md_letters .large_img > img {
+    width: auto !important;
+}

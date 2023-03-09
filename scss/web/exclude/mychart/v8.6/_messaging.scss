@@ -1,0 +1,194 @@
+﻿@import "_variables.scss";
+
+/* MESSAGING
+   ========================================================================== */
+
+ul.MessageList > li.SingleMessage {
+    background-color: $white;
+    border: $card-border;
+    box-shadow: $card-box-shadow;
+    margin: 0 0 8px;
+}
+
+ul.MessageList > li.SingleMessage:hover {
+    background-color: $hover-tile;
+}
+
+ul.MessageList li .head .actionButtons a img {
+    height: 20px;
+}
+
+.BeforeList input.SearchList {
+    opacity: 1;
+    border: $form-field-border;
+    height: 2.8rem;
+    width: 100%;
+    border-radius: $border-radius;
+}
+
+.BeforeList input.noprint.imgbutn {
+    top: 15px;
+    right: 25px;
+    box-shadow: none;
+}
+
+.ReviewMessages .messageheader .filters {
+    padding: 5px 15px 23px;
+    width: 103%;
+}
+
+.BeforeList div.search {
+    width: 45%;
+}
+
+.ReviewMessages .messageheader .filters select {
+}
+
+/* EVISIT ICONS ====== */
+#evisit-workflow .icon {
+    margin-right: 0px;
+}
+
+/* MOBILE MESSAGING
+   ========================================================================== */
+/* Message Container ====== */
+.mobile {
+    .ReviewMessages {
+        width: calc(100% + 0.8rem);
+    }
+}
+
+/* Message tab header ====== */
+
+.mobile {
+    .ReviewMessages .messageheader {
+        // Tabs
+        .tabs {
+            padding-top: 1em;
+
+            label {
+                padding-right: 1em;
+                font-size: 1.1em;
+            }
+        }
+        // Search
+        .BeforeList div.search {
+            width: 100%;
+            padding-left: 1rem;
+        }
+        // Filter
+        .filters {
+            width: 104%;
+
+            label {
+                display: inline-block;
+                width: calc(26% - 1em);
+                margin-left: 1.2em;
+                margin-top: 38px;
+            }
+
+            select {
+                margin-right: 0px;
+                height: 2.8rem;
+                margin-top: 2rem;
+                width: 70%;
+                max-width: none;
+            }
+
+            #messaging-customfilters-2 {
+                margin-top: 1rem;
+            }
+        }
+        // Action Links
+        .actionlinks {
+            padding-right: 1.2em;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        .ReviewMessages .messageheader {
+            // Filter
+            .filters {
+                label {
+                    display: inline-block;
+                    width: calc(11% - 1em);
+                }
+
+                select {
+                    width: 37%;
+                }
+
+                #messaging-customfilters-2 {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+/* Message List Collapsed ====== */
+
+.mobile {
+    .ReviewMessages {
+        ul.MessageList {
+            .SingleMessage.collapsed {
+                .RecipientName {
+                    //float: left;
+                    width: 100%;
+                }
+
+                .MessageSummary {
+                    text-overflow: ellipsis;
+                    width: 45% !important;
+                }
+
+                .actionButtons {
+                    width: 15%;
+                }
+            }
+        }
+    }
+}
+
+/* Message List Expanded ====== */
+
+.mobile {
+    .ReviewMessages {
+        ul.MessageList {
+            .SingleMessage.expanded {
+                .head {
+                    min-height: 5.5rem;
+                    height: auto !important;
+
+                    span.photo {
+                        height: 42px;
+                    }
+                }
+
+                .SenderDetails {
+                    width: 40%;
+                    text-overflow: ellipsis;
+
+                    .RecipientName {
+                        white-space: pre-wrap;
+                    }
+                }
+
+                .actionButtons {
+                    top: 0;
+                    width: 40%;
+
+                    > a {
+                        display: inline-block;
+                    }
+                }
+
+                .ExpandedSummary {
+                    padding-top: 0.5rem;
+                }
+            }
+        }
+    }
+}

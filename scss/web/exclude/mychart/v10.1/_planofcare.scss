@@ -1,0 +1,7 @@
+﻿@import "_variables_mychart.scss";
+
+div.pocdefaultpopup .goalsoverallcontainer .goalsleft {
+    @media screen and (max-width: $breakpoint-tablet-max) {
+        display: none;
+    }
+}

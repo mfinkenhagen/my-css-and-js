@@ -1,0 +1,372 @@
+﻿@import "_new_variables.scss";
+
+/* STYLES COMMON TO LOGGED OUT AND LOGGED IN UI
+   ========================================================================== */
+html {
+    font-family: $font-family;
+    font-size: $font-size-regular;
+    background-repeat: no-repeat;
+}
+
+:focus {
+    outline: none !important;
+}
+
+a {
+    &:focus, &:hover {
+        text-decoration: none;
+    }
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+h1.header, .header.large {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: $sharp-weight-semi-bold;
+}
+
+#calendar table, 
+ul.MessageList, 
+.HPcell.component > .content, 
+.component.pocdefault > a.viewmore {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+
+#main .title #assistiveicons {
+    line-height: 3rem;
+}
+
+/* BUTTONS ====== */
+a.button, div.button, input.button {
+    font-weight: $sharp-weight-semi-bold;
+    padding: 7px 12px;
+}
+
+.button {
+    border-radius: $border-radius;
+}
+
+p.buttoncheck:hover input.buttoncheck:not(:disabled) + label.buttoncheck, 
+p.buttoncheck input.buttoncheck:not(:disabled):focus + label.buttoncheck {
+    text-decoration: none;
+}
+
+#main {
+    .title {
+        .headerlink {
+            .button {
+                font-weight: $sharp-weight-semi-bold;
+                padding: $button-auto-padding;
+                margin-top: 7px;
+            }
+        }
+    }
+
+    .back {
+        .button {
+            padding: $button-auto-padding;
+        }
+    }
+}
+
+#evisitaccept.button.nextstep {
+    margin-left: 91px;
+}
+
+/* FORM ====== */
+
+input, select, textarea {
+    font-family: $font-family;
+    font-size: 1.05rem;
+}
+
+//input:not(.button):not([type='checkbox']):not([type='radio']):not(.imgbutn), select, textarea
+input[type='text'], select, textarea {
+    min-height: $form-field-min-height;
+}
+
+select {
+    color: $dk-gray;
+}
+
+input.prettycheck + label:before, input[type='checkbox'] + label:before {
+    margin: 2px 9px -2px 0px;
+    -webkit-appearance: none !important;
+    width: $form-checkbox-dimensions;
+    height: $form-checkbox-dimensions;
+    border: 2px solid $md-navy !important;
+    color: $white;
+    background-color: $white;
+    display: inline-block;
+    vertical-align: top;
+    border: 0px;
+    box-shadow: none;
+}
+
+input.prettycheck:checked + label::before, input.buttoncheck:checked + label.buttoncheck::before, input.prettycheck:checked + label:before, input.buttoncheck:checked + label.buttoncheck:before {
+    border: 2px solid $md-navy;
+    background-color: $md-navy;
+}
+
+input.chkbx[type='checkbox']:checked {
+    opacity: 0;
+    position: absolute;
+}
+
+input.chkbx[type="checkbox"]:checked + label {
+
+    &:before {
+        content: '';
+        color: $white;
+        display: inline-block;
+        vertical-align: top;
+        line-height: .9em;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIYEjQPAcoESgAAAKVJREFUSMft1rENgzAQQFGKbAAsEUoaZxyycYCKDWhQFoCfIk4Tgm2k8yEF//70Gp91WZZKCQRcjkBL4AHctdGOd7MK/oWigm+gnyag0EafwC2hx6J7l10KbYAWKLXR2Q71PjwGig+XQnO71L9a4aKvFzB2yIlbtBddmQD8Ko4G4osDNRKfgQuPg+7EZdFAPA7qweOiG/gI1Jq3kwEGoDrHifpXvQANql+AlGeZnQAAAABJRU5ErkJggg==") $md-navy;
+        background-size: ($form-checkbox-dimensions - 2px) ($form-checkbox-dimensions - 2px);
+        background-repeat: no-repeat;
+        height: $form-checkbox-dimensions;
+        width: $form-checkbox-dimensions;
+        border-radius: 2px;
+    }
+}
+
+input[type='checkbox'], 
+input.buttoncheck + label.buttoncheck:before {
+    margin: 4px 6px -2px 0px;
+    -webkit-appearance: none !important;
+    width: $form-checkbox-dimensions;
+    height: $form-checkbox-dimensions;
+    border-radius: 2px !important;
+    color: $md-navy;
+    background-color: $white;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid $md-navy;
+    box-shadow: none;
+}
+
+input.buttoncheck:checked + label.buttoncheck:before {
+    background-size: ($form-checkbox-dimensions - 2px) ($form-checkbox-dimensions - 2px);
+}
+
+input[type='checkbox']:checked, 
+input.buttoncheck[type="checkbox"]:checked:before, 
+input.radio[type="checkbox"]:checked {
+    content: '';
+    color: $white;
+    background-color: $md-navy;
+    border: 2px solid $md-navy;
+    display: inline-block;
+    vertical-align: top;
+    line-height: .9em;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIYEjQPAcoESgAAAKVJREFUSMft1rENgzAQQFGKbAAsEUoaZxyycYCKDWhQFoCfIk4Tgm2k8yEF//70Gp91WZZKCQRcjkBL4AHctdGOd7MK/oWigm+gnyag0EafwC2hx6J7l10KbYAWKLXR2Q71PjwGig+XQnO71L9a4aKvFzB2yIlbtBddmQD8Ko4G4osDNRKfgQuPg+7EZdFAPA7qweOiG/gI1Jq3kwEGoDrHifpXvQANql+AlGeZnQAAAABJRU5ErkJggg==");
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    height: $form-checkbox-dimensions;
+    width: $form-checkbox-dimensions;
+}
+
+@supports (-ms-ime-align: auto) {
+    input.radio[type="checkbox"]:checked:before {
+        -webkit-appearance: checkbox;
+    }
+}
+
+label.togglebutton[for],
+input.buttoncheck + label.buttoncheck {
+    box-shadow: none;
+    color: $md-navy;
+    border: 1px solid $md-navy;
+    border-radius: $border-radius;
+    padding: 0.25rem 0.75rem 0.3rem;
+    font-weight: normal;
+}
+
+input:focus + label.togglebutton[for],
+input + label.togglebutton[for]:hover,
+input:checked + label.togglebutton[for]:hover, 
+input:checked:focus + label.togglebutton[for] {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+input:checked + label.togglebutton[for],
+input.buttoncheck:checked + label.buttoncheck {
+    top: 0px;
+    box-shadow: none;
+}
+
+input.tiny, .formcontents input.tiny {
+    width: 4rem;
+}
+
+#timeselection {
+    .formsection fieldset legend, .formcolumn .label {
+        margin-bottom: calc($form-field-margin / 2);
+    }
+}
+
+.formsection fieldset legend, .formcontents .label, .formcontents label {
+    line-height: 1.5rem !important;
+}
+
+/* ALERTS ====== */
+.helptext {
+    font-size: 1em;
+    font-weight: $sharp-weight-semi-bold;
+
+li {
+    line-height: 1.5rem;
+}
+}
+
+.formsection .alert:not(:empty):before {
+    margin: 0 0.5rem 0 0;
+    border-color: transparent transparent transparent $alert;
+}
+
+.ErrorBanner {
+
+    .button.autowidth {
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+}
+
+// RESPONSIVE
+// @media screen and (max-width: 1279px) {
+//     body {
+//         width: 100%;
+//         min-width: 100% !important;
+//     }
+//     .fitme.width {
+//         min-width: 100% !important;
+//     }
+// }
+
+/* MOBILE STYLES COMMON TO LOGGED OUT AND LOGGED IN UI
+========================================================================== */
+    html.mobile {
+        font-family: $font-family !important;
+        font-size: $font-size-regular-mobile;
+        background-repeat: no-repeat;
+
+    select, input, textarea {
+        font-family: $font-family !important;
+    }
+}
+
+/* FORMS ====== */
+.mobile {
+    select {
+        min-height: $form-field-min-height;
+    }
+
+    .md_histques .section .flexboxLayout > .tbContainer {
+        min-width: calc(50% - 0.2rem);
+    }
+
+    input[type="radio"] {
+        -webkit-appearance: radio;
+        -moz-appearance: radio;
+    }
+}
+
+/* BUTTONS ====== */
+
+.mobile {
+    label.togglebutton[for],
+    input.buttoncheck + label.buttoncheck {
+        box-shadow: none;
+    }
+
+    input[type='checkbox'],
+    input.buttoncheck + label.buttoncheck:before {
+        margin-top: 2px;
+    }
+
+    .button:not(.buttoncheck) {
+        border-radius: 0px;
+    }
+
+    #statementDateSelection {
+        .button:not(.buttoncheck) {
+            width: auto;
+        }
+    }
+}
+
+/* STEPS ====== */
+
+.mobile {
+    p#steptext {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+/* MEDICAL ADVICE FORM ====== */
+.mobile {
+    #medadviceform {
+        p.button.buttoncheck {
+            margin-top: 0.25rem;
+        }
+
+        .uploader .uploaderbutton {
+            width: 100%;
+        }
+    }
+}
+
+/* MESSAGE REPLY FORM ====== */
+.mobile {
+    #MessageForm {
+        .uploader .uploaderbutton {
+            width: 100%;
+        }
+    }
+}
+
+/* BUTTON LIST ====== */
+.mobile {
+    ul.bcList li.bcItem {
+        width: 100%;
+        margin-bottom: 0.25rem;
+
+        > p.buttoncheck {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        ul.bcList li.bcItem {
+            width: auto;
+        }
+    }
+}
+
+
+
+
+
+
+.buttoncheck:hover input.buttoncheck:not(:disabled) + label.buttoncheck, 
+
+.buttoncheck:hover input.buttoncheck:not(:disabled) + label.buttoncheck > *, 
+
+.buttoncheck:hover input.buttoncheck:not(:disabled) + label.buttoncheck > * > *, 
+
+.buttoncheck input.buttoncheck:not(:disabled):focus + label.buttoncheck, 
+
+.buttoncheck input.buttoncheck:not(:disabled):focus + label.buttoncheck > *, 
+
+.buttoncheck input.buttoncheck:not(:disabled):focus + label.buttoncheck > * > * {
+
+}

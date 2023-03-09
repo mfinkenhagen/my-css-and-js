@@ -1,0 +1,158 @@
+﻿@import "_variables_mychart.scss";
+
+/* DOCUMENTS
+   ========================================================================== */
+
+#visitRecords {
+    input[type="radio"] {
+        opacity: 0;
+    }
+}
+
+/* Download my record */
+#datepickers {
+    #findVisits {
+        top: 0.7rem;
+    }
+}
+
+div.section div.sidetab ul.sectiontabs li {
+    min-width: 217px;
+
+    &:not(.selected) img {
+        opacity: .6;
+    }
+
+    a {
+        color: $md-gray;
+
+        &:hover {
+           color: $dk-navy;
+        }
+    }
+
+    .clickable:hover {
+        background: $white;
+
+        &:not(.selected) img {
+            opacity: 1;
+        }
+    }
+}
+
+div.section div.sidetab ul.sectiontabs li.selected {
+    min-width: 218px;
+    border-right: 1px solid white;
+
+    a {
+        color: $dk-teal;
+
+        &:hover {
+            cursor: default;
+            text-decoration: none;
+        }
+    }
+}
+
+div.sidetab ul.sectiontabs li a.clickable img {
+    max-width: 45px;
+}
+
+.pageNum {
+    color: $md-navy;
+
+    &.active {
+        color: $dk-navy;
+    }
+}
+
+/* SVG sprite pagers */
+.pagerBtn {
+    background-size: auto 200%;
+}
+
+/* Whos Accessed My Records ====== */
+.WAMR_List .headerRow {
+    background-color: $dk-teal;
+    color: $white;
+}
+
+.WAMR_List .dataRows [class*='col-']:first-child {
+    color: $dk-teal;
+}
+
+/* Documents to Sign - eSignwidget ====== */
+
+#documentcontent input[type='checkbox'], input[type='radio'] {
+    display: inline-block;
+}
+
+.dataFieldClickArea input[type='checkbox'] {
+    margin: 4px;
+}
+
+/* MOBILE DOCUMENTS
+   ========================================================================== */
+.mobile {
+    .dateSelector .dtSelWrapper {
+        width: calc(100% - 0.75rem);
+    }
+
+    .dtSelWrapper input,
+    [class] [class] .dtSelWrapper input {
+        //width: calc(100% - 2rem) !important;
+        width: calc(100% - 4rem) !important;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .mobile {
+        .dateSelector .dtSelWrapper {
+            width: calc(43% - 0.75rem);
+        }
+
+        #datepickers {
+            #findVisits {
+                line-height: 2em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .mobile {
+        #visitRecords {
+            .rowDateTime {
+                float: none;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        #datepickers {
+            #findVisits {
+                top: 0px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* MOBILE VISIT REPORTS ====== */
+.mobile {
+    .previewPopupMulti {
+        div.menu ul.visitlist {
+            .visitIcon {
+                height: 20px;
+                width: 20px;
+            }
+            .col1 {
+                width: 24%;
+            }
+            .col2 .other {
+                text-indent: 0;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,26 @@
+{
+  "name": "MyChartBSWCustomizations",
+  "version": "1.0.0",
+  "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass --embed-sources scss/web/include/mychart:dist ",
+    "build-css-prod": "sass --embed-sources scss/web/include/mychart:dist/prod/mychart --style=compressed",
+    "build-css-mobile": "sass --embed-sources scss/web/include/mychart/v10.1:dist/mobile ",
+    "build-css-mobile-prod": "sass --embed-sources src/scss/web/include/mychart:dist/prod/mychart --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bswdev.visualstudio.com/MyChart/_git/MyChartBSWCustomizations"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

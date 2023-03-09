@@ -1,0 +1,159 @@
+﻿@import "../_variables.scss";
+
+
+/* REPORTS
+   ========================================================================== */
+
+.md_visitsummary {
+    .section .report {
+        table thead tr th {
+            background-color: transparent;
+        }
+    }
+}
+
+.rpt.Universal .mainColumn .headerAVS .headerTopRight img {
+    float: right;
+    padding-bottom: 5px;
+}
+
+.section .report .rpt.Universal {
+    .rz_1 {
+        border-bottom: none !important;
+    }
+
+    .rz_b, .rz_f {
+        border-top: none !important;
+    }
+}
+
+.rpt.Universal {
+
+    :not(.runningHeader).mainColumn .sectInstr {
+        &::after, &::before {
+            border-top: 4px solid $blue-link !important;
+        }
+    }
+
+    .mainColumn {
+        .headerAVS .docHeader {
+            h1.title {
+                color: $primary !important;
+            }
+        }
+
+        .sectionHeader {
+            .title.sectionTitle {
+                color: $primary !important;
+            }
+        }
+
+        .sectAppts td.calendarBox {
+
+            .calendarMonth, .calendarDay, .calendarYear {
+                color: $blue-link !important;
+            }
+        }
+
+        .sectInstr {
+
+            .sectionHeader img {
+                box-shadow: 0 0 0 3px $blue-link !important;
+            }
+
+            .sectionHeader .title.sectionTitle {
+                color: $primary !important;
+            }
+
+            .sectionHeader .subtitle {
+                color: $blue-link !important;
+            }
+
+            .hlt13, .hlt14, .hlt15, .hlt16 {
+                color: $blue-link !important;
+            }
+        }
+
+        .attachmentInstr {
+
+            .sectionHeader .title.sectionTitle {
+                color: $primary !important;
+            }
+
+            .hlt13, .hlt14, .hlt15, .hlt16 {
+                color: $blue-link !important;
+            }
+        }
+
+        .sectMedList {
+
+            .sectionHeader .title.sectionTitle {
+                color: $primary !important;
+            }
+
+            .hlt13, .hlt14, .hlt15, .hlt16 {
+                color: $blue-link !important;
+            }
+        }
+
+        .alertBanner {
+            &.sectHlt4, &.sectHlt7 {
+                background-color: $system-orange !important;
+                font-weight: $font-weight-bold;
+                color: $orange;
+
+                .title {
+                    color: $orange;
+                }
+
+                .hlt13, .hlt14, .hlt15, .hlt16 {
+                    color: $orange;
+                }
+
+                .alertContent td, .alertContent td .hlt1 {
+                    color: $orange !important;
+                }
+            }
+        }
+    }
+}
+
+.rpt .sectionHeader .title {
+    color: $primary !important;
+}
+
+.rpt .hlt13, 
+.rpt .hlt14, 
+.rpt .hlt15, 
+.rpt .hlt16 {
+    color: $blue-link !important;
+}
+
+.rpt .fs14 .sectionHeader .title, 
+.rpt .fs18 .sectionHeader .title {
+    color: $primary !important;
+}
+
+.rpt .fs14 .hlt13, 
+.rpt .fs14 .hlt14, 
+.rpt .fs14 .hlt15, 
+.rpt .fs14 .hlt16, 
+.rpt .fs18 .hlt13, 
+.rpt .fs18 .hlt14, 
+.rpt .fs18 .hlt15, 
+.rpt .fs18 .hlt16 {
+    color: $primary;
+}
+
+/* MOBILE VISIT SUMMARY REPORT 
+   ========================================================================== */
+
+.mobile {
+    .section .report {
+        width: 100%;
+    }
+
+    .rpt.Universal .mainColumn .headerAVS .headerTopRight img {
+        width: 95%;
+    }
+}

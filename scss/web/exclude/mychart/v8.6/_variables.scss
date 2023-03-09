@@ -1,0 +1,138 @@
+﻿// COLORS
+$primary: #00539d;
+$secondary: #3eadf0;
+$tertiary: #42a84f;
+$gold: #ffc843;
+$white: #ffffff;
+$blue: #2F72B1;
+$skyblue: #f5fbfc;
+$blue-link: #4197E3;
+$bg-grey: #f0f0f0;
+$border-grey: #edf1f5;
+$dark-grey: #121212;
+$mid-dark-grey: #333333;
+$red: #E64F2A;
+$red-orange: #e64f2a;
+$orange: #DD8C00;
+$atx-orange: #F58223;
+$alert: $red-orange;
+$disabled-bg-color: #DBDBDB;
+$text-color: #474747;
+
+// DEFAULT COLORS
+$white: #ffffff;
+$black: #000000;
+
+$dk-gray: #53575A;
+$md-gray: #888B8D;
+$lt-gray: #C8C8C8;
+
+$dk-blue: #00539D;
+$md-blue: #6AAAE4;
+$lt-blue: #97CAEB;
+
+$dk-teal: #008FBE;
+$md-teal: #00C1DE;
+$lt-teal: #96DAEA;
+
+$dk-green: #009877;
+$md-green: #00C4B3;
+$lt-green: #78DED4;
+
+$dk-navy: #001E61;
+$md-navy: #5887DA;
+$lt-navy: #A5C5ED;
+
+$dk-yellow: #FFB71B;
+$md-yellow: #FFC844;
+$lt-yellow: #FCD672;
+
+$dk-orange: #FF4D00;
+$md-orange: #FF7F30;
+$lt-orange: #FFB98E;
+
+$dk-red: #CE0E2D;
+$md-red: #F4436C;
+$lt-red: #FE9BB1;
+
+$dk-purple: #691F74;
+$md-purple: #93358D;
+$lt-purple: #CB8BDA;
+$grey: #4c575f;
+
+//COLORS - SYSTEM
+$system-red: #FFF0F0;
+$system-orange: #FFF5E3;
+$system-green: #F1F9EB;
+$system-dk-blue: #E3EDEF;
+
+// COLORS - HOVER
+$navy: #002856;
+$light-gray: #DCDCDC;
+$tertiary-opaque-hover: rgba(66,168,79,0.8);
+$blue-hover: #287ECA;
+$red-hover: #CA4B39;
+$hover-tile: $bg-grey;
+$bubblegum-hover: #f9eaf1;
+$royal-hover: #e9e2f3;
+$ocean-hover: #f5fbfc;
+$goldenrod-hover: #FFF5E3;
+$autumn-hover: #fee9df;
+
+// COLORS - MOBILE
+$banner-bg-color: $hover-tile;
+$banner-font-color: $dk-teal;
+
+// PROXY COLORS
+$bubblegum: #B52B6E;
+$royal: #744DAE;
+$ocean: #008FBB;
+$goldenrod: #F79A11;
+$autumn: #F47032;
+
+// COLORS - HIGH CONTRAST
+$hc-primary: #00539d;
+$hc-secondary: #2F72B1;
+$hc-tertiary: #34863e;
+$hc-font-color-regular: #000000;
+$border-dark-grey: #dbdbdb;
+$hc-alert: #CA4B39;
+$hc-hover-link: #d3e4f0;
+$hc-card-border: solid 1px #e3e7ea;
+
+// FONTS
+$default-font-family: "Source Sans Pro", "Arial", sans-serif;
+
+$font-size-regular: 16px;
+$font-size-regular-mobile: 14px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+$font-weight-black: 800;
+
+$font-color-regular: #4C575F;
+
+// CARDS
+$card-border: solid 1px #edf1f5;
+$card-border-radius: 2px;
+$card-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.09);
+$main-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+// FORMS
+$form-field-border: solid 2px #e8f0f2;
+$form-field-border-new: solid 1px #A2A2A2;
+$form-field-margin: 1rem;
+$form-checkbox-dimensions: 15px;
+$form-checkbox-border: 1px solid $md-gray;
+$form-field-min-height: 2.5rem;
+$input-checked: #CAEBF2;
+
+// MISC
+$border-radius: 2px;
+$border-radius-new: 0px;
+$button-auto-padding: 5px 15px;
+$info-bg: #E8F5F9;
+$common-bg: #f4f4f4;
+
+@import "_new_variables.scss";

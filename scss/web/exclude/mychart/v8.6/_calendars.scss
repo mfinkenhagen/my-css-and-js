@@ -1,0 +1,28 @@
+﻿@import "_variables.scss";
+
+/* CALENDAR
+   ========================================================================== */
+
+.calendar {
+    background-color: $white;
+}
+
+#datechooserAnchor.calendar {
+    background-color: transparent;
+}
+
+.temporaryInformation input.date.withCalendar ~ .calendar {
+
+    @media screen and (min-width: 769px) {
+        float: right;
+        margin: -33px 0 0 3px;
+    }
+}
+
+.formsection .temporaryInformation .alert:not(:empty):before {
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+

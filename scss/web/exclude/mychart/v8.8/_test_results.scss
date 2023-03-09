@@ -1,0 +1,114 @@
+﻿@import "_new_variables.scss";
+
+/* TEST RESULTS
+   ========================================================================== */
+.TestResultsList li.SingleResult {
+    border-bottom: none;
+    border-color: none;
+    margin-bottom: 5px;
+}
+
+.BeforeTestResultsList input {
+    max-width: none;
+}
+
+.BeforeTestResultsList input.SearchList {
+    opacity: 1;
+    box-shadow: $card-box-shadow;
+    border: $card-border;
+    height: $form-field-min-height;
+    display: block;
+}
+
+.BeforeTestResultsList {
+    /* Search bar width */
+    .col-3 {
+        width: 100% !important;
+    }
+
+    input.noprint.imgbutn {
+        position: absolute;
+        top: 65px;
+        left: 30%;
+    }
+
+    .FilterWrapper, .BeforeTestResultsList .ToggleWrapper {
+        padding-left: 0px;
+        margin-top: 5px;
+    }
+
+    .ToggleInpatient {
+        margin-top: 5px;
+        margin-right: 0px;
+    }
+
+    input.ToggleInpatient {
+        margin-left: 0;
+        width: $form-checkbox-dimensions;
+        height: $form-checkbox-dimensions;
+        display: inline-block;
+    }
+
+    select.Filter {
+        border: 1px solid $border-dark-grey;
+        box-shadow: $card-box-shadow;
+        -webkit-appearance: none;
+        padding-left: 15px;
+        background: url(../images/down_chevron_blue.svg) no-repeat;
+        background-position: 96% 50%;
+        background-size: 15px;
+    }
+}
+
+.md_testresults_index {
+    .BeforeTestResultsList input.noprint.imgbutn {
+        top: 24px;
+        right: 7px;
+        left: auto;
+    }
+}
+
+/* Override GooGrid which makes the results too long */
+.TestResultsList .SingleResult {
+    width: 100% !important;
+}
+
+.TestResultsList li.SingleResult {
+    border-color: $white;
+}
+
+.ToggleWrapper {
+    margin-top: 15px;
+}
+
+ul.TestResultsList li.SingleResult.Header {
+    padding:0px;
+}
+
+/* MOBILE TEST RESULTS
+   ========================================================================== */
+.mobile {
+    .TestResultsList .SingleResult {
+        span.ListIcon {
+            width: 15%;
+        }
+
+        span.ResultNameWrapper {
+            width: 30%;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        .TestResultsList .SingleResult {
+            span.ListIcon {
+                width: 5%;
+            }
+
+            span.ResultNameWrapper {
+                width: 40%;
+            }
+        }
+    }
+}

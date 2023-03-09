@@ -1,0 +1,26 @@
+﻿@import "_variables.scss";
+
+/* COVERAGES
+   ========================================================================== */
+
+.card.addItem.addImages {
+    padding: 0px;
+}
+
+.insurance_card_actions_link {
+    color: $md-navy;
+}
+
+.insurance_card_actions_link:hover, .insurance_card_actions_link:focus, .insurance_card_actions_link:active {
+    background-color: $common-bg;
+    color: $dk-navy;
+}
+
+.addImagesContainer {
+    height: auto;
+}
+
+.insuranceVerification .cardlist.hasPendingStatus .card .cardline.name span.coverageStatus {
+    padding-top: 7px;
+    line-height: initial;
+}

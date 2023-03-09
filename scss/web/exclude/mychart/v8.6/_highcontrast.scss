@@ -1,0 +1,311 @@
+﻿@import "_variables.scss";
+
+/* HIGH CONTRAST
+   ========================================================================== */
+
+html[data-altstylesheet="High Contrast"] {
+    color: $hc-font-color-regular;
+
+    #sidebar,
+    #sidebar .subtle,
+    #sidebar .subtlecolor,
+    #header .menugroup a:not(.button),
+    .subtle:not(.killSwitchOn),
+    .subtlecolor,
+    body.isInside #footer,
+    body.isInside #footer a,
+    .datatile #wrap > .copyright a,
+    .list.hoverable:not(.collapsible) a:not(.button),
+    .list.hoverable:not(.collapsible) a:not(.button):focus,
+    .list.hoverable:not(.collapsible) a:not(.button):hover,
+    .list.hoverable.collapsible a.collapsed:focus,
+    .list.hoverable.collapsible a.collapsed:hover,
+    .list.hoverable.collapsible li.collapsed:focus a,
+    .list.hoverable.collapsible li.collapsed:hover a,
+    .list.hoverable.collapsible li.collapsed a:focus,
+    .list.hoverable.collapsible li.collapsed a:hover,
+    .md_caredecision_index .documenttable .documents .document .docinfo,
+    .md_caredecision_index #divHCAs .divHCATitle p,
+    .md_premiumbilling_index span.premium-bill-balance-label,
+    .md_premiumbilling_index span.premium-bill-summary-details,
+    .md_premiumbilling_index span.premium-bill-payment-date,
+    .md_premiumbilling_payments tr.uncommitted-payment,
+    body.md_visitdetails_index div.waitlist span.waitlistpretext,
+    body.md_visitdetails_index div.visitinstructionsheader,
+    body.md_visitdetails_index div.departmentaddress,
+    body.md_visitdetails_index div.departmentphone,
+    body .component.Popup.notificationreview .footer,
+    label,
+    .label,
+    .inlinelabel,
+    .formsection fieldset legend,
+    .button.buttoncheck label,
+    .openingsContainer .filterControls .filterFrame {
+        color: $hc-font-color-regular;
+    }
+
+    label.togglebutton[for], input.buttoncheck + label.buttoncheck {
+        color: $white;
+    }
+}
+
+html[data-altstylesheet="High Contrast"] #main,
+html[data-altstylesheet="High Contrast"] .BeforeList input.SearchList {
+    background: $hover-tile;
+}
+
+html[data-altstylesheet="High Contrast"] #sidebar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+html[data-altstylesheet="High Contrast"] {
+    #content[style*="min-height"] + #footer {
+        a {
+            opacity: 1;
+        }
+    }
+}
+
+/* HOVER LIST ====== */
+html[data-altstylesheet="High Contrast"] {
+    table tr.hover, table tr td.selected, table.hoverable tr:hover, .section .content .hover:not(.button), .list.hoverable:not(.collapsible) a:not(.button):focus, .list.hoverable:not(.collapsible) a:not(.button):hover, .list.hoverable:not(.collapsible) li:focus, .list.hoverable:not(.collapsible) li:hover, .list.hoverable.collapsible a.collapsed:focus, .list.hoverable.collapsible a.collapsed:hover, .list.hoverable.collapsible li.collapsed:focus, .list.hoverable.collapsible li.collapsed:focus a, .list.hoverable.collapsible li.collapsed:hover, .list.hoverable.collapsible li.collapsed:hover a, .list.hoverable.collapsible li.collapsed a:focus, .list.hoverable.collapsible li.collapsed a:hover, .MessageList .SingleMessage.collapsed .inlinedelete:focus, .SingleIndicator.collapsed.hover {
+        background-color: $hc-hover-link;
+    }
+
+    #sidebar {
+        table tr.hover, table tr td.selected, table.hoverable tr:hover, .section .content .hover:not(.button), .list.hoverable:not(.collapsible) a:not(.button):focus, .list.hoverable:not(.collapsible) a:not(.button):hover, .list.hoverable:not(.collapsible) li:focus, .list.hoverable:not(.collapsible) li:hover, .list.hoverable.collapsible a.collapsed:focus, .list.hoverable.collapsible a.collapsed:hover, .list.hoverable.collapsible li.collapsed:focus, .list.hoverable.collapsible li.collapsed:focus a, .list.hoverable.collapsible li.collapsed:hover, .list.hoverable.collapsible li.collapsed:hover a, .list.hoverable.collapsible li.collapsed a:focus, .list.hoverable.collapsible li.collapsed a:hover, .MessageList .SingleMessage.collapsed .inlinedelete:focus, .SingleIndicator.collapsed.hover {
+            background-color: $hover-tile;
+        }
+    }
+
+    .loginalert {
+        border: $hc-card-border;
+    }
+}
+
+/* CONDITIONS WIDGET ====== */
+html[data-altstylesheet="High Contrast"] {
+    .component .ToDolist.pocdefault ul li.todolistelement,
+    .component .ToDolist.pocdefault ul li.todolistelement.overdueslistelement {
+        border: $hc-card-border;
+
+        &:hover {
+            background-color: $hc-hover-link;
+        }
+    }
+
+    .component.pocdefault ul li.listelement:hover {
+        background-color: $hc-hover-link;
+    }
+
+    .component.pocdefault ul li.listelement.goalslistelement {
+        border: $hc-card-border;
+    }
+
+    .ToDoEvents .multiMonthCalendar.component {
+        border: $hc-card-border;
+    }
+}
+
+/* TEST RESULTS ====== */
+html[data-altstylesheet="High Contrast"] {
+    .BeforeTestResultsList input.SearchList {
+        border: $hc-card-border;
+    }
+}
+
+/* CLINICAL ====== */
+html[data-altstylesheet="High Contrast"] {
+    div.medbottom {
+        background-color: $border-grey;
+    }
+}
+
+/* MESSAGING ====== */
+html[data-altstylesheet="High Contrast"] {
+    ul.MessageList > li.SingleMessage {
+        border: $hc-card-border;
+    }
+}
+
+/* CALENDAR ====== */
+html[data-altstylesheet="High Contrast"] {
+    #calendar table, ul.MessageList, .HPcell.component > .content, .component.pocdefault > a.viewmore {
+        border: $hc-card-border;
+    }
+}
+
+/* CARD
+   ========================================================================== */
+
+html[data-altstylesheet="High Contrast"] {
+    .card:not(.SingleResult):not(.seriessel) {
+        border: $hc-card-border;
+    }
+}
+
+/* SELECTABLE CARDS  ====== */
+html[data-altstylesheet="High Contrast"] {
+    .cardlist.selectable {
+        .card {
+            &.hover:not(.button) {
+                background-color: $tertiary-opaque-hover;
+            }
+
+            &.selected {
+                background-color: $tertiary;
+            }
+        }
+
+        a.card:not(.button):hover {
+            background-color: $tertiary-opaque-hover;
+        }
+    }
+}
+
+/* CHECKBOX BUTTONS ====== */
+html[data-altstylesheet="High Contrast"] {
+    input:checked + label.togglebutton[for],
+    input.buttoncheck:checked + label.buttoncheck {
+
+        background-color: $hc-tertiary;
+
+        &:before {
+            background-color: #204324;
+        }
+    }
+}
+
+/* BUTTONS ====== */
+html[data-altstylesheet="High Contrast"] {
+    .button.completeworkflow {
+        background-color: $hc-tertiary;
+
+        &:focus, &:hover {
+            background-color: $hc-tertiary;
+        }
+    }
+
+    .button, .button:not(.buttoncheck) {
+        background-color: $hc-tertiary;
+
+        &:focus {
+            background-color: $hc-tertiary;
+        }
+
+        &:hover {
+            background-color: $hc-tertiary;
+        }
+    }
+
+    .button.cancelworkflow, .previousstep {
+        background-color: $primary;
+
+        &:focus {
+            background-color: $primary;
+        }
+
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    .button.disabled, .button.disabled:focus, .button.disabled:hover, .button[disabled], .button[disabled]:focus, .button[disabled]:hover {
+        background-color: $hc-tertiary;
+        color: $white;
+        opacity: 0.5;
+    }
+
+    ul .MessageList.list.hoverable.collapsible .SingleMessage .ReplyButton a.button {
+        background-color: $hc-tertiary;
+    }
+
+    #main .back .button {
+        color: $white;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+/* ALERTS ====== */
+html[data-altstylesheet="High Contrast"] {
+    .alert, .alertHeader, .abnormal {
+        color: $hc-alert;
+    }
+
+    .helptext {
+        &.required {
+            color: $hc-alert;
+
+            &:before {
+                margin-right: 0.75rem;
+            }
+        }
+    }
+
+    .required {
+
+        &:before {
+            color: $hc-alert;
+        }
+    }
+}
+
+/* LOGGED OUT UI
+   ========================================================================== */
+
+/* MAIN BODY ====== */
+
+html[data-altstylesheet="High Contrast"] {
+    .isPrelogin {
+        #main {
+            h2.header {
+                color: $hc-secondary;
+            }
+        }
+
+        #footer {
+            .mainStyle .links, .sidebarStyle .copyright {
+                a {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* PAY AS GUEST FORM ====== */
+
+html[data-altstylesheet="High Contrast"] {
+    .isPrelogin {
+        #PaymentEntry {
+            .guestPayWarning {
+                color: $hc-alert;
+            }
+
+            .formsection .formcolumn {
+                label, input, select, #CardEntry-Exp-Label {
+                    border-color: $border-dark-grey;
+                    color: $dark-grey;
+                }
+            }
+
+            #divPmtAmount {
+                #PaymentOtherAmountInput {
+                    border-color: $border-dark-grey;
+                    color: $dark-grey;
+                }
+
+                .section .content .hover:not(.button) {
+                    background-color: $hc-tertiary;
+                }
+            }
+
+            .cardlist.selectable .card.selected {
+                background-color: $hc-tertiary;
+            }
+        }
+    }
+}

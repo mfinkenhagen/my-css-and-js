@@ -1,0 +1,77 @@
+﻿@import "_variables.scss";
+
+/* DOCUMENTS
+   ========================================================================== */
+
+#visitRecords {
+    input[type="radio"] {
+        opacity: 0;
+    }
+}
+
+/* MOBILE DOCUMENTS
+   ========================================================================== */
+
+.mobile {
+    .dateSelector .dtSelWrapper {
+        width: calc(100% - 0.75rem);
+    }
+
+    .dtSelWrapper input,
+    [class] [class] .dtSelWrapper input {
+        //width: calc(100% - 2rem) !important;
+        width: calc(100% - 4rem) !important;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .mobile {
+        .dateSelector .dtSelWrapper {
+            width: calc(43% - 0.75rem);
+        }
+
+        #datepickers {
+            #findVisits {
+                line-height: 2em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .mobile {
+        #visitRecords {
+            .rowDateTime {
+                float: none;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        #datepickers {
+            #findVisits {
+                top: 0px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* MOBILE VISIT REPORTS ====== */
+.mobile {
+    .previewPopupMulti {
+        div.menu ul.visitlist {
+            .visitIcon {
+                height: 20px;
+                width: 20px;
+            }
+            .col1 {
+                width: 24%;
+            }
+            .col2 .other {
+                text-indent: 0;
+            }
+        }
+    }
+}
+

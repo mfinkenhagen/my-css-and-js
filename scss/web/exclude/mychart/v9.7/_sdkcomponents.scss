@@ -1,0 +1,89 @@
+﻿@import "_variables_mychart.scss";
+
+/* SDK COMPONENTS
+   ========================================================================== */
+
+/* BUTTONS ======= */
+._link.primary.positive,
+._command.primary.positive {
+    @include default-button-style;
+}
+
+._ActionGroup.type-dialog ._actionable:not([disabled]),
+._ActionGroup.type-dialog ._actionable ~ ._actionable:not([disabled]) {
+    @include default-button-style;
+
+    &.nextstep,
+    &.completeworkflow,
+    &.inlinesave,
+    &.positive {
+        @include default-button-style;
+    }
+
+    &.cancelworkflow,
+    &.inlinedelete,
+    &.negative {
+        @include default-button-style--negative-ghost;
+    }
+}
+
+/* DROPDOWNS ====== */
+._CollapsibleListBox {
+    ._CollapsibleListBoxCommand {
+        border: $form-field-border;
+        border-radius: $border-radius;
+        color: $form-field-text;
+
+        &:hover,
+        &:focus {
+            background-color: $white;
+            border: $form-field-border-active;
+            color: $form-field-text;
+        }
+    }
+
+    ._CollapsibleListBoxCommand.open,
+    ._OptionListElement,
+    ._OptionListElement:last-child {
+        border: $form-field-border-active;
+        border-radius: $border-radius;
+
+        &.selected {
+            background-color: $selected-bg-color;
+            border-color: $selected-border-color;
+            color: $selected-label-color;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $default-hover-bg-color;
+            border-color: $default-hover-border-color;
+            color: $default-hover-label-color;
+        }
+    }
+
+    ._OptionListElement ._OptionListCommand:focus {
+        background-color: $default-hover-bg-color;
+        border-color: $default-hover-border-color;
+    }
+}
+
+._ViewPicker._CollapsedControls ._OptionListElement:hover,
+._ViewPicker._CollapsedControls ._OptionListElement ._OptionListCommand:focus {
+    color: $default-hover-label-color;
+}
+
+._ViewPicker._CollapsedControls ._CollapsibleListBoxCommand:not(.open):hover,
+._ViewPicker._CollapsedControls ._CollapsibleListBoxCommand:not(.open):focus {
+    color: $dk-gray;
+}
+
+/* CHECKBOXES ====== */
+._Choice.buttoncheck ._input:checked + ._DataEntryLabel::before {
+    background-color: $md-navy;
+    border-color: $md-navy;
+}
+
+._heading {
+    color: $dk-teal;
+}

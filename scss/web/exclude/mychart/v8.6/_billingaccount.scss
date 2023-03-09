@@ -1,0 +1,16 @@
+﻿@import "_variables.scss";
+
+/* BILLING ACCOUNT SUMMARY
+   ========================================================================== */
+
+.ba_card_header_paperless_icon {
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.ba_paperless_icon_container {
+    .ba_card_header_paperless_icon {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}

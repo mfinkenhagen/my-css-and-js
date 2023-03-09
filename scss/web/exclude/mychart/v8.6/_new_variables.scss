@@ -1,0 +1,103 @@
+﻿// SHARP SANS FONT VARIABLES
+$sharp-sans: 'Source Sans Pro', sans-serif;
+$sharp-weight-light: 100;
+$sharp-weight-semi-light: 300;
+$sharp-weight-regular: 400;
+$sharp-weight-semi-bold: 600;
+$sharp-weight-bold: 700;
+$sharp-weight-semi-black: 800;
+$sharp-weight-black: 900;
+
+// FONTS
+$font-family: "Source Sans Pro", "Arial", sans-serif;
+
+// COLORS
+$white: #ffffff;
+$black: #000000;
+
+$dk-gray: #364248;
+$md-gray: #888B8D;
+$lt-gray: #C8C8C8;
+
+$dk-blue: #00539D;
+$md-blue: #6AAAE4;
+$lt-blue: #97CAEB;
+
+$dk-teal: #008FBE;
+$md-teal: #00C1DE;
+$lt-teal: #96DAEA;
+
+$dk-green: #009877;
+$md-green: #00C4B3;
+$lt-green: #78DED4;
+
+$dk-navy: #001E61;
+$md-navy: #5887DA;
+$lt-navy: #A5C5ED;
+
+$dk-yellow: #FFB71B;
+$md-yellow: #FFC844;
+$lt-yellow: #FCD672;
+
+$dk-orange: #FF4D00;
+$md-orange: #FF7F30;
+$lt-orange: #FFB98E;
+
+$dk-red: #CE0E2D;
+$md-red: #F4436C;
+$lt-red: #FE9BB1;
+
+$dk-purple: #691F74;
+$md-purple: #93358D;
+$lt-purple: #CB8BDA;
+
+$timeline-blue: #00C1DE;
+
+// BREAKPOINTS
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 576px;
+$breakpoint-tablet-max: #{$breakpoint-tablet - 1px}; //max width 767px
+$breakpoint-mobile-max: #{$breakpoint-mobile - 1px}; //max width 575px
+$breakpoint-desktop: 992px;
+$breakpoint-desktop-xl: 1200px;
+$breakpoint-custom-desktop: 1250px;
+$breakpoint-max-width: 1440px;
+
+// GLOBAL COMPONENTS
+$menu-width-desktop: 125px;
+$menu-width-mobile: 100%;
+$header-height-desktop: 80px;
+$header-height-mobile: 90px;
+$header-main-height-desktop: 80px;
+$header-main-height-mobile: 50px;
+
+// PADDING AND MARGINS
+$card-padding-desktop: 30px;
+$card-padding-tablet: 25px;
+$card-padding-mobile: 15px;
+$card-margin-desktop: 30px;
+$card-margin-mobile: 15px;
+$icon-padding: 7px;
+
+// CARDS
+$card-box-shadow: 0 1px 5px 0 $lt-gray;
+$card-link: 14px;
+$card-pill: 13px;
+$pill-border-radius: 11px;
+
+// SELECTED STATE
+$selected-color: #C5D4F0;
+$selected-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px, rgba(0, 0, 0, 0.13) 0px 2px 1px inset;
+
+// MISC
+$border-radius: 0px;
+$header-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+$padding-top: 0px;
+$uc-plus: 12px;
+$fade-transition: .4s ease-in-out;
+$divider: 2px solid #E9E9E9;
+$fade-transition: .4s ease-in-out;
+$light-selected-color: #C5D4F0;
+
+
+

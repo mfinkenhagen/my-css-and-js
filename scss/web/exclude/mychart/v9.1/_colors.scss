@@ -1,0 +1,825 @@
+﻿@import "_new_variables.scss";
+
+/* COLORS
+   ========================================================================== */
+
+html {
+    color: $dk-gray;
+}
+
+.isInside #header:not(:empty) {
+    background: $white;
+}
+
+/* HEADINGS ====== */
+
+h1, h2, h3, h4, .header, .heading, .hover a.header:focus, .hover a.header:hover, .hover a.heading:focus, .hover a.heading:hover, .titlebar, .sectionheader, .formsection > legend, table thead tr {
+    color: $dk-teal !important;
+    font-weight: $sharp-weight-semi-bold;
+}
+
+/* LINKS ====== */
+a, .linkcolor, .subtle.linkcolor {
+    color: $md-navy;
+    transition: $fade-transition;
+}
+
+a:hover, .linkcolor:hover, #calendar table td.ctrl a:hover {
+    color: $dk-navy;
+    text-decoration: underline;
+}
+
+a:focus, .linkcolor:focus {
+    color: $md-navy;
+}
+
+.linkcolorOverride, .linkcolorOverride:visited {
+    color: $md-navy !important;
+}
+
+/* CUSTOM FORM QUESTION GROUP TITLES ====== */
+#main,
+.BeforeList input.SearchList {
+    background-color: $white;
+}
+
+.BeforeList input.SearchList {
+    background-color: $white;
+}
+
+#sidebar {
+    background-color: $white;
+}
+
+#divAcpQuestionnaire .qnr-container .questiongroup .group-prompt {
+    color: $dk-teal;
+}
+
+.md_questionnairelist .header, .md_mychartquestionnaire_questionnaires .header {
+    color: $dk-teal;
+}
+
+/* NO DATA ====== */
+:not(tr):not(td).nodata:not(:empty) {
+    background-color: $common-bg;
+    color: $md-gray;
+}
+
+#sidebar .nodata:not(:empty) {
+    background-color: rgba(238, 238, 238, 0.25);
+    color: $dk-gray;
+}
+
+.noinfo.component > .content {
+    border: none;
+}
+
+/* HOVERABLE LISTS ====== */
+table tr.hover,
+table tr td.selected,
+table.hoverable tr:hover,
+.section .content .hover:not(.button),
+.list.hoverable:not(.collapsible) a:not(.button):focus,
+.list.hoverable:not(.collapsible) a:not(.button):hover,
+.list.hoverable:not(.collapsible) li:focus,
+.list.hoverable:not(.collapsible) li:hover,
+.list.hoverable.collapsible a.collapsed:focus,
+.list.hoverable.collapsible a.collapsed:hover,
+.list.hoverable.collapsible li.collapsed:focus,
+.list.hoverable.collapsible li.collapsed:focus a,
+.list.hoverable.collapsible li.collapsed:hover,
+.list.hoverable.collapsible li.collapsed:hover a,
+.list.hoverable.collapsible li.collapsed a:focus,
+.list.hoverable.collapsible li.collapsed a:hover,
+.MessageList .SingleMessage.collapsed .inlinedelete:focus,
+.SingleIndicator.collapsed.hover {
+    //background-color: rgba(238,243,244,0.5);
+    background-color: $common-bg;
+}
+
+table tr.hover, table tr td.selected, table.hoverable tr:hover, .section .content .hover:not(.button):not(.card), .list.hoverable:not(.collapsible) a:not(.button):focus, .list.hoverable:not(.collapsible) a:not(.button):hover, .list.hoverable:not(.collapsible) li:focus, .list.hoverable:not(.collapsible) li:hover, .list.hoverable.collapsible a.collapsed:focus, .list.hoverable.collapsible a.collapsed:hover, .list.hoverable.collapsible li.collapsed:focus, .list.hoverable.collapsible li.collapsed:focus a, .list.hoverable.collapsible li.collapsed:hover, .list.hoverable.collapsible li.collapsed:hover a, .list.hoverable.collapsible li.collapsed a:focus, .list.hoverable.collapsible li.collapsed a:hover, .MessageList .SingleMessage.collapsed .inlinedelete:focus, .SingleIndicator.collapsed.hover, .listHolder > .listRow.hover, .listHolder > .listRow.selected, .clickable:hover, .clickable:focus, .clickable a:focus {
+    background: $common-bg;
+}
+
+.list.hoverable:not(.collapsible) a:not(.button),
+.list.hoverable:not(.collapsible) a:not(.button):focus,
+.list.hoverable:not(.collapsible) a:not(.button):hover,
+.list.hoverable.collapsible a:not(.linkcolor).collapsed:focus,
+.list.hoverable.collapsible a:not(.linkcolor).collapsed:hover,
+.list.hoverable.collapsible li.collapsed:focus a:not(.linkcolor),
+.list.hoverable.collapsible li.collapsed:hover a:not(.linkcolor),
+.list.hoverable.collapsible li.collapsed a:not(.linkcolor):focus,
+.list.hoverable.collapsible li.collapsed a:not(.linkcolor):hover {
+    color: $dk-gray;
+}
+
+/* MENU ====== */
+#header {
+    .menugroup {
+        span[role="menuitem"] {
+            color: $dk-gray;
+        }
+
+        li[role="menuitem"] a {
+            border-left: 2px solid transparent;
+
+            &:hover {
+                color: $dk-gray;
+            }
+        }
+    }
+}
+
+/* FORMS ====== */
+label, .label, .inlinelabel, .formsection fieldset legend {
+    color: $dk-gray;
+}
+
+input.invalid:not(:focus), textarea.invalid:not(:focus), select.invalid:not(:focus) {
+    border-color: $alert;
+}
+
+/* BUTTONS ====== */
+.button, 
+.button.nextstep, 
+.button.previousstep {
+    background-color: $white;
+    color: $md-navy;
+    border: 1px solid $md-navy;
+
+    &:focus {
+        background-color: $white;
+        color: $md-navy;
+    }
+
+    &:hover {
+        background-color: $md-navy;
+        color: $white;
+    }
+}
+
+.button.cancelworkflow, .button.continuelater, .button.cancel/*, .previousstep*/ {
+    background-color: $white;
+    color: $md-navy;
+    border: 1px solid $md-navy !important;
+
+    &:focus {
+        background-color: $white;
+        color: $md-navy;
+    }
+
+    &:hover {
+        background-color: $md-navy;
+        color: $white;
+    }
+}
+
+.button.disabled, .button.disabled:focus, .button.disabled:hover, .button[disabled], .button[disabled]:focus, .button[disabled]:hover, .button[disabled]:not(.omitdisablestyling), .button[disabled]:focus:not(.omitdisablestyling), .button[disabled]:hover:not(.omitdisablestyling) {
+    background-color: $white;
+    color: $md-navy;
+    border: 1px solid $md-navy;
+    opacity: 0.5;
+}
+
+.buttoncheck.button.disabled {
+    opacity: 1;
+    border: none;
+}
+
+.button.completeworkflow {
+    background-color: $white;
+    color: $md-navy;
+    border: 1px solid $md-navy;
+
+    &:focus, &:hover {
+        background-color: $md-navy;
+        color: $white;
+    }
+}
+
+.button.inlinesave {
+    background-color: $white;
+    color: $md-navy;
+    border: 1px solid $md-navy;
+
+    &:focus, &:hover {
+        background-color: $md-navy;
+        color: $white;
+    }
+}
+
+.button.inlinedelete {
+    background-color: $white;
+
+    &:focus, &:hover {
+        background-color: $md-navy;
+        color: $white;
+    }
+}
+
+.button.inlineedit {
+    background-color: $white;
+
+    &:focus, &:hover {
+        background-color: $md-navy;
+    }
+}
+
+#main .back .button {
+    border-color: transparent;
+    color: $md-navy;
+    background-color: $white;
+    border: 1px solid $md-navy;
+
+    &:hover {
+        background-color: $md-navy;
+        color: $white;
+    }
+}
+
+.button[data-type=workflow]:hover, .button[data-type=workflow]:focus {
+    background-color: $md-navy;
+}
+
+/* 2020 Remove Button - Health Summary Items */
+.medbottom .buttonList .button.inlinesave, 
+.medbottom .buttonList .button.inlinedelete, 
+.pendingUpdatesSection .buttonList .button.inlinesave, 
+.pendingUpdatesSection .buttonList .button.inlinedelete {
+    color: $md-navy;
+    border: none !important;
+}
+
+
+/* CHECKBOX BUTTONS ====== */
+input + label.togglebutton[for]:hover {
+    background-color: $md-navy;
+    color: $white;
+}
+
+input:focus + label.togglebutton[for] {
+    background-color: $white;
+    color: $md-navy;
+}
+
+input:checked + label.togglebutton[for],
+input:checked + label.togglebutton[for]:hover,
+input:checked:focus + label.togglebutton[for],
+input.buttoncheck:checked + label.buttoncheck {
+    color: $dk-gray;
+    background-color: $selected-color;
+    box-shadow: $selected-shadow;
+    border: 1px solid transparent;
+}
+
+.buttoncheck {
+    background: transparent none repeat scroll 0 0;
+
+    &:focus, &:hover {
+        background: transparent none repeat scroll 0 0;
+    }
+}
+
+.card {
+
+    label.togglebutton[for],
+    input.buttoncheck + label.buttoncheck {
+        //background-color: $white;
+        color: $dk-gray;
+
+        &:before {
+            background-color: $white;
+            outline: none;
+        }
+    }
+
+    input.togglebutton.clearradio + label.togglebutton[for] {
+        background-color: $white;
+        color: $md-navy;
+        border: 1px solid $md-navy;
+
+        &:hover {
+            background-color: $md-navy;
+            color: $white;
+        }
+    }
+
+    label.buttoncheck[for]:hover,
+    label.togglebutton[for]:hover,
+    input:focus + label.buttoncheck,
+    input:focus + label.togglebutton[for] {
+        color: $dk-gray;
+    }
+
+    input.togglebutton.clearradio + label.togglebutton[for]:hover {
+        color: $white;
+    }
+
+    input.togglebutton.clearradio:checked + label.togglebutton[for] {
+        color: $dk-gray;
+        background-color: $selected-color;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.13);
+        border: none;
+    }
+
+    input:checked + label.togglebutton[for],
+    input.buttoncheck:checked + label.buttoncheck {
+        color: $dk-gray;
+        background-color: $selected-color;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.13);
+        border: none;
+
+        &:before {
+            background-color: $md-navy;
+        }
+    }
+}
+
+
+/* POPUPS ====== */
+.component.Popup > .titlebar {
+    background-color: $dk-teal;
+}
+
+/* ALERTS ====== */
+.softwarning {
+    background-color: $skyblue;
+}
+
+.alert, .alertHeader, .abnormal {
+    color: $dk-red;
+}
+
+.alert.card {
+    color: $md-orange;
+    background-color: $system-orange;
+}
+
+.Alerts .loginalert a::after, .component.quickLinks.vertical a::after, .component ul li.listelement:after, .Alerts .loginalert .loginalert.tab::after {
+    background-color:transparent;
+}
+
+.helptext {
+    &.required {
+        color: $alert;
+
+        &:before {
+            margin-right: 0.75rem;
+        }
+    }
+}
+
+.required {
+
+    &:before {
+        color: $alert;
+        border-color: $alert transparent transparent;
+    }
+}
+
+.HPcell.component.pocdefault ul li.listelement:after {
+    background-color: unset;
+}
+
+/* VISIT RECORDS ====== */
+
+
+table#visitRecords {
+    &.hoverable tr:hover {
+        background-color: $md-navy;
+        color: $white;
+    }
+
+    tr.clickable.selectedVisitRecord {
+        background-color: $md-navy;
+        color: $white;
+    }
+}
+
+/* MISC ====== */
+.green {
+    color: $dk-green;
+}
+
+.subtle, .subtlecolor {
+    color: $dk-gray;
+}
+
+/* Labels */
+.relationship-content .name.header .primaryContactLabel {
+    border-radius: 2px;
+    background-color: $dk-green;
+    border: 2px solid $dk-green;
+    padding: 1px 5px;
+}
+
+
+/* TO DO ====== */
+.overdue {
+    color: $dk-red;
+}
+
+.todotiles.healthadvisory:after {
+    background-color: $bubblegum;
+}
+
+.todotiles.appointment:after {
+    background-color: $ocean;
+}
+
+.todotiles.order:after {
+    background-color: $royal;
+}
+
+.todotiles.appointment.selected {
+    box-shadow: 0 9px 18px 2px $ocean-hover;
+}
+
+.todotiles.healthadvisory.selected {
+    box-shadow: 0 9px 18px 2px $bubblegum-hover;
+}
+
+.todotiles.order.selected {
+    box-shadow: $selected-shadow;
+}
+
+/* GOALS ====== */
+.Popup.component, .todotiles .knowmore a, .goalssmall .goalslist .noncompliant, .goalslarge .goalslist .noncompliant, .goalslarge .chartgraph .noncompliant, .goalssmall .goaltitlerow, .goalsleft .goaltitlerow, .goalsvb6 .goaltitle, .goalsdetails .noteslabel, .careteam .fullscreen .providerTitle a {
+    color: $dk-teal;
+}
+
+.calendar table tbody td.hi a, .calendar .selectableevent, .fullscreen ul.careteam li.selected:before, .goalslarge li.goalslistelement.selected:before {
+    background-color: $dk-teal;
+}
+
+/* TEST RESULTS ====== */
+.membertab.selected {
+    border-color: $dk-teal;
+}
+
+/* COMPONENTS ====== */
+#calendar table td, .lb_content.template, .component.Popup, .HProw .component, .component > a.viewmore, .todotiles, .todotooltip .arrow:after, .HPcell.component > .content, #calendar table, .medicationslist.component .filteredwarningtooltip, .component.pocdefaultpopup.careteam ul.careteam li.listelement.careteam.selected, .goalslarge .goalsleft .goalslist.list .goalslistelement.selected, .todotooltip, #weekcalendartooltip, #staticeventcalendartooltip, .loginalert.tab > a, .loginalert .body, .component.news .newscard, .loginalert .contentbody .apptoffer, #calendar table thead td.hi, #calendar table td#calcancel.hi, .externalorganizations .badge.orglink {
+    border-radius: $border-radius;
+}
+
+#calendar table, ul.MessageList, .HPcell.component > .content, .component.pocdefault > a.viewmore {
+    box-shadow: $card-box-shadow;
+    border: $card-border;
+}
+
+#calendar table, ul.MessageList, .HPcell.component > .content, .component.pocdefault > a.viewmore, .lightShadow {
+    box-shadow: $card-box-shadow;
+}
+
+.multiMonthCalendar .calendarBtns a, .multiMonthCalendar .calendarBtns a:hover, .multiMonthCalendar .calendarBtns a:focus, .multiMonthCalendar li.calendarBackEventBtn:before, .multiMonthCalendar li.calendarNextEventBtn:after, .loginalert .body .apptDateDetails, .BeforeList .top a, .messagefooter .loadall, .calendar table td#calcancel a, .ToDolist li.healthadvisory a.requestappointment:not(.button) {
+    border: none !important;
+}
+/* BILLING ====== */
+.PaymentAmountVerify {
+    color: $dk-green;
+    font-weight: $sharp-weight-semi-bold;
+}
+
+.ErrorBanner {
+    background-color: $system-red;
+}
+
+.verticalDate {
+    color: $dk-teal;
+}
+
+/* CARD ====== */
+.card {
+    box-shadow: $card-box-shadow;
+    border: $card-border;
+}
+
+/* VISITS ====== */
+.date div, .previewCCD .listelement .date div {
+    color: $dk-blue;
+}
+
+#scheduling-workflow .banner::before {
+    background-color: $white;
+}
+
+.card.helptip.success:not(.moreToDo) .header.medium {
+    color: $dk-green !important;
+}
+
+/* SETTINGS ====== */
+#commMethodSidebar > a.selected {
+    box-shadow: $card-box-shadow;
+}
+
+.settingsList.card {
+    border: none;
+}
+
+/* ECHECKIN ====== */
+.stops .trainstation {
+    background-color: $dk-blue;
+    background: linear-gradient(rgba(0, 193, 222, 0.5),rgba(0, 143, 190, 0.5)), #fff;
+    border-color: $dk-teal;
+}
+
+.line .trainrail {
+    background-color: $dk-teal;
+}
+
+.subway, .subway a, .subway a:focus, .subway a:hover {
+    color: $dk-teal;
+}
+
+.line .trainrail.future:not(.visited) {
+    background-color: rgba(0, 143, 190, .5);
+}
+
+.stops .future:not(.visited) .trainstation {
+    border-color: rgba(0, 143, 190, .5);
+}
+
+.stops .now .trainstation {
+    background-color: $md-teal;
+}
+
+/* Mobile Subway Timeline Scrollable */
+
+@media screen and (max-width: 767px) {
+    .subway {
+        border-radius: 0;
+        font-size: 1.1em;
+        margin: 0;
+        overflow-x: scroll;
+        padding: 1em 1.2em 0.4em;
+        position: relative;
+        text-align: center;
+        min-height: 7em;
+        width: 110%;
+        margin-left: -5%;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Sign eVisit documents */
+input.button.sign-later {
+    color: $md-navy;
+    padding-top: 7px;
+
+    &:hover, &.focus {
+        color: $white;
+        background-color: $md-navy;
+    }
+}
+
+#documenttable .document .signed {
+    color: $dk-green;
+}
+
+/* Payment */
+#PaymentMethodEntryStep {
+    .cardlist.selectable .card.clickable.hover {
+        background: $common-bg !important;
+        color: $dk-gray;
+    }
+
+    .cardlist.selectable .card.hover:not(.button) span {
+        color: $md-navy;
+    }
+
+    .cardlist.selectable .card.hover:not(.button) .label, .cardlist.selectable .card.hover:not(.button) label, .cardlist.selectable .card.hover:not(.button) .PaymentAmountValue, .cardlist.selectable .card.hover:not(.button) h4, .cardlist.selectable .card.hover:not(.button) span {
+        color: $md-navy;
+    }
+
+    .cardlist.selectable .card.clickable.hover,
+    .cardlist.selectable .card.clickable:focus {
+        background: $selected-color;
+    }
+
+    .card.addItem.hover {
+        background: $common-bg !important;
+    }
+}
+
+
+/* ESTIMATES ====== */
+.essLtrBtn:not(.nextstep) {
+    background-color: $md-navy !important;
+}
+
+.mobile .essBack a.button.previousstep {
+    color: $md-navy;
+}
+
+.moneyColor, .essMoneyColor, .HARSAutopay {
+    color: $md-green;
+    font-weight: $sharp-weight-semi-bold;
+}
+
+/* COMMUNITY ACCOUNTS ====== */
+.PickOrganization.Popup .content > p {
+    color: $dk-teal;
+}
+
+/* APPOINTMENTS 
+========================================================================== */
+.slot {
+    background-color: $white;
+    color: $md-navy;
+    border: 1px solid $md-navy;
+}
+
+.slot.selected, html:not(.mobile) .slot:hover, html:not(.mobile) .slot:focus {
+    background-color: $md-navy;
+    color: $white;
+}
+
+/* MOBILE
+   ========================================================================== */
+/* BUTTONS ====== */
+.mobile {
+    .button.cancelworkflow, .button.continuelater, .button.cancel, .previousstep {
+        /*color: $md-navy !important;*/
+
+        &:focus {
+            background-color: $md-navy;
+            color: $white;
+        }
+        /*&:hover {
+            background-color: $md-navy;
+            color: $white;
+        }*/
+    }
+}
+
+.mobile {
+    label.togglebutton[for],
+    input.buttoncheck + label.buttoncheck {
+        background-color: $white;
+        color: $md-navy;
+        border: 1px solid $md-navy;
+
+        &:before {
+            background-color: $border-grey;
+        }
+    }
+
+    label.buttoncheck[for]:hover,
+    label.togglebutton[for]:hover {
+        color: $white;
+    }
+
+    input:checked + label.togglebutton[for],
+    input.buttoncheck:checked + label.buttoncheck {
+        color: $md-navy;
+        background-color: $input-checked;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.13);
+        border: none;
+
+        &:before {
+            background-color: $md-navy;
+        }
+    }
+}
+
+
+/* VISITS PAYMENTS ====== */
+
+.mobile {
+    #eCheckInContainer {
+        #paymentCollectionGroup {
+            label.togglebutton[for],
+            input.buttoncheck + label.buttoncheck {
+                background-color: $input-checked;
+                color: $dk-gray;
+                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.13);
+                border: none;
+            }
+
+        }
+    }
+}
+
+/* ALERTS ====== */
+.mobile .section form .alert,
+.mobile .vtInformation + .alert,
+.mobile .section .dtSelWrapper .alert,
+.mobile .md_echeckin form .section .alert,
+.mobile .section .subsquestion h4 + .alert,
+.mobile .section .validation-summary-errors,
+.mobile .section [class*='question'] legend + .alert,
+.mobile .section [class*='question'] legend + .alert.helptext,
+.mobile .section [class*='question'] .required + .alert,
+.mobile .section [class*='question'] .hasRequired + .alert {
+    color: $md-orange;
+    background-color: $system-orange;
+}
+
+.mobile {
+    .alert.card {
+        color: $md-orange;
+        background-color: $system-orange;
+    }
+}
+
+/* OPEN SCHED DESKTOP 
+   ========================================================================== */
+.header .stepNumber {
+    background-color: transparent;
+    padding-right: 10px;
+    margin-left: 8px;
+}
+
+/* Choose a Time ======= */
+
+.md_openscheduling_index {
+
+    .optionsgroup {
+
+        label.togglebutton[for] {
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+
+        input.buttoncheck + label.buttoncheck {
+            background-color: $tertiary !important;
+            color: $white !important;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+    }
+
+    .stepContainer .openingsData .card > .header {
+        background-color: $dk-blue;
+        color: $white;
+        padding: 10px 15px;
+        border-radius: $border-radius;
+        margin-bottom: 15px;
+    }
+
+    .stepContainer .openingsData .slotslist .slotdetailaction.selected {
+        background-color: $tertiary;
+    }
+}
+
+/* Almost Done Popup ======= */
+
+.md_openscheduling_index {
+    .signupContainer .card.loginContainer {
+        background: $dk-blue;
+        color: $white;
+        border-radius: $border-radius;
+    }
+    //Male-Female Buttons
+    .card label.togglebutton[for] {
+        background-color: $md-teal;
+        color: $white;
+        width: 100%;
+        padding: 7px;
+        text-align: center;
+    }
+
+    .card input.buttoncheck + label.buttoncheck {
+        background-color: $md-teal;
+        color: $white;
+        width: 100%;
+        padding: 7px;
+    }
+    //Hover
+    .card label.buttoncheck[for]:hover {
+        background-color: $tertiary-opaque-hover;
+        color: $white;
+    }
+
+    .card label.togglebutton[for]:hover {
+        background-color: $tertiary-opaque-hover;
+        color: $white;
+    }
+
+    .card input:focus + label.buttoncheck {
+        background-color: $dk-blue;
+        color: $white;
+    }
+
+    .card input:focus + label.togglebutton[for] {
+        background-color: $dk-blue;
+        color: $white;
+    }
+    //Selected
+    .card input:checked + label.togglebutton[for] {
+        color: $dk-gray;
+        background-color: $input-checked;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.13);
+        border: none;
+    }
+
+    .card input.buttoncheck:checked + label.buttoncheck {
+        color: $dk-gray;
+        background-color: $input-checked;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.13);
+        border: none;
+    }
+}
+
+

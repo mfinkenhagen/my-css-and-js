@@ -1,0 +1,43 @@
+﻿@import "_new_variables.scss";
+
+/* CALENDAR
+   ========================================================================== */
+
+.calendar {
+    background-color: $white;
+}
+
+#datechooserAnchor.calendar {
+    background-color: transparent;
+}
+
+.formsection .temporaryInformation .alert:not(:empty):before {
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+/* Add Temporary Address Calendars ====== */
+
+.temporaryInformation {
+    @media screen and (min-width: $breakpoint-tablet) {
+        input.date.withCalendar ~ .calendar {
+            margin: 5px 0 0 3px;
+        }
+    }
+    /* Extend so calendar icons stay aligned with inputs */
+    @media screen and (max-width: $breakpoint-desktop-xl) {
+        .grid.compact > .row > .col-4 {
+            &.startDate, &.endDate, &.temporaryPhoneNumber, &.county {
+                width: 100%;
+            }
+        }
+
+        .grid.compact > .row > .col-5 {
+            &.county {
+                width: 100%;
+            }
+        }
+    }
+}

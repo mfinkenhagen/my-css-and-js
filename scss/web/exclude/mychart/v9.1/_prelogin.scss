@@ -1,0 +1,373 @@
+﻿@import "_new_variables.scss";
+
+/* LOGGED OUT UI
+   ========================================================================== */
+
+/* HEADER BANNER ====== */
+
+body.isPrelogin {
+    &::before {
+        /*
+        content: url('../images/logo.png');
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        border-bottom: 2px solid $primary;
+        background-color: #fff;
+        margin: 0px auto;
+        text-align: center;
+            */
+    }
+}
+
+/* MAIN BODY ====== */
+
+.isPrelogin {
+
+    #wrap {
+        /*top: 160px !important;*/
+    }
+
+    .logo {
+        display: none;
+    }
+
+    #main.withSidebar {
+        border-bottom-left-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+        box-shadow: $main-box-shadow;
+        background-color: $white;
+    }
+
+    #main {
+        padding: 3rem;
+
+        .title {
+            h1 {
+                font-size: 3em;
+                /*Jball (2018.10.30): changing height to 2em to make pay as a guest work. was 4 em. */
+                height: 2em;
+            }
+        }
+    }
+    /* MyChart App icons in pay as guest footer */
+    &.md_guestpay_payasguest, &.md_guestpay_showresults {
+        .badges {
+            display: none;
+        }
+    }
+}
+
+.md_guestpay_payasguest, .md_guestpay_showresults {
+    #localeswitch.prelogin {
+        top: -3rem;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+
+/* SIDEBAR ====== */
+.isPrelogin {
+    #sidebar {
+        border-bottom-right-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        box-shadow: $main-box-shadow;
+        background-color: $skyblue;
+        line-height: 1.5em;
+        padding: calc(0.5rem + 6rem + 1rem) 2rem 0.5rem;
+
+        .header {
+            color: $dk-teal;
+            font-size: 1.3em;
+            margin-bottom: 1rem;
+        }
+
+        > div {
+            > .header {
+                margin-top: 1rem;
+            }
+        }
+
+        .button {
+            margin-top: 1rem;
+            padding: 12px 30px;
+            font-weight: $sharp-weight-semi-bold;
+
+            &.autowidth {
+                width: auto;
+            }
+        }
+    }
+}
+
+/* BUTTONS ====== */
+.isPrelogin {
+    .button {
+        width: 100%;
+        padding: 10px;
+        font-weight: $sharp-weight-semi-bold;
+        border-radius: $border-radius;
+        font-size: 1.1em;
+
+        &.multi {
+            width: calc(50% - 0.5rem);
+            display: inline-block;
+            //float: left;
+        }
+    }
+}
+
+/* FOOTER ====== */
+
+.isPrelogin {
+    #footer {
+        margin-top: 0px !important;
+        color: $dk-gray;
+        //font-size: 1.3em;
+        a {
+            color: $dk-gray;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .mainStyle .links, .sidebarStyle .copyright {
+            a {
+                opacity: 0.7;
+
+                &:hover {
+                    text-decoration: none;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .mainStyle {
+            width: 100%;
+            vertical-align: top;
+
+            .links {
+                vertical-align: top;
+            }
+        }
+
+        .sidebarStyle {
+            width: 100%;
+            padding-top: 0rem;
+            margin-top: -1rem;
+            vertical-align: top;
+
+            .copyright {
+                text-align: right;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+/* MOBILE
+   ========================================================================== */
+
+.mobile {
+    body.isPrelogin::before {
+        content: none;
+    }
+
+    .isPrelogin {
+        .button.multi {
+            margin-right: 0.5rem;
+        }
+
+        .logo {
+            display: block;
+            height: 5rem;
+            background-size: contain;
+        }
+
+        #main {
+            padding: 1.5rem;
+
+            .title {
+                h1 {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+/* PAY AS A GUEST FORM
+   ========================================================================== */
+
+/* LOOK UP YOUR ACCOUNT ====== */
+#PaymentEntry {
+    #divGuarLookup {
+        #divEnterDOB {
+            #SecondAuth-Label-2 {
+                line-height: 1.25rem;
+                border-right: $form-field-border;
+            }
+
+            .segment2, .segment4 {
+                width: 31.5%;
+            }
+        }
+    }
+}
+
+/* VERIFIED GUARANTOR INFORMATION ====== */
+.isPrelogin {
+    #PaymentEntry {
+        #divVerifiedInfo {
+
+            &.formsection.column_4 .formcolumn {
+                width: 33%;
+            }
+
+            #txtGuarId, #txtSecondAuth {
+                font-weight: $sharp-weight-semi-bold;
+            }
+
+            .VerifyButton {
+                font-weight: $sharp-weight-semi-bold;
+            }
+
+            #divQuickPayVerified {
+                margin-top: 0rem;
+                text-align: right;
+            }
+        }
+    }
+}
+
+/* MOBILE PAY AS GUEST FORM
+   ========================================================================== */
+.mobile {
+    .isPrelogin {
+        #PaymentEntry {
+            .formsection.halfwidth input,
+            input[type='text'],
+            input[type='password'],
+            input[type='email'],
+            input[type='tel'],
+            textarea {
+                min-width: 0px;
+            }
+
+            #dobFormSection {
+                float: left;
+            }
+
+            h2 {
+                background-color: transparent;
+            }
+
+            #divEnterDOB {
+                .segment2, .segment4 {
+                    input {
+                        margin-top: 0rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        .isPrelogin {
+            #PaymentEntry {
+                #divGuarLookup {
+                    .PaymentEntryField  > input, #dobFormSection {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* MOBILE FORMS
+   ========================================================================== */
+
+@media screen and (max-width: 599px) {
+    .mobile {
+        .isPrelogin {
+            .button.multi {
+                margin-right: 0rem;
+                width: 100%;
+            }
+
+            select, input, textarea {
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+/* OPEN SCHEDULE
+   ========================================================================== */
+
+.md_openscheduling_index {
+    #main.withSidebar {
+        width: 100%
+    }
+
+    #wrap {
+        position: relative;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}
+
+body.md_openscheduling_index #wrap {
+    min-width: auto;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+@media (max-width: 1440px) and (min-width:1280px) {
+    body.md_openscheduling_index #wrap {
+        margin: auto;
+    }
+}
+
+@media (max-width: 1520px) and (min-width:1280px) {
+    body.md_openscheduling_index #wrap {
+        margin: auto;
+        width: auto;
+    }
+}
+
+@media (max-width: 1728px) and (min-width:1280px) {
+    body.md_openscheduling_index #wrap {
+        margin: auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    body.md_openscheduling_index #wrap {
+        left: auto;
+        margin: auto;
+    }
+}
+
+/* Almost Done Popup ====== */
+
+.md_openscheduling_index {
+    .login .recovery {
+        text-align: left;
+        padding-left: 5px;
+
+        a {
+            width: auto;
+        }
+    }
+}

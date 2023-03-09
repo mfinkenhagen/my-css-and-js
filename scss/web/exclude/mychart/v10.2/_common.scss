@@ -1,0 +1,746 @@
+﻿@import "_variables_mychart.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+
+$dt-font: 'Montserrat';
+
+/* STYLES COMMON TO LOGGED OUT AND LOGGED IN UI
+   ========================================================================== */
+html {
+    font-family: $font-family;
+    font-size: $font-size-regular;
+    background-repeat: no-repeat;
+}
+
+:focus {
+    outline: none !important;
+}
+
+a {
+    &:focus, &:hover {
+        text-decoration: none;
+    }
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+body {
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    overflow-y: auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, #sidebar .titlebar, #sidebar > h2, .heading, legend, .header {
+    font-family: $dt-font;
+    font-weight: $sharp-weight-semi-bold !important;
+}
+
+.h1, h1, .isPrelogin #main .title h1 {
+    font-size: 20px;
+
+    @media screen and (min-width: $breakpoint-mobile) {
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 32px;
+    }
+}
+
+h1.header,
+.header.large,
+h1._heading {
+    font-family: $sharp-sans;
+    font-weight: $sharp-weight-semi-bold;
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 1.4;
+
+    @media screen and (min-width: $grid-breakpoint-sm) {
+        font-size: 30px;
+        letter-spacing: -0.5px;
+        line-height: 1.4;
+    }
+
+    @media screen and (min-width: $grid-breakpoint-lg) {
+        font-size: 44px;
+        letter-spacing: -1.5px;
+        line-height: 1.2;
+    }
+
+    .subjectIndicator {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: $sharp-weight-bold;
+        letter-spacing: 0px;
+        line-height: 1.4;
+        vertical-align: bottom;
+
+        @media screen and (min-width: $grid-breakpoint-sm) {
+            padding-bottom: 2px;
+        }
+
+        &:not(:empty) {
+            &::before {
+                content: 'for ';
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: $color-primary-b2;
+                clip-path: polygon(0 0, 100% 0%, calc(100% - 3px) 100%, 0% 100%);
+            }
+        }
+    }
+}
+
+#calendar table,
+ul.MessageList,
+.HPcell.component > .content,
+.component.pocdefault > a.viewmore {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* BUTTONS ====== */
+button {
+    -webkit-appearance: none;
+    font-size: 100%;
+    font-family: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.button,
+.button.subtle,
+.button.nextstep,
+.button.previousstep,
+.button.nextpage,
+.button.previouspage,
+.button.nextworkflow,
+.button.previousworkflow,
+.button.cancelworkflow,
+.button.completeworkflow,
+.button.cancel,
+.button.continuelater,
+.button.inlinesave,
+.button.inlinedelete,
+.button.inlineedit,
+.button[data-type=workflow],
+.button.nextstep.subtle,
+.button.previousstep.subtle,
+.button.nextpage.subtle,
+.button.previouspage.subtle,
+.button.nextworkflow.subtle,
+.button.previousworkflow.subtle,
+.button.cancelworkflow.subtle,
+.button.completeworkflow.subtle,
+.button.cancel.subtle,
+.button.continuelater.subtle,
+.button.inlinesave.subtle,
+.button.inlinedelete.subtle,
+.button.inlineedit.subtle,
+.button[data-type=workflow].subtle,
+.apptoffer a.button,
+#main .back .button {
+    font-weight: $sharp-weight-semi-bold;
+    @include default-button-style;
+}
+
+/* 2020 Remove Button - Health Summary Items */
+.medbottom .buttonList .button.inlinesave,
+.medbottom .buttonList .button.inlinedelete,
+.pendingUpdatesSection .buttonList .button.inlinesave,
+.pendingUpdatesSection .buttonList .button.inlinedelete {
+    color: $default-button-label-color;
+    border: none !important;
+}
+
+/* DISABLED BUTTONS */
+.button[disabled]:not(.omitdisablestyling)[class],
+.button[disabled]:not(.omitdisablestyling)[class]:focus,
+.button[disabled]:not(.omitdisablestyling)[class]:hover,
+.button[disabled]:not(.omitdisablestyling)[class]:active,
+.button.disabled[class],
+.button.disabled[class]:focus,
+.button.disabled[class]:hover,
+.button.disabled[class]:active {
+    background-color: $disabled-button-bg-color;
+    border: $disabled-button-border;
+    color: $disabled-button-label-color;
+}
+
+.buttoncheck.button.disabled {
+    opacity: 1;
+    border: none;
+}
+
+/* PRIMARY BUTTON */
+.button.primary {
+    &.negative {
+        @include default-button-style--negative;
+    }
+
+    &.neutral {
+        @include default-button-style;
+    }
+
+    &.positive {
+        @include default-button-style--positive;
+    }
+}
+
+/* SECONDARY BUTTON */
+.button.secondary {
+    &.negative {
+        @include default-button-style--negative;
+    }
+
+    &.neutral,
+    &.positive {
+        @include default-button-style;
+    }
+}
+
+/* TERTIARY BUTTON */
+.button.tertiary {
+    background-color: transparent;
+    border: none;
+
+    &.negative {
+        color: $default-button-bg-color__neg;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $default-button-bg-color__neg--hover;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    &.neutral,
+    &.positive {
+        color: $default-button-label-color;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $default-button-bg-color--hover;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+}
+
+/* MULTISTEP BUTTONS */
+.formbuttons.multiStep {
+    .button:not(.hidden):not([disabled]):not(.disabled):first-child {
+        @include default-button-style--positive;
+
+        &.nextstep,
+        &.completeworkflow,
+        &.inlinesave,
+        &.positive {
+            @include default-button-style--positive;
+        }
+
+        &.cancelworkflow,
+        &.inlinedelete,
+        &.negative {
+            @include default-button-style--negative;
+        }
+    }
+
+    .button:not(.hidden):not([style*="display: none"]) ~ .button:not(.hidden):not([disabled]):not(.disabled) {
+        @include default-button-style;
+
+        &.nextstep,
+        &.completeworkflow,
+        &.inlinesave,
+        &.positive {
+            @include default-button-style;
+        }
+
+        &.cancelworkflow,
+        &.inlinedelete,
+        &.negative {
+            @include default-button-style--negative;
+        }
+    }
+}
+
+p.buttoncheck:hover input.buttoncheck:not(:disabled) + label.buttoncheck,
+p.buttoncheck input.buttoncheck:not(:disabled):focus + label.buttoncheck {
+    text-decoration: none;
+}
+
+#main {
+    .title {
+        height: auto;
+        display: flex;
+
+        h1 {
+            padding: $spacing-size-none $spacing-size-none $spacing-size-xsmall $spacing-size-none;
+        }
+
+        .headerlink {
+            width: auto;
+
+            .button {
+                font-weight: $sharp-weight-semi-bold;
+                padding: $button-auto-padding;
+                margin-top: 7px;
+            }
+        }
+    }
+
+    .back {
+        .button {
+            padding: $button-auto-padding;
+        }
+    }
+}
+
+#evisitaccept.button.nextstep {
+    margin-left: 91px;
+}
+
+/* FORM GROUP BUTTONS ====== */
+.formbuttons {
+    &:not(.multiStep) {
+        flex-wrap: wrap;
+    }
+
+    &.multiStep {
+        @media screen and (max-width: $breakpoint-mobile) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+/* FORM ====== */
+input,
+select,
+textarea {
+    font-family: $font-family;
+    font-size: 1.05rem;
+    padding: 0.25rem 0.5rem;
+}
+
+input[type='text'],
+select,
+textarea {
+    min-height: $form-field-min-height;
+    border: $form-field-border;
+
+    &:focus {
+        border: $form-field-border-active;
+    }
+}
+
+select {
+    color: $form-field-text;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../images/down_chevron_blue.svg);
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    cursor: pointer;
+}
+
+/* GHOST INPUT */
+.ghostInput {
+    label {
+        position: relative;
+    }
+}
+
+.ghostInput label.required {
+    background: url(../images/required_asterisk.png) no-repeat transparent;
+    background-size: 8px;
+    background-position: 0% 30%;
+    padding-left: 10px;
+
+    + input,
+    + textarea {
+        background-image: none;
+    }
+
+    + select {
+        background-image: url(../images/down_chevron_blue.svg);
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 14px;
+    }
+}
+
+.ghostInput.ghosted label,
+.section .content .ghostInput.ghosted label {
+    margin-left: calc(0.5rem + 1px);
+
+    &.required {
+        margin-left: 0.5rem;
+        padding-left: 10px;
+    }
+}
+
+.ghostInput.ghosted input,
+.ghostInput.ghosted span.readOnlyInput,
+.ghostInput.ghosted select,
+.ghostInput.ghosted textarea {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* PRETTYCHECK */
+input.prettycheck + label:before,
+input[type='checkbox'] + label:before {
+    margin: 2px 9px -2px 0px;
+    -webkit-appearance: none !important;
+    width: $form-checkbox-dimensions;
+    height: $form-checkbox-dimensions;
+    border: 2px solid $md-navy !important;
+    color: $white;
+    background-color: $white;
+    display: inline-block;
+    vertical-align: top;
+    border: 0px;
+    box-shadow: none;
+}
+
+input.prettycheck:checked + label::before,
+input.buttoncheck:checked + label.buttoncheck::before,
+input.prettycheck:checked + label:before,
+input.buttoncheck:checked + label.buttoncheck:before {
+    border: 2px solid $md-navy;
+    background-color: $md-navy;
+}
+
+input.chkbx[type='checkbox']:checked {
+    opacity: 0;
+    position: absolute;
+}
+
+input.chkbx[type="checkbox"]:checked + label {
+    &:before {
+        content: '';
+        color: $white;
+        display: inline-block;
+        vertical-align: top;
+        line-height: .9em;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIYEjQPAcoESgAAAKVJREFUSMft1rENgzAQQFGKbAAsEUoaZxyycYCKDWhQFoCfIk4Tgm2k8yEF//70Gp91WZZKCQRcjkBL4AHctdGOd7MK/oWigm+gnyag0EafwC2hx6J7l10KbYAWKLXR2Q71PjwGig+XQnO71L9a4aKvFzB2yIlbtBddmQD8Ko4G4osDNRKfgQuPg+7EZdFAPA7qweOiG/gI1Jq3kwEGoDrHifpXvQANql+AlGeZnQAAAABJRU5ErkJggg==") $md-navy;
+        background-size: ($form-checkbox-dimensions - 2px) ($form-checkbox-dimensions - 2px);
+        background-repeat: no-repeat;
+        height: $form-checkbox-dimensions;
+        width: $form-checkbox-dimensions;
+        border-radius: 2px;
+    }
+}
+
+input[type='checkbox'],
+input.buttoncheck + label.buttoncheck:before {
+    margin: 4px 6px -2px 0px;
+    -webkit-appearance: none !important;
+    width: $form-checkbox-dimensions;
+    height: $form-checkbox-dimensions;
+    border-radius: 2px !important;
+    color: $md-navy;
+    background-color: $white;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid $md-navy;
+    box-shadow: none;
+}
+
+input.buttoncheck:checked + label.buttoncheck:before {
+    background-size: ($form-checkbox-dimensions - 2px) ($form-checkbox-dimensions - 2px);
+}
+
+input[type='checkbox']:checked,
+input.buttoncheck[type="checkbox"]:checked:before,
+input.radio[type="checkbox"]:checked {
+    content: '';
+    color: $white;
+    background-color: $md-navy;
+    border: 2px solid $md-navy;
+    display: inline-block;
+    vertical-align: top;
+    line-height: .9em;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIYEjQPAcoESgAAAKVJREFUSMft1rENgzAQQFGKbAAsEUoaZxyycYCKDWhQFoCfIk4Tgm2k8yEF//70Gp91WZZKCQRcjkBL4AHctdGOd7MK/oWigm+gnyag0EafwC2hx6J7l10KbYAWKLXR2Q71PjwGig+XQnO71L9a4aKvFzB2yIlbtBddmQD8Ko4G4osDNRKfgQuPg+7EZdFAPA7qweOiG/gI1Jq3kwEGoDrHifpXvQANql+AlGeZnQAAAABJRU5ErkJggg==");
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    height: $form-checkbox-dimensions;
+    width: $form-checkbox-dimensions;
+}
+
+@supports (-ms-ime-align: auto) {
+    input.radio[type="checkbox"]:checked:before {
+        -webkit-appearance: checkbox;
+    }
+}
+
+input.flatradio:checked + label:before {
+    background-color: $md-navy;
+    border-color: $md-navy;
+}
+
+p.flatradio.container.selected {
+    background-color: $lt-teal-hover;
+}
+
+/* CHECKBOX BUTTONS ====== */
+label.togglebutton[for] {
+    box-shadow: none;
+    background-color: $default-button-bg-color;
+    color: $default-button-label-color;
+    border: $default-button-border;
+    border-radius: $border-radius;
+    font-weight: $sharp-weight-semi-black;
+}
+
+input:focus + label.togglebutton[for],
+input + label.togglebutton[for]:hover {
+    box-shadow: none;
+    text-decoration: none;
+    color: $default-button-label-color--hover;
+    background-color: $default-button-bg-color--hover;
+}
+
+input:checked + label.togglebutton[for],
+input:checked + label.togglebutton[for]:hover,
+input:checked:focus + label.togglebutton[for],
+input.buttoncheck:checked + label.buttoncheck {
+    color: $selected-toggle-label-color;
+    background-color: $selected-bg-color;
+    box-shadow: $selected-shadow;
+    border: $selected-toggle-border;
+}
+
+input:focus + label.togglebutton[for],
+input + label.togglebutton[for]:hover,
+input:checked + label.togglebutton[for]:hover,
+input:checked:focus + label.togglebutton[for] {
+    text-decoration: none;
+}
+
+input:checked + label.togglebutton[for],
+input.buttoncheck:checked + label.buttoncheck {
+    top: 0px;
+}
+
+.buttoncheck {
+    background: transparent none repeat scroll 0 0;
+
+    &:focus, &:hover {
+        background: transparent none repeat scroll 0 0;
+    }
+}
+
+.card {
+    label.togglebutton[for],
+    input.buttoncheck + label.buttoncheck {
+        color: $dk-gray;
+
+        &:before {
+            background-color: $white;
+            outline: none;
+        }
+    }
+
+    input.togglebutton.clearradio + label.togglebutton[for] {
+        background-color: $white;
+        color: $md-navy;
+        border: 1px solid $md-navy;
+
+        &:hover {
+            background-color: $md-navy;
+            color: $white;
+        }
+    }
+
+    label.buttoncheck[for]:hover,
+    label.togglebutton[for]:hover,
+    input:focus + label.buttoncheck,
+    input:focus + label.togglebutton[for] {
+        color: $dk-gray;
+    }
+
+    input.togglebutton.clearradio + label.togglebutton[for]:hover {
+        color: $white;
+    }
+
+    input.togglebutton.clearradio:checked + label.togglebutton[for] {
+        color: $dk-gray;
+        background-color: $selected-bg-color;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 2px 1px rgba(0, 0, 0, 0.13);
+        border: none;
+    }
+
+    input:checked + label.togglebutton[for],
+    input.buttoncheck:checked + label.buttoncheck {
+
+        &:before {
+            background-color: $md-navy;
+        }
+    }
+}
+
+input.buttoncheck + label.buttoncheck {
+    box-shadow: none;
+    color: $md-navy;
+    font-weight: normal;
+}
+
+p.buttoncheck {
+    border: none;
+}
+
+input.tiny, .formcontents input.tiny {
+    width: 4rem;
+}
+
+#timeselection {
+    .formsection fieldset legend, .formcolumn .label {
+        margin-bottom: calc($form-field-margin / 2);
+    }
+}
+
+/* ALERTS ====== */
+.helptext {
+    font-size: 1em;
+    font-weight: $sharp-weight-semi-bold;
+
+    li {
+        line-height: 1.5rem;
+    }
+}
+
+.formsection .alert:not(:empty):before {
+    margin: 0 0.5rem 0 0;
+    border-color: transparent transparent transparent $alert;
+}
+
+.ErrorBanner {
+
+    .button.autowidth {
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* STANDARD BANNER ====== */
+.standardBanner.successType {
+    background-color: $system-green;
+}
+
+/* MOBILE STYLES COMMON TO LOGGED OUT AND LOGGED IN UI
+========================================================================== */
+html.mobile {
+    font-family: $font-family !important;
+    font-size: $font-size-regular-mobile;
+    background-repeat: no-repeat;
+
+    select, input, textarea {
+        font-family: $font-family !important;
+    }
+}
+
+/* FORMS ====== */
+.mobile {
+    select {
+        min-height: $form-field-min-height;
+    }
+
+    .md_histques .section .flexboxLayout > .tbContainer {
+        min-width: calc(50% - 0.2rem);
+    }
+
+    input[type="radio"] {
+        -webkit-appearance: radio;
+        -moz-appearance: radio;
+    }
+}
+
+/* BUTTONS ====== */
+.mobile {
+    label.togglebutton[for],
+    input.buttoncheck + label.buttoncheck {
+        box-shadow: none;
+    }
+
+    input[type='checkbox'],
+    input.buttoncheck + label.buttoncheck:before {
+        margin-top: 2px;
+    }
+
+    .button:not(.buttoncheck) {
+        border-radius: 0px;
+    }
+
+    #statementDateSelection {
+        .button:not(.buttoncheck) {
+            width: auto;
+        }
+    }
+}
+
+/* STEPS ====== */
+
+.mobile {
+    p#steptext {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+/* MEDICAL ADVICE FORM ====== */
+.mobile {
+    #medadviceform {
+        p.button.buttoncheck {
+            margin-top: 0.25rem;
+        }
+
+        .uploader .uploaderbutton {
+            width: 100%;
+        }
+    }
+}
+
+/* MESSAGE REPLY FORM ====== */
+.mobile {
+    #MessageForm {
+        .uploader .uploaderbutton {
+            width: 100%;
+        }
+    }
+}
+
+/* BUTTON LIST ====== */
+.mobile {
+    ul.bcList li.bcItem {
+        width: 100%;
+        margin-bottom: 0.25rem;
+
+        > p.buttoncheck {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        ul.bcList li.bcItem {
+            width: auto;
+        }
+    }
+}

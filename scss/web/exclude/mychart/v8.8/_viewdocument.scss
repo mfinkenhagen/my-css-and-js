@@ -1,0 +1,37 @@
+﻿@import "_new_variables.scss";
+
+/* VIEW DOCUMENTS WIDGET
+   ========================================================================== */
+
+#viewdocumentwidget .document:hover {
+    background-color: $hover-tile !important;
+}
+
+
+/* MOBILE VIEW DOCUMENTS WIDGET
+   ========================================================================== */
+
+.mobile {
+    #viewdocumentwidget {
+        .component[data-component='viewdocuments'] {
+            height: auto !important;
+        } 
+        
+        .documenttable .documents .document {
+            width: 100%;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        #viewdocumentwidget {
+            .documenttable .documents .document {
+                display: table-cell;
+                width: 50%;
+                position: relative;
+            }
+        }
+    }
+}

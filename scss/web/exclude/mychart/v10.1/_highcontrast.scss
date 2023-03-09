@@ -1,0 +1,508 @@
+﻿@import "_variables_mychart.scss";
+
+/* HIGH CONTRAST
+   ========================================================================== */
+
+html[data-altstylesheet="High Contrast"] {
+    color: $hc-font-color-regular;
+
+    #sidebar,
+    #sidebar .subtle,
+    #sidebar .subtlecolor,
+    #header .menugroup a:not(.button),
+    .subtle:not(.killSwitchOn),
+    .subtlecolor,
+    body.isInside #footer,
+    body.isInside #footer a,
+    .datatile #wrap > .copyright a,
+    .list.hoverable:not(.collapsible) a:not(.button),
+    .list.hoverable:not(.collapsible) a:not(.button):focus,
+    .list.hoverable:not(.collapsible) a:not(.button):hover,
+    .list.hoverable.collapsible a.collapsed:focus,
+    .list.hoverable.collapsible a.collapsed:hover,
+    .list.hoverable.collapsible li.collapsed:focus a,
+    .list.hoverable.collapsible li.collapsed:hover a,
+    .list.hoverable.collapsible li.collapsed a:focus,
+    .list.hoverable.collapsible li.collapsed a:hover,
+    .md_caredecision_index .documenttable .documents .document .docinfo,
+    .md_caredecision_index #divHCAs .divHCATitle p,
+    .md_premiumbilling_index span.premium-bill-balance-label,
+    .md_premiumbilling_index span.premium-bill-summary-details,
+    .md_premiumbilling_index span.premium-bill-payment-date,
+    .md_premiumbilling_payments tr.uncommitted-payment,
+    body.md_visitdetails_index div.waitlist span.waitlistpretext,
+    body.md_visitdetails_index div.visitinstructionsheader,
+    body.md_visitdetails_index div.departmentaddress,
+    body.md_visitdetails_index div.departmentphone,
+    body .component.Popup.notificationreview .footer,
+    label,
+    .label,
+    .inlinelabel,
+    .formsection fieldset legend,
+    .button.buttoncheck label,
+    .openingsContainer .filterControls .filterFrame {
+        color: $hc-font-color-regular;
+    }
+}
+
+html[data-altstylesheet="High Contrast"] #main,
+html[data-altstylesheet="High Contrast"] .BeforeList input.SearchList {
+    background: $hover-tile;
+}
+
+html[data-altstylesheet="High Contrast"] #sidebar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+html[data-altstylesheet="High Contrast"] {
+    #content[style*="min-height"] + #footer {
+        a {
+            opacity: 1;
+        }
+    }
+}
+
+/* HOVER LIST ====== */
+html[data-altstylesheet="High Contrast"] {
+    table tr.hover, 
+    table tr td.selected, 
+    table.hoverable tr:hover, 
+    .section .content .hover:not(.button), 
+    .list.hoverable:not(.collapsible) a:not(.button):focus, 
+    .list.hoverable:not(.collapsible) a:not(.button):hover, 
+    .list.hoverable:not(.collapsible) li:focus, 
+    .list.hoverable:not(.collapsible) li:hover, 
+    .list.hoverable.collapsible a.collapsed:focus, 
+    .list.hoverable.collapsible a.collapsed:hover, 
+    .list.hoverable.collapsible li.collapsed:focus, 
+    .list.hoverable.collapsible li.collapsed:focus a, 
+    .list.hoverable.collapsible li.collapsed:hover, 
+    .list.hoverable.collapsible li.collapsed:hover a, 
+    .list.hoverable.collapsible li.collapsed a:focus, 
+    .list.hoverable.collapsible li.collapsed a:hover, 
+    .MessageList .SingleMessage.collapsed .inlinedelete:focus, 
+    .SingleIndicator.collapsed.hover {
+        background-color: $hc-hover-link;
+    }
+
+    #sidebar {
+        table tr.hover, 
+        table tr td.selected, 
+        table.hoverable tr:hover, 
+        .section .content .hover:not(.button), 
+        .list.hoverable:not(.collapsible) a:not(.button):focus, 
+        .list.hoverable:not(.collapsible) a:not(.button):hover, 
+        .list.hoverable:not(.collapsible) li:focus, 
+        .list.hoverable:not(.collapsible) li:hover, 
+        .list.hoverable.collapsible a.collapsed:focus, 
+        .list.hoverable.collapsible a.collapsed:hover, 
+        .list.hoverable.collapsible li.collapsed:focus, 
+        .list.hoverable.collapsible li.collapsed:focus a, 
+        .list.hoverable.collapsible li.collapsed:hover, 
+        .list.hoverable.collapsible li.collapsed:hover a, 
+        .list.hoverable.collapsible li.collapsed a:focus, 
+        .list.hoverable.collapsible li.collapsed a:hover, 
+        .MessageList .SingleMessage.collapsed .inlinedelete:focus, 
+        .SingleIndicator.collapsed.hover {
+            background-color: $hover-tile;
+        }
+    }
+
+    .loginalert {
+        border: $hc-card-border;
+    }
+}
+
+/* CONDITIONS WIDGET ====== */
+html[data-altstylesheet="High Contrast"] {
+    .component .ToDolist.pocdefault ul li.todolistelement,
+    .component .ToDolist.pocdefault ul li.todolistelement.overdueslistelement {
+        border: $hc-card-border;
+
+        &:hover {
+            background-color: $hc-hover-link;
+        }
+    }
+
+    .component.pocdefault ul li.listelement:hover {
+        background-color: $hc-hover-link;
+    }
+
+    .component.pocdefault ul li.listelement.goalslistelement {
+        border: $hc-card-border;
+    }
+
+    .ToDoEvents .multiMonthCalendar.component {
+        border: $hc-card-border;
+    }
+}
+
+/* TEST RESULTS ====== */
+html[data-altstylesheet="High Contrast"] {
+    .BeforeTestResultsList input.SearchList {
+        border: $hc-card-border;
+    }
+}
+
+/* CLINICAL ====== */
+html[data-altstylesheet="High Contrast"] {
+    div.medbottom {
+        background-color: $border-grey;
+    }
+}
+
+/* MESSAGING ====== */
+html[data-altstylesheet="High Contrast"] {
+    ul.MessageList > li.SingleMessage {
+        border: $hc-card-border;
+    }
+}
+
+/* CALENDAR ====== */
+html[data-altstylesheet="High Contrast"] {
+    #calendar table, ul.MessageList, .HPcell.component > .content, .component.pocdefault > a.viewmore {
+        border: $hc-card-border;
+    }
+}
+
+/* CARD
+   ========================================================================== */
+
+html[data-altstylesheet="High Contrast"] {
+    .card:not(.SingleResult):not(.seriessel) {
+        border: $hc-card-border;
+    }
+}
+
+/* SELECTABLE CARDS  ====== */
+html[data-altstylesheet="High Contrast"] {
+    /* Selected State: Billing CC, etc. */
+    .cardlist.selectable,
+    .cardlist.selectable.multiselect,
+    .cardlist.selectable.autoadvance {
+        .card.selected {
+            background-color: $selected-bg-color;
+            border: $selected-toggle-border;
+            box-shadow: $selected-shadow;
+
+            &:before {
+                background-color: $selected-toggle-label-color;
+                background-image: url(../images/checkmark_white.svg);
+                background-repeat: no-repeat;
+                background-size: 12px;
+                border-radius: 100%;
+                height: 20px;
+                width: 20px;
+                right: 5px;
+                top: 5px;
+            }
+        }
+
+        &.selectionMade .card:hover,
+        &.selectionMade .card:focus,
+        &.selectionMade .card.selected {
+            box-shadow: $selected-shadow !important;
+        }
+    }
+
+    .cardlist.selectable.autoadvance .card {
+        &:not(.selected):before {
+            background: none;
+        }
+
+        &.selected:before {
+            display: block;
+            padding-right: 0rem;
+        }
+    }
+    /* Hover and click states*/
+    .cardlist.selectable,
+    .cardlist.selectable.multiselect {
+        .card {
+            &.hover {
+                background-color: $selected-bg-color
+            }
+
+            &.hover:not(.button) {
+                background-color: $selected-bg-color;
+            }
+
+            &.clickable {
+                &.hover {
+                    background-color: $selected-bg-color;
+                }
+            }
+        }
+
+        a.card:not(.button):hover {
+            background-color: $common-bg;
+        }
+
+        a.card.addItem:not(.button):hover {
+            background-color: $common-bg;
+
+            span {
+                color: $white;
+            }
+        }
+    }
+}
+
+/* CHECKBOX BUTTONS ====== */
+html[data-altstylesheet="High Contrast"] {
+    label.togglebutton[for] {
+        box-shadow: none;
+        background-color: $white;
+        color: $hc-button-default;
+        border: $default-border-style $hc-button-default;
+        border-radius: $border-radius;
+        font-weight: $sharp-weight-semi-black;
+    }
+
+    input:focus + label.togglebutton[for],
+    input + label.togglebutton[for]:hover {
+        box-shadow: none;
+        text-decoration: none;
+        color: $white;
+        background-color: $hc-button-default-hover;
+        border: $default-border-style $hc-button-default-hover;
+    }
+
+    input:checked + label.togglebutton[for],
+    input:checked + label.togglebutton[for]:hover,
+    input:checked:focus + label.togglebutton[for],
+    input.buttoncheck:checked + label.buttoncheck {
+        color: $selected-toggle-label-color;
+        background-color: $selected-bg-color;
+        box-shadow: $selected-shadow;
+        border: $selected-toggle-border;
+    }
+}
+
+/* HC BUTTONS ====== */
+html[data-altstylesheet="High Contrast"] {
+    .button,
+    .button.subtle,
+    .button.nextstep,
+    .button.previousstep,
+    .button.nextpage,
+    .button.previouspage,
+    .button.nextworkflow,
+    .button.previousworkflow,
+    .button.cancelworkflow,
+    .button.completeworkflow,
+    .button.cancel,
+    .button.continuelater,
+    .button.inlinesave,
+    .button.inlinedelete,
+    .button.inlineedit,
+    .button[data-type=workflow],
+    .button.nextstep.subtle,
+    .button.previousstep.subtle,
+    .button.nextpage.subtle,
+    .button.previouspage.subtle,
+    .button.nextworkflow.subtle,
+    .button.previousworkflow.subtle,
+    .button.cancelworkflow.subtle,
+    .button.completeworkflow.subtle,
+    .button.cancel.subtle,
+    .button.continuelater.subtle,
+    .button.inlinesave.subtle,
+    .button.inlinedelete.subtle,
+    .button.inlineedit.subtle,
+    .button[data-type=workflow].subtle,
+    .apptoffer a.button,
+    #main .back .button {
+        font-weight: $sharp-weight-semi-bold;
+        @include default-highcontrast-button-style;
+    }
+    /* DISABLED BUTTONS */
+    .button[disabled]:not(.omitdisablestyling)[class],
+    .button[disabled]:not(.omitdisablestyling)[class]:focus,
+    .button[disabled]:not(.omitdisablestyling)[class]:hover,
+    .button[disabled]:not(.omitdisablestyling)[class]:active,
+    .button.disabled[class],
+    .button.disabled[class]:focus,
+    .button.disabled[class]:hover,
+    .button.disabled[class]:active {
+        background-color: $disabled-button-bg-color;
+        border: $disabled-button-border;
+        color: $disabled-button-label-color;
+    }
+
+    .buttoncheck.button.disabled {
+        opacity: 1;
+        border: none;
+    }
+    /* PRIMARY BUTTON */
+    .button.primary {
+        &.negative {
+            @include default-highcontrast-button-style--negative;
+        }
+
+        &.neutral {
+            @include default-highcontrast-button-style;
+        }
+
+        &.positive {
+            @include default-highcontrast-button-style--positive;
+        }
+    }
+    /* SECONDARY BUTTON */
+    .button.secondary {
+        &.negative {
+            @include default-highcontrast-button-style--negative;
+        }
+
+        &.neutral,
+        &.positive {
+            @include default-highcontrast-button-style;
+        }
+    }
+    /* TERTIARY BUTTON */
+    .button.tertiary {
+        background-color: transparent;
+        border: none;
+
+        &.negative {
+            color: $default-button-bg-color__neg;
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $default-button-bg-color__neg--hover;
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+
+        &.neutral,
+        &.positive {
+            color: $hc-button-default;
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $hc-button-default-hover;
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+    }
+    /* MULTISTEP BUTTONS */
+    .formbuttons.multiStep {
+        .button:not(.hidden):not([disabled]):not(.disabled):first-child {
+            @include default-highcontrast-button-style--positive;
+
+            &.nextstep,
+            &.completeworkflow,
+            &.inlinesave,
+            &.positive {
+                @include default-highcontrast-button-style--positive;
+            }
+
+            &.cancelworkflow,
+            &.inlinedelete,
+            &.negative {
+                @include default-highcontrast-button-style--negative;
+            }
+        }
+
+        .button:not(.hidden):not([style*="display: none"]) ~ .button:not(.hidden):not([disabled]):not(.disabled) {
+            @include default-highcontrast-button-style;
+
+            &.nextstep,
+            &.completeworkflow,
+            &.inlinesave,
+            &.positive {
+                @include default-highcontrast-button-style;
+            }
+
+            &.cancelworkflow,
+            &.inlinedelete,
+            &.negative {
+                @include default-highcontrast-button-style--negative;
+            }
+        }
+    }
+
+    .subwayNavButtons .formbuttons.multiStep button[type="button"].button:not(.hidden):not([style*="display: none"]) {
+        width: 49%;
+    }
+    /* TIME SLOTS */
+    #scheduling-workflow a.slot:not(:hover):not(:focus),
+    #selftriage-triage-workflow a.slot:not(:hover):not(:focus),
+    #onmyway-workflow .slot:not(:hover):not(:focus),
+    .openingsData .slotslist .slotdetailaction:not(:hover):not(:focus) {
+        color: $white;
+        background-color: $hc-button-default;
+    }
+
+    .slot.selected,
+    .slotgroup.preview .slot,
+    .slotdetailaction.selected,
+    html:not(.mobile) .slot:hover,
+    html:not(.mobile) .slot:focus,
+    html:not(.mobile) .slotdetailaction:hover,
+    html:not(.mobile) .slotdetailaction:focus {
+        background: $hc-button-default-hover !important;
+    }
+
+    .solutionpreview {
+        border-top-color: $hc-button-default-hover;
+        border-bottom-color: $hc-button-default-hover;
+    }
+}
+
+/* FIELDS =============*/
+html[data-altstylesheet="High Contrast"] {
+    form .subwayStep .Step:not(.hidden) label:not(.hidden),
+    form .subwayStep .Step:not(.hidden) input[type="text"]:not(.hidden) {
+        color: $BSWH_Navy;
+    }
+}
+
+/* ALERTS ====== */
+html[data-altstylesheet="High Contrast"] {
+    .alert, .alertHeader, .abnormal {
+        color: $hc-alert;
+    }
+
+    .helptext {
+        &.required {
+            color: $hc-alert;
+
+            &:before {
+                margin-right: 0.75rem;
+            }
+        }
+    }
+
+    .required {
+
+        &:before {
+            color: $hc-alert;
+        }
+    }
+}
+/* LOGGED OUT UI
+========================================================================== */
+/* MAIN BODY ====== */
+
+html[data-altstylesheet="High Contrast"] {
+    .isPrelogin {
+        #main {
+            h2.header {
+                color: $hc-secondary;
+            }
+        }
+
+        #footer {
+            .mainStyle .links, .sidebarStyle .copyright {
+                a {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

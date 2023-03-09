@@ -1,0 +1,163 @@
+﻿@import "../_new_variables.scss";
+
+
+/* REPORTS
+   ========================================================================== */
+
+.md_visitsummary {
+    .section .report {
+        table thead tr th {
+            background-color: transparent;
+        }
+    }
+}
+
+.section .report {
+    margin-top: 20px;
+}
+
+.rpt.Universal .mainColumn .headerAVS .headerTopRight img {
+    float: right;
+    padding-bottom: 5px;
+}
+
+.section .report .rpt.Universal {
+    .rz_1 {
+        border-bottom: none !important;
+    }
+
+    .rz_b, .rz_f {
+        border-top: none !important;
+    }
+}
+
+.rpt.Universal {
+
+    :not(.runningHeader).mainColumn .sectInstr {
+        &::after, &::before {
+            border-top: 4px solid $md-navy !important;
+        }
+    }
+
+    .mainColumn {
+        .headerAVS .docHeader {
+            h1.title {
+                color: $dk-blue !important;
+            }
+        }
+
+        .sectionHeader {
+            .title.sectionTitle {
+                color: $dk-blue !important;
+            }
+        }
+
+        .sectAppts td.calendarBox {
+
+            .calendarMonth, .calendarDay, .calendarYear {
+                color: $md-navy !important;
+            }
+        }
+
+        .sectInstr {
+
+            .sectionHeader img {
+                box-shadow: 0 0 0 3px $md-navy !important;
+            }
+
+            .sectionHeader .title.sectionTitle {
+                color: $dk-blue !important;
+            }
+
+            .sectionHeader .subtitle {
+                color: $md-navy !important;
+            }
+
+            .hlt13, .hlt14, .hlt15, .hlt16 {
+                color: $md-navy !important;
+            }
+        }
+
+        .attachmentInstr {
+
+            .sectionHeader .title.sectionTitle {
+                color: $dk-blue !important;
+            }
+
+            .hlt13, .hlt14, .hlt15, .hlt16 {
+                color: $md-navy !important;
+            }
+        }
+
+        .sectMedList {
+
+            .sectionHeader .title.sectionTitle {
+                color: $dk-blue !important;
+            }
+
+            .hlt13, .hlt14, .hlt15, .hlt16 {
+                color: $md-navy !important;
+            }
+        }
+
+        .alertBanner {
+            &.sectHlt4, &.sectHlt7 {
+                background-color: $system-orange !important;
+                font-weight: $sharp-weight-semi-bold;
+                color: $md-orange;
+
+                .title {
+                    color: $md-orange;
+                }
+
+                .hlt13, .hlt14, .hlt15, .hlt16 {
+                    color: $md-orange;
+                }
+
+                .alertContent td, .alertContent td .hlt1 {
+                    color: $md-orange !important;
+                }
+            }
+        }
+    }
+}
+
+.rpt .hlt13,
+.rpt .hlt14,
+.rpt .hlt15,
+.rpt .hlt16 {
+    color: $md-navy !important;
+}
+
+.rpt .fs14 .sectionHeader .title, 
+.rpt .fs18 .sectionHeader .title {
+    color: $dk-blue !important;
+}
+
+.rpt .fs14 .hlt13,
+.rpt .fs14 .hlt14,
+.rpt .fs14 .hlt15,
+.rpt .fs14 .hlt16,
+.rpt .fs18 .hlt13,
+.rpt .fs18 .hlt14,
+.rpt .fs18 .hlt15,
+.rpt .fs18 .hlt16 {
+    color: $dk-blue;
+}
+
+.rpt .mainColumn .pgSection > .pgContent {
+    padding-left: 0px;
+}
+
+/* MOBILE VISIT SUMMARY REPORT 
+   ========================================================================== */
+
+.mobile {
+    .section .report {
+        width: 100%;
+    }
+
+    .rpt.Universal .mainColumn .headerAVS .headerTopRight img {
+        width: 95%;
+    }
+}

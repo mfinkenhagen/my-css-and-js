@@ -1,0 +1,586 @@
+﻿@import "_new_variables.scss";
+
+/* BILLING ACCOUNT
+   ========================================================================== */
+
+#accounts, #recentpayinfo, #agingtable, #transactiontable2, #details, #statementdetails {
+    td {
+        line-height: 1.5rem;
+    }
+}
+
+#recentpayinfo2 {
+    tbody {
+        tr:last-child {
+            td:first-child {
+                border-bottom-left-radius: 0px;
+            }
+
+            td:last-child {
+                border-bottom-right-radius: 0px;
+            }
+        }
+    }
+}
+
+#recentpayinfo .amount.bold td {
+    background-color: $common-bg;
+}
+
+/* ACCOUNT DETAILS ====== */
+.OutstandingBalanceHeader {
+    font-size: 1.2em !important;
+    padding-bottom: 0.5rem;
+    color: $dk-teal !important;
+}
+.OutstandingBalanceValue {
+    font-size: 1.75rem;
+    color: $dk-gray;
+    font-weight: $sharp-weight-semi-bold;
+}
+
+.billingaccountnumber  {
+    font-weight: $sharp-weight-semi-bold;
+}
+
+#demographics {
+    .card {
+        .name {
+            line-height: 1.5rem;
+        }
+
+        > .label {
+            color: $dk-teal;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+.header.accountsGrouperPatient, .header.accountsGrouperPaymentPlan  {
+    padding-left: 0px;
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+#details {
+    tr:not(.tableRowMessage) {
+        background-color: $white;
+    }
+
+    tfoot tr.amount td, th.amount, td.amount {
+        text-align: left !important;
+        padding-left: 1rem;
+    }
+
+    .tableRowMessage {
+        td {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+    }
+
+    .OutstandingAccountsHARID {
+        padding-right: 0.5rem;
+        padding-top: 0.2rem;
+    }
+}
+
+.outstandingAccountTotal {
+    font-size: 1.1rem;
+}
+
+#recentpayinfo {
+    .amount.bold {
+        font-size: 1.1rem;
+    }
+}
+
+/* ACCOUNT PAYMENT
+   ========================================================================== */
+
+/* GENERAL PAYMENT FORM UI ====== */
+
+#PaymentEntry {
+    .guestPayWarning {
+        color: $alert;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .label, p {
+        font-size: 1.1em;
+    }
+
+    .formsection .formcolumn {
+        width: 100%;
+        margin-left: 0%;
+        margin-bottom: 1rem;
+
+        label, input, select, #CardEntry-Exp-Label, #SecondAuth-Label-2 {
+            border: $form-field-border;
+            color: $dk-gray;
+            font-size: 1.1em;
+        }
+
+        label, #CardEntry-Exp-Label, #SecondAuth-Label-2 {
+            width: 50%;
+            height: 46px;
+            float: left;
+            padding: 0.8rem;
+            opacity: 0.8;
+            border-right: 0px;
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            position: relative;
+            background-color: $white;
+
+            &.required {
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        input, select {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            padding: 0.68rem 0.8rem;
+            height: 46px;
+        }
+    }
+
+    .VerifyButton.formcolumn {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    .PaymentAmountValue {
+        font-size: 1.75rem;
+        color: $dk-gray;
+        font-weight: $sharp-weight-semi-bold;
+    }
+
+    .card {
+        &.hover:not(.button) {
+            .PaymentAmountValue {
+                color: $white;
+            }
+        }
+
+        &.selected {
+            .PaymentAmountValue {
+                color: $white;
+            }
+        }
+    }
+}
+
+/* SELECT PAYMENT BALANCE ====== */
+
+#PaymentEntry {
+    #divPmtAmount {
+        #serviceAreaExplanation, #pmtHARSelectionList {
+            font-size: 1.1em;
+        }
+
+        #pmtHARSelectionList.cardlist {
+            .card {
+                margin: 0.25rem 0%;
+            }
+        }
+
+        li.HARForPayment {
+            border-top: $card-border;
+        }
+
+        .card {
+            padding: 0.75rem;
+        }
+
+        #PaymentOtherAmountInput {
+            border: $form-field-border;
+            border-radius: $border-radius;
+            color: $dk-gray;
+        }
+
+        #paymentAmountContainer {
+            .alert {
+                color: $skyblue;
+            }
+        }
+    }
+}
+
+
+/* PAYMENT INFORMATION ====== */
+
+#PaymentEntry {
+    #divPmtMethod {
+        #CardEntry-Column1 {
+            margin-bottom: 0rem;
+        }
+
+        .CardImageAfterField {
+            display: none;
+        }
+
+        .CardEntryError {
+            margin-top: 0.5rem;
+            margin-bottom: $form-field-margin;
+        }
+
+        input.FieldInputBox {
+            padding: 0.55rem 0.8rem;
+            margin: 0.25rem 0 0;
+        }
+
+        .pmtSubSeparator {
+            font-size: 2rem;
+            top: $form-field-margin;
+            width: 4%;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ExpirationDate {
+            width: 23%;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        #AddressEntryFields input, #AddressEntryFields select {
+            width: 50%;
+        }
+
+        select.FieldInputBox {
+            margin: 0.25rem 0 0;
+            padding: 0.6rem 0.8rem;
+        }
+
+        .CardEntry-Field {
+            margin-bottom: $form-field-margin;
+        }
+
+        #CardEntry-BillingInfoDiv {
+
+            .card {
+                margin: 0.25rem 0%;
+            }
+
+            #Address_Guarantor, #Address_Manual {
+                height: 105px;
+                margin-top: $form-field-margin;
+            }
+
+            #Address_Guarantor {
+                margin-right: 0.25rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    #PaymentEntry {
+        #divPmtMethod {
+            #CardEntry-BillingInfoDiv {
+                #Address_Guarantor, #Address_Manual {
+                    width: calc(50% - 0.25rem);
+                }
+            }
+        }
+    }
+
+}
+
+
+/* VERIFY PAYMENT INFORMATION ====== */
+
+#setOfStepsContainer {
+    min-height: 250px;
+}
+
+#GuestPayVerification {
+}
+
+#verifyText {
+    font-size: 1em;
+}
+
+#verifyGuarantorNumber {
+    font-weight: $sharp-weight-semi-bold;
+}
+
+#divVerifyPmtAmt {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    font-size: 1.1em;
+    line-height: 2em;
+}
+
+#verifyBillingInfo {
+    p {
+        font-weight: $sharp-weight-semi-bold;
+    }
+}
+
+.PaymentAmountVerify {
+    color: $dk-green !important;
+}
+
+.pmtStep .paymentSummarySection {
+    margin: 0 0.5%;
+}
+
+@media only screen and (max-width: 768px) {
+    .pmtStep .centerSectionWrapper {
+        margin-top: 10px;
+    }
+}
+
+/* PAYMENT STEP ON EVISIT ====== */
+.md_evisit_index {
+    @media only screen and (max-width: 768px) {
+        .pmtStep .centerContent {
+            width: 100%;
+            text-align: left;
+        }
+
+        .pmtStep .paymentSummarySection {
+            text-align: left;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .pmtStep .centerContent {
+            .formsection.column_3 .formcolumn {
+                width: 100%;
+            }
+        }
+
+        .pmtStep .paymentSummarySection {
+            width: 100%;
+        }
+    }
+}
+
+/* PAYMENT PROCESSED CONFIRMATION ====== */
+#divConfirmPayment {
+    margin-top: 30px; /* for pay as guest */
+
+    .successMessage p {
+        font-weight: normal !important;
+    }
+
+    .VerifyInfoField {
+        > div {
+            font-weight: $sharp-weight-semi-bold;
+            font-size: 1.1rem;
+
+            &.PaymentAmountVerify {
+                font-weight: normal;
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .confirm-paymentMethodFields, confirm-icon {
+        display: block;
+    }
+}
+/*Added by JBall as a hack fix for pay as a guest to allow a user to see the "other amount" after they click into the box.  2019.11.01*/
+fakewrapper label {
+    margin-bottom: 20px !important;
+}
+
+/* BILLING SET UP A PAYMENT PLAN ====== */
+#divTermsUserEntry #divMonthAmt input, #divTermsUserEntry #AutoPayDOM input {
+    position: relative;
+}
+
+/* PAYMENT ERROR ====== */
+//#main .maintitle > .title > *, #main > .title {
+//    > #assistiveicons {
+//        display: block;
+//        float: right;
+//    }
+//}
+/* MOBILE BILLINGS
+   ========================================================================== */
+@media screen and (max-width: 325px) {
+    .mobile {
+        #accounts.billing {
+            margin-left: -0.75em;
+        }
+    }
+}
+
+/* MOBILE ACCOUNT DETAILS
+   ========================================================================== */
+
+.mobile {
+    #currentoutstandingaccts tr:not(.header) td {
+        padding-left: 0.5rem;
+    }
+
+    #details tfoot tr.amount td, #details th.amount, #details td.amount {
+        padding-left: 0.5rem;
+    }
+
+    #details th#details_col2.amount {
+        word-break: break-word;
+    }
+
+    #timeselection {
+        fieldset.multifield input.tiny {
+            min-width: 150px;
+        }
+    }
+}
+
+@media screen and (min-width: 414px) {
+    .mobile {
+        #details th#details_col2.amount {
+            word-break: normal;
+        }
+    }
+}
+
+@media screen and (min-width: 420px) {
+    .mobile {
+        #currentoutstandingaccts tr:not(.header) td {
+            padding-left: 1rem;
+        }
+
+        #details tfoot tr.amount td, #details th.amount, #details td.amount {
+            padding-left: 1rem;
+        }
+    }
+}
+
+/* MOBILE ACCOUNT PAYMENT
+   ========================================================================== */
+
+/* MOBILE SELECT VISIT BALANCE ====== */
+.mobile {
+    #pmtHARSelectionSection {
+        li.HARForPayment > h4 span.pmtOutstandingBalanceForHAR {
+            float: none;
+            display: block;
+            text-align: left;
+            margin-bottom: 0.25rem;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        #pmtHARSelectionSection {
+            li.HARForPayment > h4 span.pmtOutstandingBalanceForHAR {
+                float: right;
+                text-align: right;
+                margin-bottom: 0rem;
+            }
+        }
+    }
+}
+
+/* MOBILE PAYMENT INFORMATION ====== */
+
+.mobile {
+    #PaymentEntry {
+        #divPmtMethod {
+            input.FieldInputBox {
+                width: 100%;
+            }
+
+            .ExpirationDate {
+                width: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        #PaymentEntry {
+            #divPmtMethod {
+                input.FieldInputBox, select.FieldInputBox {
+                    width: 50%;
+                    display: inline;
+                }
+
+                .ExpirationDate {
+                    width: 23%;
+
+                    input.FieldInputBox {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* MOBILE PAYMENT FORM
+   ========================================================================== */
+.mobile {
+
+    #PaymentEntry {
+        .formsection .formcolumn {
+            input, select {
+                padding: 0.8rem;
+            }
+        }
+
+        #divVerifiedInfo {
+            #divQuickPayVerified {
+                text-align: left;
+            }
+        }
+
+        #divPmtMethod {
+            input.FieldInputBox {
+                padding: 0.7rem 0.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .mobile {
+        #PaymentEntry {
+            .formsection .formcolumn {
+                label, #CardEntry-Exp-Label, #SecondAuth-Label-2 {
+                    width: 100%;
+                    border: 0px;
+                    background: transparent;
+                }
+            }
+
+            #divPmtMethod {
+                #AddressEntryFields input, #AddressEntryFields select {
+                    width: 100%;
+                }
+
+                #CardEntry-BillingInfoDiv #Address_Guarantor {
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+}
+
+
+

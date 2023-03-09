@@ -1,0 +1,34 @@
+﻿@import "_variables_mychart.scss";
+
+/* COVERAGES
+   ========================================================================== */
+
+.card.addItem.addImages {
+    padding: 0px;
+}
+
+.insurance_card_actions_link {
+    color: $md-navy;
+}
+
+.insurance_card_actions_link:hover, .insurance_card_actions_link:focus, .insurance_card_actions_link:active {
+    background-color: $common-bg;
+    color: $dk-navy;
+}
+
+.addImagesContainer {
+    height: auto;
+}
+
+.insuranceVerification .cardlist.hasPendingStatus .card .cardline.name span.coverageStatus {
+    padding-top: 7px;
+    line-height: initial;
+}
+
+.insurance_card_actions_link:hover img {
+    filter: invert(0.4) sepia(1) saturate(8.9) hue-rotate(183.6deg) brightness(0.5);
+}
+
+.card.addItem .addlabel.withUploadIcon:before {
+    top: -5px;
+}

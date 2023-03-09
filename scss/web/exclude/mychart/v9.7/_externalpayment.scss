@@ -1,0 +1,23 @@
+﻿@import "_variables_mychart.scss";
+
+/* BILLING PAYMENT IFRAME
+========================================================================== */
+
+/* MOBILE BILLING PAYMENT ====== */
+#iFrameLoadingIndicator.mobileExtPmtPage, #extPmtPageFrame.mobileExtPmtPage {
+    height: auto;
+    min-height: 630px;
+}
+
+#extPmtPageFrame {
+    height: auto;
+    min-height: 650px;
+    
+    @media screen and (min-width: 480px) {
+        min-height: 620px;
+    }
+
+    @media screen and (min-width:1280px) {
+        min-height: 500px;
+    }
+}

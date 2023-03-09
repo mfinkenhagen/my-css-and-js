@@ -1,0 +1,382 @@
+﻿@import "_variables_mychart.scss";
+
+/* MY CONDITIONS WIDGET
+   ========================================================================== */
+
+.pretext:empty {
+    display: none;
+}
+
+/* GOALS ====== */
+
+.goalslarge.pocdefaultpopup .component .stats {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.goalslarge.component.Popup > div.content {
+    padding: 20px;
+}
+
+.goalsvb6 .goaltitle {
+    color: $dk-teal;
+}
+
+.goalsdetails.section .chart table tr td.scroll.noncompliant {
+    font-size: 1em;
+    padding-top: 40px;
+}
+
+.fullscreen ul.careteam li.selected:before, .goalslarge li.goalslistelement.selected:before {
+    width: 0.35rem;
+}
+
+.stats {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.component.pocdefault ul li.listelement.goalslistelement {
+    background-color: white;
+    margin: 5px 0;
+    box-shadow: $card-box-shadow;
+    border: $card-border;
+}
+
+#calendar table, ul.MessageList, .HPcell.component > .content, .component.pocdefault > a.viewmore {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.component.pocdefault ul li.listelement.goalslistelement:after {
+    width: 100%;
+    left: 0;
+}
+
+/* GOALS - PLAN OF CARE - RESPONSIVE ====== */
+.goalsleft > .content {
+    min-height: 100px;
+    height: 200px;
+    overflow-y: scroll;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        min-height: 70vh;
+        overflow-y: visible;
+    }
+}
+
+.menudetailstable .column {
+    display: inline-block;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: table-cell;
+    }
+}
+
+.menudetailstable.leftmenu .leftcolumn {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dbdbdb;
+    background: #f4f4f4;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 25%;
+        margin-bottom: 0px;
+        border: none;
+        background: transparent;
+    }
+}
+
+.menudetailstable.leftmenu .rightcolumn {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: 75%;
+    }
+}
+
+/* TEST RESULTS - PLAN OF CARE - RESPONSIVE ====== */
+
+.dashboardComponentCard .card,
+.testResultAndComponents.singleComponentTestResult {
+    width: 95%;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 50%;
+    }
+}
+
+
+.TRPContainer {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #dbdbdb;
+
+    @media screen and (min-width: $breakpoint-mobile) {
+        height: 300px;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 25%;
+        height: 100%;
+        border: none;
+    }
+
+    > div.content, .abbrev_header {
+        background: #f4f4f4;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            background: $white;
+        }
+    }
+
+    .testResultsLinkFooter.abbrev_header {
+        background: $white;
+    }
+}
+
+.TRPContent {
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 75%;
+    }
+}
+
+
+/* TO DO */
+li.todolistelement.overdueslistelement ul li {
+    border: solid 1px lightgray;
+    border-left: 3px solid $dk-red;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px 0px 0px -16px;
+}
+
+.component .ToDolist .name {
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+.component .ToDolist.pocdefault ul li.todolistelement, .component .ToDolist.pocdefault ul li.todolistelement.overdueslistelement {
+    padding: 1.2rem 0.7rem 1.2rem 1.3rem;
+    margin: 0 0 15px -10px;
+    box-shadow: $card-box-shadow;
+    background-color: $white;
+    border: $card-border;
+}
+
+.component .ToDolist.pocdefault ul li.todolistelement:hover, .component .ToDolist.pocdefault ul li.todolistelement.overdueslistelement:hover {
+    background-color: $hover-tile;
+}
+
+.ToDoEvents .multiMonthCalendar.component {
+    background-color: $white;
+    box-shadow: $card-box-shadow;
+    border: $card-border;
+    width: 31%;
+}
+
+/* Card selected state after selecting from Plan of Care page*/
+.todotiles.selected {
+    top: 0;
+}
+
+.component.pocdefault ul li.listelement:hover {
+    background-color: $hover-tile;
+}
+
+.patientActions a.button.message::before, .patientActions a.button.schedule::before {
+    background-image: none;
+}
+
+.patientActions a.button::before {
+    height: 0px;
+    margin-right: 0px;
+    width: 0px;
+}
+/* MOBILE
+   ========================================================================== */
+/* TO DO LIST ====== */
+.mobile {
+    .ToDoEvents {
+        .ToDolist.component {
+            width: 100%;
+            margin-top: 420px;
+        }
+    }
+
+    .todolistelement {
+        .leftsection, .rightsection {
+            width: 100%;
+        }
+    }
+}
+
+/* CALENDAR ====== */
+
+.mobile {
+    .ToDoEvents {
+        .multiMonthCalendar.component {
+            width: 100%;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+        }
+    }
+
+    #calendar table {
+        background-color: $white;
+    }
+}
+
+/* TO DO EVENTS POPUP CALENDAR ====== */
+.mobile {
+    .Popup .ToDoEventsPopup {
+        ul.buttons li {
+            display: inline-block;
+        }
+
+        #weekcalendartooltip {
+            left: 0px !important;
+            width: 22rem;
+            text-align: left;
+        }
+
+        .todoweekcalendarcontent {
+            .calendartitle {
+                height: 1.5em;
+            }
+
+            .nextweekbuttons {
+                position: relative;
+                text-align: center;
+                padding-bottom: 0.5em;
+            }
+
+            table.weekcalendar thead th:nth-child(1),
+            table.weekcalendar tbody td:nth-child(1) {
+                width: 11%;
+            }
+        }
+    }
+} 
+
+/* TO DO EVENTS POPUP CARDS */
+
+.mobile {
+    .Popup .ToDoEventsPopup {
+
+        #todoevents {
+            .todotiles.card {
+                text-align: left;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .todotiles .eventdetails {
+                padding-bottom: 5px;
+            }
+
+            .todotiles .eventrightsec {
+                margin-left: 0px;
+            }
+
+            .todotiles > div.buttonList {
+                position: relative;
+            }
+
+            .todotiles.order .orderdetails {
+                width: 91%;
+                position: relative;
+                align-self: flex-end;
+
+                .leftsection {
+                    padding-bottom: 5px;
+                }
+
+                .leftsection, .rightsection {
+                    width: 100%;
+                    margin-left: 0%;
+                    margin-right: 0%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+} 
+
+/* TO DO EVENTS TOOLTIPS ====== */
+.mobile {
+    .todotooltip[data-id='calendarTooltip'] {
+        left: 0px !important;
+        right: 0px !important;
+        width: 100%;
+        margin: 0px auto;
+        max-width: 50em;
+
+        .popupbubble {
+            text-align: left;
+        }
+
+        .arrow {
+            display: none;
+        }
+    }
+}
+/* GOALS POP UP ====== */
+.mobile {
+    .Popup.container.goalslarge {
+        .menudetailstable.leftmenu {
+            .goalsleft > .content {
+                min-height: 100px;
+            }
+
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+            }
+
+            .column {
+                display: table-row;
+            }
+        }
+
+        .component .goalrightsec {
+            text-align: left;
+        }
+    }
+}
+
+/* OPEN SCHEDULING ======= */
+
+.md_openscheduling_index {
+    .cardlist.buttonCards .card {
+        width: 24%;
+    }
+}
+
+@media screen and (min-width: 310px) {
+    .md_openscheduling_index {
+        .cardlist.buttonCards .card {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 602px) {
+    .md_openscheduling_index {
+        .cardlist.buttonCards .card {
+            width: 49%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .md_openscheduling_index {
+        .cardlist.buttonCards .card {
+            width: 24%;
+        }
+    }
+}

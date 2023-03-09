@@ -1,0 +1,289 @@
+﻿@import "_new_variables.scss";
+
+/* LOGGED IN UI
+   ========================================================================== */
+
+#content::after {
+    background-image: none;
+}
+
+body {
+    background-image: none;
+}
+
+/* HEADER ====== */
+#proxies.noProxies {
+    + #menu {
+        width: calc(100% - 17% - 6rem - 20%);
+
+        + #account {
+            width: 20%;
+            max-width: 20%;
+        }
+    }
+}
+
+#header {
+    #menu {
+        width: calc(100% - 17% - 18% - 15%);
+    }
+
+    #account {
+        padding-top: 1.55rem;
+        width: 15%;
+        max-width: 15%;
+
+        .menugroup {
+            text-align: right;
+
+            .menuicon {
+                display: inline;
+                text-indent: 0em;
+
+                &:before {
+                    display: none;
+                }
+
+                span {
+                    display: inline-block;
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+
+                    &.acctname {
+                        margin: 0 0.3rem -0.3rem 0rem;
+                        width: calc(95% - 58px);
+
+                        &:before {
+                            background: rgba(0, 0, 0, 0) url(../images/menus/account.png) no-repeat center top / 1.25rem 1.25rem;
+                            content: " ";
+                            display: inline-block;
+                            height: 1.5rem;
+                            margin: 0 0 -0.5rem 0;
+                            padding: 0 0.25rem 0 0;
+                            width: 1.5rem;
+                        }
+                    }
+
+                    &.menuname.subtle {
+                        color: $dk-gray;
+                        float: right;
+                        width: 58px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* MENU ====== */
+
+#header {
+    .menugroup {
+        li[role="menuitem"] a {
+            padding: 0.3rem 0.5rem;
+        }
+    }
+
+    .submenu {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+}
+
+/* 2018 Menu */
+#menu .menuicon:before {
+    width: 41px;
+}
+
+#menu .menugroup.selected .menuicon:after {
+    margin: 7px auto;
+}
+
+/* LOCALE LANGUAGE SWITCH ====== */
+#localeswitch {
+    /*top: -0.5rem;
+    right: 205px;*/
+    top: 3.4rem;
+    right: 1rem;
+    font-size: 0.9rem;
+}
+
+/* 
+    Compact header local language switch version
+*/
+
+#header.compact #localeswitch {
+    top: -0.5rem;
+    right: 205px;
+}
+
+/* FORM ====== */
+.isInside {
+    input, select, textarea {
+        border-radius: $border-radius;
+    }
+
+    input[type='radio'] {
+        border-radius: 50%;
+
+        &:checked {
+            background-color: $dk-blue;
+        }
+    }
+}
+
+/* Radio Button Labels */
+
+.section .content input.radio, .section .content input.radio + label {
+    width: auto;
+}
+
+/* PAGE ELEMENTS ====== */
+.cptLink {
+    margin: 0.5rem 0 0.5rem;
+}
+
+/* FOOTER ====== */
+#content[style*="min-height"] + #footer {
+    margin-top: 1rem;
+    color: $md-gray;
+
+    a {
+        color: $md-gray;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+/* MOBILE
+   ========================================================================== */
+
+/* MOBILE HEADERS AND SEPARATORS ====== */
+
+.mobile {
+    p.separator,
+    .section h2,
+    .section #confMesg2 legend,
+    .section .formsection > legend,
+    .md_scheduling_landingpage #main .pretext {
+        background-color: $white;
+        color: $dk-teal;
+        font-weight: $sharp-weight-semi-bold;
+        padding: 1rem 5% 0.75rem;
+    }
+}
+
+/* CHECKBOX PULLBACK ====== */
+
+.mobile {
+    p.buttoncheck.pullback {
+
+        .required:after {
+            color: $white;
+            overflow: visible;
+            background-image: none;
+            content: '*';
+        }
+
+        &.checked {
+            border-radius: 0px;
+            color: $md-teal;
+        }
+    }
+}
+
+/* REQUIRED ====== */
+.mobile {
+
+    legend.required {
+        &:after {
+            overflow: visible;
+        }
+    }
+}
+
+/* ECHECKIN ====== */
+
+.mobile .section.questionsContainer .questiongroup .question, .mobile .section .questiongroup .question {
+    margin: 15px;
+    max-width: none;
+}
+
+/* FORM ====== */
+.mobile {
+    form .content label + select,
+    form .content label + textarea,
+    form .content label + textarea.halfwidth,
+    form .content label + input[type='text'],
+    .section [class*='question'] select,
+    .section [class*='question'] textarea,
+    .section [class*='question'] textarea.halfwidth,
+    .section [class*='question'] input[type='text'] {
+        min-height: $form-field-min-height;
+    }
+} 
+
+/* BUTTONS ====== */
+.mobile {
+    .formbuttons {
+        text-align: center;
+    }
+}
+
+.mobile .formbuttons .button.previousstep:not(.disabled), .mobile .formbuttons .button.prevstep:not(.disabled), .mobile .formbuttons .button.cancelworkflow:not(.disabled), .mobile .formbuttons .button.continuelater:not(.disabled), .mobile .formbuttons .button.finishlater:not(.disabled) {
+    color: $md-navy;
+}
+
+.mobile .formbuttons.qnr-actions .button.nextstep + .button.prevstep:not(.btnHidden) {
+    color: $md-navy;
+}
+
+.mobile .formbuttons.qnr-actions .button.nextstep.btnHidden + .button.prevstep:not(.btnHidden) {
+    color: $md-navy;
+}
+/* SUBQUESTIONS ====== */
+.mobile {
+    .section [class*='subsquestion'] {
+        border-radius: $border-radius;
+        background-color: $white;
+        box-shadow: $card-box-shadow;
+        border: $card-border;
+    }
+}
+
+/* CANCEL APPOINTMENT CONFIRMATION SCREEN ====== */
+.mobile .md_apptdircancel #main .title {
+    display: block;
+}
+
+.mobile .md_apptdircancel #main .title h1 {
+    text-overflow: initial;
+    white-space: pre-wrap;
+}
+
+/* PREFERENCES SAVED INFO CONFIRMATION  ====== */
+.mobile .md_schedotherprefs #main .title {
+    display: inline-block;
+}
+
+.mobile .md_schedotherprefs #main .title .assistiveicon, #sidebar img.assistiveicon {
+    display: none;
+}
+
+/* TABS ====== */
+.mobile {
+    .tabcontainer {
+        .section h2 {
+            margin: 1rem 0;
+            width: 100%;
+        }
+    }
+}
+
+/* ESTIMATES ====== */
+
+.mobile .md_estimates_getestimateservices .list.hoverable a:not(.button), .mobile .md_estimates_getestimateservices .list.hoverable p.essCardTitle:not(.button), .mobile .md_estimates_startestimate .list.hoverable .essCardTitle:not(.button) {
+    color: $dk-teal;
+}

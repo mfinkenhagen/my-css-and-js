@@ -1,0 +1,168 @@
+﻿@import "_variables_mychart.scss";
+
+/* THEMES
+   ========================================================================== */
+
+.section .content {
+    .colorpreview {
+        border-radius: 50%;
+        margin-left: 1rem;
+    }
+}
+
+img.photo, .colorpreview, #proxies, body #header .menugroup.selected .menuicon:after {
+}
+
+
+/* Proxy Switcher Colors 
+ * These colors impact the proxy icons, menus, and header.
+ * They are used to provide the context of which proxy record is being accessed.
+ * They do not impact the background image or colors of the main content of the page (except for hovers).
+*/
+
+/* Color 1 - Skylight ====== */
+img.photo.color1,
+.colorpreview.color1,
+#proxies .color1:after,
+body.color1 #header .menugroup.selected .menuicon:after {
+    background-color: $dk-blue;
+}
+
+#proxies .color1 .proxyicon,
+#proxies a.color1 .proxyicon {
+    background-color: $dk-blue;
+    border-color: $dk-blue;
+}
+
+body.color1 #header .menugroup li a:not(.button):focus,
+body.color1 #header .menugroup li a:not(.button):hover,
+body.color1 #localeswitch #morelocales li a:not(.button):hover {
+    background-color: $hover-tile;
+    border-left-color: $dk-blue;
+}
+
+/* Color 2 - Forest ====== */
+img.photo.color2,
+.colorpreview.color2,
+#proxies .color2:after,
+body.color2 #header .menugroup.selected .menuicon:after {
+    background-color: $tertiary;
+}
+
+#proxies .color2 .proxyicon,
+#proxies a.color2 .proxyicon {
+    background-color: $tertiary;
+    border-color: $tertiary;
+}
+
+body.color2 #header .menugroup li a:not(.button):focus,
+body.color2 #header .menugroup li a:not(.button):hover,
+body.color2 #localeswitch #morelocales li a:not(.button):hover {
+    background-color: $system-green;
+    border-left-color: $tertiary;
+}
+
+/* Color 3 - Bubblegum ====== */
+img.photo.color3,
+.colorpreview.color3,
+#proxies .color3:after,
+body.color3 #header .menugroup.selected .menuicon:after {
+    background-color: $bubblegum;
+}
+
+#proxies .color3 .proxyicon,
+#proxies a.color3 .proxyicon {
+    background-color: $bubblegum;
+    border-color: $bubblegum;
+}
+
+body.color3 #header .menugroup li a:not(.button):focus,
+body.color3 #header .menugroup li a:not(.button):hover,
+body.color3 #localeswitch #morelocales li a:not(.button):hover {
+    background-color: $bubblegum-hover;
+    border-left-color: $bubblegum;
+}
+
+/* Color 4 - Royal ====== */
+img.photo.color4,
+.colorpreview.color4,
+#proxies .color4:after,
+body.color4 #header .menugroup.selected .menuicon:after {
+    background-color: $royal;
+}
+
+#proxies .color4 .proxyicon,
+#proxies a.color4 .proxyicon {
+    background-color: $royal;
+    border-color: $royal;
+}
+
+body.color4 #header .menugroup li a:not(.button):focus,
+body.color4 #header .menugroup li a:not(.button):hover,
+body.color4 #localeswitch #morelocales li a:not(.button):hover {
+    background-color: $royal-hover;
+    border-left-color: $royal;
+}
+
+/* Color 5 - Ocean ====== */
+img.photo.color5,
+.colorpreview.color5,
+#proxies .color5:after,
+body.color5 #header .menugroup.selected .menuicon:after {
+    background-color: $ocean;
+}
+
+#proxies .color5 .proxyicon,
+#proxies a.color5 .proxyicon {
+    background-color: $ocean;
+    border-color: $ocean;
+}
+
+body.color5 #header .menugroup li a:not(.button):focus,
+body.color5 #header .menugroup li a:not(.button):hover,
+body.color5 #localeswitch #morelocales li a:not(.button):hover {
+    background-color: $ocean-hover;
+    border-left-color: $ocean;
+}
+
+/* Color 6 Goldenrod ====== */
+img.photo.color6,
+.colorpreview.color6,
+#proxies .color6:after,
+body.color6 #header .menugroup.selected .menuicon:after {
+    background-color: $goldenrod;
+}
+
+#proxies .color6 .proxyicon,
+#proxies a.color6 .proxyicon {
+    background-color: $goldenrod;
+    border-color: $goldenrod;
+}
+
+body.color6 #header .menugroup li a:not(.button):focus,
+body.color6 #header .menugroup li a:not(.button):hover,
+body.color6 #localeswitch #morelocales li a:not(.button):hover {
+    background-color: $goldenrod-hover;
+    border-left-color: $goldenrod;
+}
+
+/* Color 7 - Autumn ====== */
+img.photo.color7,
+.colorpreview.color7,
+#proxies .color7:after,
+body.color7 #header .menugroup.selected .menuicon:after {
+    background-color: $autumn;
+}
+
+#proxies .color7 .proxyicon,
+#proxies a.color7 .proxyicon {
+    background-color: $autumn;
+    border-color: $autumn;
+}
+
+body.color7 #header .menugroup li a:not(.button):focus,
+body.color7 #header .menugroup li a:not(.button):hover,
+body.color7 #localeswitch #morelocales li a:not(.button):hover {
+    background-color: $autumn-hover;
+    border-left-color: $autumn;
+}

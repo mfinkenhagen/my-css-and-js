@@ -1,0 +1,378 @@
+﻿@import "_new_variables.scss";
+
+/* COMPONENTS
+   ========================================================================== */
+
+/* SIDEBAR ====== */
+#sidebar {
+    .titlebar, > h2 {
+        color: $dk-teal;
+        padding: 10px 15px;
+        border-bottom: none;
+        margin-bottom: 0.7rem;
+    }
+
+    .component > .content, .quickLinks {
+        padding-bottom: 0.7rem;
+    }
+
+    #alerts > .loginalert a::after, .quickLinks.vertical a::after, .component.pocdefault ul li.listelement:after, .Alerts .loginalert .loginalert.tab::after {
+        height: 0px;
+    }
+
+    .roundedimage {
+        width: 2rem;
+        height: 2rem;
+        margin: 0 0.7rem 0 0.5rem;
+    }
+
+    .component.pocdefault ul.careteam li {
+        border-radius: $border-radius;
+    }
+}
+
+/* QUICK LINKS ====== */
+
+.quickLinks a {
+    border-radius: $border-radius;
+}
+
+.quickLinks.vertical a {
+    min-height:3.2rem;
+     
+    span {
+        color: $md-navy;
+        width: auto;
+    }
+}
+
+.quickLinks.vertical a img {
+    width: auto;
+    height: auto;
+    margin: 0 0.7rem 0 0.5rem;
+}
+
+.quickLinks.vertical a::after {
+    width: 0px;
+}
+
+/* ALERTS CARD ====== */
+.Alerts.component.notoolbar {
+    height: auto !important;
+}
+
+/* NEWS CARD ====== */
+
+.component.news .newscard {
+    width: 49%;
+
+    &.videoVisits {
+        background-image: url(../images/video_visit_home.png);
+    }
+}
+
+#main .component > .titlebar {
+    margin: 0 0 1rem 0;
+}
+
+:not(tr):not(td).nodata:not(:empty) {
+    border-radius: $border-radius;
+}
+
+.Alerts .loginalert > a::after, .Alerts .loginalert .loginalert.tab::after {
+    width: 100%;
+}
+
+.Alerts .loginalert > a img.icon, .Alerts .loginalert .head img.icon {
+    height: auto;
+    width: auto;
+    margin: 0 15px 0 0;
+    vertical-align: middle;
+}
+
+.Alerts .loginalert > a span.alertContent, .Alerts .loginalert > p span.alertContent {
+    width: calc(100% - 90px);
+    margin-top: 0px;
+}
+
+.component .ToDolist .todolistelement:after {
+    left: 0rem;
+}
+
+.component.Popup.medium {
+
+    @media screen and (max-width: 767px) {
+        width: auto;
+        min-width: 100%;
+    }
+}
+
+.component.Popup.large span {
+    font-family: $font-family !important;
+    color: $dk-gray !important;
+}
+
+.component.Popup.large .button span {
+    color: $white !important;
+}
+
+.component.Popup.lookupcontainer {
+    a.button.multi.inlinesave {
+        margin: 0 0.5rem 0 0 !important;
+    }
+}
+
+.section > *:not(.report) thead tr {
+    color: $white;
+}
+
+.component.Popup > .titlebar {
+    background-color: $dk-blue;
+    padding: 13px;
+
+    span, h2 {
+        color: $white !important;
+    }
+}
+
+.documentpopup.Popup .titlebar {
+    background-color: $dk-blue !important;
+}
+
+
+.loginalert {
+    background-color: $white;
+    border: $card-border;
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 412px) {
+    .component.news .newscard {
+        width: 49.2%;
+    }
+}
+
+/* PATIENT INFORMATION ====== */
+
+.md_patinfo {
+    span.label {
+        font-weight: $sharp-weight-semi-bold;
+        font-size: 1rem;
+    }
+}
+
+/* EVISIT ====== */
+.md_evisit {
+
+    a.button.inlinesave {
+        margin: 0 0.5rem 0 0 !important;
+    }
+
+    a.button.inlineedit {
+        img {
+            height: 14px;
+            padding-left: 0.25rem;
+        }
+    }
+
+    .formcontents {
+        p.required {
+            margin-left: 0.7rem;
+        }
+
+        .section [class*='question'] {
+            padding-left: 0rem;
+
+            .header {
+                margin-left: 0rem;
+            }
+
+            .header.required {
+                margin-left: 0.7rem;
+
+                .helptext {
+                    margin-left: -0.7rem;
+                    font-size: 0.9em;
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+
+        .terms {
+            margin: 1rem auto;
+            width: 100%;
+        }
+
+        .content {
+            #evisitaccept.button.nextstep {
+                margin-left: 0px;
+                margin-right: 1rem;
+            }
+
+            #evisitdecline {
+                margin-right: 0px;
+            }
+
+            #evisitaccept, #evisitdecline {
+                width: calc(50% - 0.5rem);
+                float: left;
+            }
+        }
+    }
+
+    ul#evisitcomplaint {
+        margin-top: 0.5rem;
+    }
+}
+
+.genqnrreview {
+
+    .editCell {
+        input[type='image'].button.transparent {
+            min-height: 1em;
+        }
+    }
+}
+
+/* MOBILE E-VISIT ====== */
+
+.mobile {
+    .md_evisit {
+        p.buttoncheck.pullback.checked {
+            /*overflow: visible;
+            width: 100%;*/
+        }
+
+        .section .flexboxLayout .tbContainer label.togglebutton {
+            margin: 0 0.25rem 0.5rem 0;
+        }
+
+        .formcontents {
+            p.alert:last-of-type {
+                margin-bottom: 0.5rem;
+            }
+            /*legend.required {
+                &:before {
+                    color: $alert;
+                    content: "*";
+                    display: inline-block;
+                    height: 0.511rem;
+                    padding: 0 0.5em;
+                    vertical-align: top;
+                    border: 0;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }*/
+            .section [class*='question'] {
+                padding-left: 0rem;
+
+                .header.required {
+                    margin-left: 0rem;
+
+                    .helptext {
+                        margin-left: 0rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+    Review E-Visit Summary
+*/
+
+.mobile {
+    .md_evisit {
+        .header + .right {
+            margin-top: 0rem;
+        }
+
+        a.button.inlineedit {
+            margin-bottom: 0.5rem !important;
+
+            img {
+                height: 12px;
+            }
+        }
+    }
+
+    .genqnrreview {
+        .editCell {
+            input[type='image'].button.transparent {
+                border: 0px;
+                background-image: none !important;
+                height: 3em;
+                width: 3em;
+            }
+        }
+    }
+}
+
+/* POP UP ====== */
+.component.Popup.notificationreview {
+    .methodoptions {
+        width: 100%;
+
+        &.onlymethod {
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        > div {
+            width: 44%;
+            text-align: left;
+        }
+    }
+
+    .section .content .icon {
+        height: 3.3rem;
+        padding: 0 .5rem;
+    }
+
+    .button.buttoncheck, .field {
+        width: 100%;
+        margin-left: 0.7rem;
+    }
+
+    .section .content[data-error-fieldset="notificationReviewAlertError"] {
+        text-align: center;
+    }
+}
+
+/* PROVIDER SEARCH ====== */
+#provsearchform {
+    label {
+        line-height: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .formbuttons {
+        margin-top: 1.5rem;
+    }
+}
+
+/* MOBILE
+   ========================================================================== */
+
+.mobile {
+
+    #homepagemain {
+        .component .news {
+            .section {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            .newscard {
+                background-position: 13% 5%;
+                padding: 6rem 1rem 1rem 1rem;
+            }
+        }
+    }
+}
+

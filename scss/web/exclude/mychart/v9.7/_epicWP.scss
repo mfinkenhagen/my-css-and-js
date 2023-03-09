@@ -1,0 +1,1289 @@
+﻿@import "_variables_mychart.scss";
+
+/* OPEN SCHEDULING 
+   ========================================================================== */
+
+body.md_openscheduling_index {
+    margin: 2px auto 10px;
+    width: 90%;
+    max-width: 935px;
+    min-width: 420px;
+    color: $dk-gray;
+    font-size: .85em;
+    
+    a:not(.button) {
+        color: $dk-gray;
+        text-decoration: none;
+    }
+
+    :focus {
+        outline: -webkit-focus-ring-color none;
+    }
+}
+
+body.md_openscheduling_index {
+    width: 100%;
+    max-width: none;
+    margin-top: 0px;
+    background: none !important;
+
+    [id$="60148"] {
+        display: none !important;
+    }
+}
+
+.md_openscheduling_index .button {
+    border-radius: $border-radius;
+    background-color: $dk-blue;
+
+    &:hover {
+        background-color: $dk-navy;
+    }
+}
+
+/* STEP CONTAINER ====== */
+.md_openscheduling_index {
+
+    div.stepContainer {
+        border: 1px solid #ccc;
+        border-radius: $border-radius;
+        margin-bottom: 12px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .stepContainer ul.withIcon li > a {
+        background-color: transparent;
+    }
+
+    .stepContainer ul.withIcon li > a:hover, .stepContainer ul.withIcon li > a:focus, .stepContainer ul.withIcon li.selected > a:hover, .stepContainer ul.withIcon li.selected > a:focus {
+        border: none;
+    }
+
+    .stepContainer .scrollTableWrapper {
+        border-color: transparent;
+    }
+}
+
+/* STEPS HEADER ====== */
+.md_openscheduling_index {
+    .header .step, .header .stepNumber {
+        vertical-align: top;
+    }
+
+    .header .stepNumber {
+        border: 0px;
+        color: $md-teal;
+        width: auto;
+    }
+
+    .stepContainer .cardlist.buttonCards .card .stepIcon {
+        max-height: 50px;
+        margin-top: 10px;
+    }
+}
+
+/* SPECIALTY AND VISIT TYPE ====== */
+.md_openscheduling_index {
+    .stepContainer .cardlist.buttonCards {
+        padding: 0px;
+    }
+}
+
+/* CHOOSE A LOCATION ======= */
+
+.md_openscheduling_index {
+    .stepContainer {
+        .cardlist.buttonCards .card .zipSearch label {
+            width: 100%;
+        }
+
+        .cardlist.buttonCards .card .zipSearch input.zip {
+            width: 100%;
+        }
+    }
+}
+
+/* Steps - Choose Time ======= */
+.md_openscheduling_index {
+    .openingsContainer {
+        position: relative;
+    }
+
+    input.prettycheck + label {
+        margin: 0;
+        padding-left: 15px;
+    }
+
+    input.personFilter[type='checkbox']:checked, input.personFilter.buttoncheck[type="checkbox"]:checked:before, input.personFilter.radio[type="checkbox"]:checked {
+        margin: 0px;
+        position: relative;
+    }
+
+    input.personFilter[type='checkbox'], input.personFilter.buttoncheck + label.buttoncheck:before {
+        margin: 0px;
+        position: relative;
+    }
+
+    input.dayFilter[type='checkbox']:checked, input.dayFilter.buttoncheck[type="checkbox"]:checked:before, input.dayFilter.radio[type="checkbox"]:checked {
+        position: relative;
+    }
+
+    input.dayFilter[type='checkbox'], input.dayFilter.buttoncheck + label.buttoncheck:before {
+        position: relative;
+    }
+
+    .formbuttons {
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    .card label.togglebutton[for] {
+        padding: 0.25rem 0.75rem 0.3rem;
+    }
+
+    .filterFrame {
+        color: #08579e;
+    }
+
+    .filterButtonContainer {
+        margin: 10px 0px 0px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $border-grey;
+
+        p {
+            text-transform: uppercase;
+            font-weight: $sharp-weight-semi-black;
+        }
+
+        .filterControl {
+            width: 30%;
+            display: inline;
+            margin: 10px;
+            padding: 10px 0 10px 10px;
+            border: 1px solid $border-grey;
+            border-radius: $border-radius;
+            border-right: $white;
+
+            a {
+                padding: 10px 80px 10px 10px;
+                border: 1px solid $border-grey;
+                border-radius: $border-radius;
+
+                &[data-name='people'], &[data-name='locations'], &[data-name='datetime'] {
+                    max-width: 65%;
+
+                    > span {
+                        display: inline-block;
+                        text-overflow: ellipsis;
+                        overflow-x: hidden;
+                        width: 100%;
+                    }
+                }
+            }
+
+            a.filterValue {
+                background-image: url("../images/rowopen.gif");
+                background-repeat: no-repeat;
+                background-position: top 11px right 5px;
+                background-size: 13px;
+                display: inline;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .departmentFilter {
+        padding-left: 15px;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .filterName {
+        display: inline !important;
+        width: auto !important;
+        margin-right: 10px;
+        color: #222222;
+    }
+
+    #peopleGroup.optionsgroup {
+        li {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .optionsgroup {
+        max-width: 500px;
+        margin-top: 20px;
+        padding-top: 15px;
+        width: 99% !important;
+
+        li {
+            display: block;
+            width: 100%;
+        }
+
+        .scrollable {
+            max-height: 390px;
+            overflow-y: scroll;
+        }
+
+        .departmentName {
+            font-weight: bold;
+            color: $dk-gray;
+            line-height: 1.4em;
+
+            &.hasDistance {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .departmentAddress {
+            padding-left: 17px !important;
+            color: $dk-gray;
+            line-height: 1.6em;
+        }
+
+        .dayOfWeek li {
+            width: 100% !important;
+        }
+    }
+
+    .actionContainer {
+        text-align: center;
+        margin-left: -12px;
+
+        #D6F73C26-7627-4948-95EA-2C630C25C5E9_scheduleOpenings_filterControls_0_locationsLoadMore {
+            display: none;
+        }
+
+        .button {
+            width: 30%;
+            margin: 10px 5px 18px;
+            padding: 5px !important;
+            border: none !important;
+        }
+    }
+
+    #datetimeGroup {
+
+        .actionContainer {
+            text-align: left;
+            padding-left: 14px;
+            margin: 0;
+            padding-top: 5px;
+        }
+
+        .tbContainer {
+            width: auto;
+        }
+
+        .timeOfDay {
+            padding-left: 10px;
+            padding-bottom: 10px;
+
+            li {
+                display: inline-block;
+            }
+        }
+    }
+
+    div.openingsData .slotslist a {
+        padding: 6px 9px;
+        border-radius: 2px;
+        font-size: 18px;
+    }
+
+    .openingsData .slotslist .subslotslist {
+        margin-bottom: 20px;
+        width: 7rem;
+    }
+
+    div.openingsData .withProvider {
+        text-align: left;
+    }
+
+    .popupiconcontainer {
+        padding-bottom: 5px;
+        margin: 0;
+    }
+
+    .departmentDistance {
+        padding-left: 5px;
+        color: $tertiary !important;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    div.openingsData .subslotslist.am .slotdetailaction:hover {
+        background-color: $dk-blue;
+    }
+
+    div.openingsData .slotdetailaction.am:hover {
+        background-color: $dk-blue;
+    }
+
+    div.openingsData .subslotslist.pm .slotdetailaction:hover {
+        background-color: $dk-blue;
+    }
+
+    div.openingsData .slotdetailaction.pm:hover {
+        background-color: $dk-blue;
+    }
+
+    .button.completeworkflow {
+        background-color: $dk-blue;
+    }
+
+    .button.completeworkflow:focus, .button.completeworkflow:hover {
+        background-color: $dk-navy;
+    }
+}
+
+@media screen and (min-width: 310px) {
+    .md_openscheduling_index {
+        .filterControlContainer {
+            text-align: left;
+        }
+
+        .filterButtonContainer {
+
+            p {
+                padding-left: 11px;
+                display: none;
+            }
+
+            .filterControl {
+                width: 100%;
+                display: block;
+                height: 40px;
+
+                a {
+                    padding: 10px 20% 10px 10px;
+                    float: right;
+                    margin-top: -12px;
+                    text-overflow: ellipsis;
+                    font-weight: 400;
+
+                    &:focus {
+                        background-color: $dk-blue;
+                    }
+                }
+
+                span {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .md_openscheduling_index {
+
+        .filterControlContainer {
+            text-align: right;
+        }
+
+        .filterButtonContainer {
+
+            .filterControl {
+                width: 30%;
+                display: inline;
+
+                a {
+                    padding: 10px 80px 10px 10px;
+                    float: none;
+                    margin-top: initial;
+
+                    &[data-name='people'], &[data-name='locations'], &[data-name='datetime'] {
+                        max-width: none;
+
+                        > span {
+                            max-width: 11%;
+                            width: auto;
+                            margin-bottom: -0.4em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .md_openscheduling_index {
+
+        .filterButtonContainer {
+
+            .filterControl {
+
+                a {
+
+                    &[data-name='people'], &[data-name='locations'], &[data-name='datetime'] {
+                        > span {
+                            max-width: 27%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .md_openscheduling_index {
+
+        .filterButtonContainer {
+
+            .filterControl {
+
+                a {
+
+                    &[data-name='people'], &[data-name='locations'], &[data-name='datetime'] {
+                        > span {
+                            max-width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Steps - Confirm and Schedule ======= */
+
+.md_openscheduling_index {
+
+    div#D6F73C26-7627-4948-95EA-2C630C25C5E9_scheduleOpenings_apptDetailsControlsContainer {
+        margin-top: 40px;
+    }
+
+    div.slotDetailsContainer {
+        padding: 0px;
+        margin: 0;
+        text-align: left;
+
+        .hasProviderPhoto {
+            padding-left: 0px;
+
+            .providerPhoto {
+                margin-left: 0rem;
+            }
+
+            .providerName {
+                margin-left: 4.5rem;
+                min-height: 4rem;
+            }
+        }
+
+        .dateTime {
+            line-height: 1.5em;
+            background-color: $hover-tile;
+            border-radius: $border-radius;
+            padding: 15px;
+            margin-bottom: 10px;
+            margin-bottom: 20px;
+            min-height: 74px;
+            width: 100%;
+
+            &:before {
+                background-image: none;
+            }
+
+            .date {
+                font-size: 14px;
+                font-weight: $sharp-weight-semi-black;
+                text-transform: uppercase;
+                padding-bottom: 5px;
+                color: $dk-blue;
+            }
+
+            .time {
+                font-size: 20px;
+                color: $dk-gray;
+            }
+        }
+
+        .address {
+            background-color: $hover-tile;
+            border-radius: $border-radius;
+            padding: 15px;
+            margin-bottom: 20px;
+            min-height: 74px;
+            width: 100%;
+
+            .departmentName {
+                font-size: 14px;
+                font-weight: $sharp-weight-semi-black;
+                text-transform: uppercase;
+                padding-bottom: 5px;
+                color: $dk-blue;
+            }
+
+            .addressLine {
+                line-height: 1.5em;
+                font-size: 20px;
+                color: $dk-gray;
+            }
+
+            .phoneNumber {
+                line-height: 1.5em;
+                font-size: 20px;
+                color: $dk-gray;
+            }
+        }
+
+        .address:before {
+            background-image: none;
+        }
+
+        .instructions {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .comments {
+            text-align: left;
+            width: 100%;
+
+            &:before {
+                background-image: none;
+            }
+        }
+
+        textarea {
+            max-height: none;
+            min-height: 0;
+            max-width: none;
+            min-width: 0;
+        }
+    }
+
+    .stepContainer label.required:before {
+        line-height: 1.5em;
+    }
+
+    .signupContainer label.required:before {
+        line-height: 1.5em;
+    }
+
+    .signupContainer legend.required:before {
+        line-height: 1.5em;
+    }
+
+    textarea#Comments {
+        padding: 0.875rem 0.25rem 0.125rem;
+        width: 100%;
+    }
+
+    .ghostInput.ghosted textarea {
+        padding: initial;
+    }
+}
+
+/* Almost Done Popup ======= */
+
+.md_openscheduling_index {
+
+    .loginSignupContainer > h1 {
+        color: $dk-blue;
+    }
+
+    .card .cardline.partial.right {
+        right: 45px;
+    }
+
+    .signupContainer {
+        overflow: visible;
+        width: auto;
+        padding: 0px;
+
+        .signupStepsContainer {
+            margin: 0;
+
+            .signupStep {
+                margin: 0 0;
+            }
+        }
+
+        .card.loginContainer {
+            width: 100%;
+            margin: 0 auto;
+            padding: 1rem;
+
+            a {
+                color: $white;
+            }
+        }
+
+        h2 {
+            color: $white;
+        }
+
+        .slider {
+            padding: 7px 0 0 0;
+        }
+
+        .signupStep {
+            border: 20px solid #cecece;
+            border-radius: $border-radius;
+        }
+
+        .signupStep label {
+            color: $dk-gray;
+        }
+
+        .signupStep .navigation {
+            position: relative;
+            height: 5.5rem;
+            margin-top: 25px;
+
+            .button {
+                display: block;
+                width: 100%;
+                position: relative;
+            }
+        }
+
+        .column fieldset legend {
+            text-align: left;
+            margin: 9px 3px 0 10px;
+        }
+    }
+
+    .login {
+        .field-validation-error {
+            color: $goldenrod;
+            display: block;
+            padding-top: 24px;
+        }
+
+        .button, .ghostInput {
+            display: block;
+            width: 100%;
+        }
+
+        .ghostInput + .ghostInput {
+            margin: 1rem 0px;
+        }
+
+        input {
+            border-radius: $border-radius;
+        }
+
+        .button {
+            height: $form-field-min-height;
+            line-height: 1.3rem;
+            background-color: white;
+            color: $dk-blue;
+        }
+
+        .button:hover {
+            background-color: $light-gray;
+        }
+    }
+
+    .lb_content {
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        width: auto;
+        max-width: 960px;
+        background-color: $white;
+    }
+
+    .signupheader h2 {
+        color: $dk-blue;
+    }
+
+    .signupheader p {
+        color: $dk-blue;
+        padding-left: 5px;
+    }
+
+    .signupStep .content > .navigation .nextstep {
+        float: initial;
+    }
+
+    .signupStep .content > .navigation .completeworkflow {
+        float: initial;
+    }
+
+    .signupsection label {
+        text-align: left;
+    }
+
+    .tbContainer {
+        width: 100%;
+        margin: 0px 0px 15px 0px;
+    }
+
+    .signupsection .signupStep {
+        .column, .column fieldset {
+            width: 100%;
+        }
+
+        .ghostInput {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 15px;
+
+            input[type='text'], input[type='tel'], input[type='email'], input[type='password'], select {
+                width: 100%;
+                border-radius: $border-radius;
+                padding: 0.875rem 0.25rem 0;
+            }
+
+            label {
+                position: absolute;
+            }
+        }
+    }
+
+    .signupsection .field-validation-error {
+
+        &[data-valmsg-for='DateOfBirthStr'] {
+            width: 100%;
+        }
+    }
+
+    body:not(.embedded) .signupStep.userinfo .prevstep {
+        display: none;
+    }
+
+    .signupStep .content > .navigation .prevstep {
+        margin-left: 0px;
+    }
+
+    label[for='AddressLine2'].clearlabel {
+        color: $dk-gray !important;
+        font-size: 0.9rem !important;
+        height: 2.5rem !important;
+        line-height: 2.5rem !important;
+        opacity: 1 !important;
+        margin: 0 0.5rem -2.5rem !important;
+        width: calc(100% - 1rem) !important;
+        transition: all .3s ease-in-out;
+    }
+
+    .ghosted {
+        label[for='AddressLine2'].clearlabel {
+            font-size: 0.6rem !important;
+            height: 1.25rem !important;
+            line-height: 1.25rem !important;
+            margin: 0 0.325rem -1.25rem !important;
+            padding: 0 !important;
+            width: calc(100% - 0.65rem) !important;
+        }
+    }
+
+    input#AddressLine2 {
+        border: 1px solid #cecece;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .md_openscheduling_index {
+        .login {
+            .button, .ghostInput {
+                display: inline-block;
+                width: 32.5%;
+            }
+
+            .ghostInput + .ghostInput {
+                margin: 0 1%;
+            }
+        }
+
+        .tbContainer {
+            width: 48%;
+            margin: 0 5px;
+        }
+
+        .signupsection .signupStep {
+            .ghostInput {
+                width: 50%;
+
+                input[type='text'], input[type='tel'], input[type='email'], input[type='password'], select {
+                    width: calc(100% - 30px);
+                }
+            }
+        }
+
+        .signupsection .insurance {
+            div[id*='signup_insurance_content'] .column {
+
+                > .ghostInput:nth-child(-n+2) {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* Verification */
+.md_openscheduling_index {
+    .credentials {
+        #CAPTCHA {
+            margin-bottom: 15px;
+        }
+
+    }
+}
+
+/* Confirmation Screen ======= */
+
+.md_signupandschedule_apptconfirm {
+    .title h1 {
+        font-size: 22px !important;
+        height: auto !important;
+    }
+
+    .button {
+        background-color: $dk-blue;
+
+        &:hover {
+            background-color: $dk-navy;
+        }
+
+        &:focus {
+            background-color: $dk-blue;
+        }
+    }
+}
+
+body.embedded {
+    .slotDetailsContainer {
+        .providerPhoto {
+            width: 7rem;
+        }
+
+        .roundedimage {
+            height: 7rem;
+            width: 7rem;
+        }
+    }
+
+    .dateTime {
+        padding-top: 35px;
+
+        .date, .time {
+            font-weight: $sharp-weight-semi-bold;
+        }
+    }
+
+    div.slotDetailsContainer {
+        .address p {
+            font-size: 18px;
+        }
+
+        .signup {
+            border-top: none;
+            width: 50%;
+            float: right;
+            margin-top: -173px;
+            padding: 0 25px;
+            line-height: 1.4;
+            border-left: 3px solid #F0F0F0;
+
+            p {
+                color: $dk-gray;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+
+/* EPIC WP EMBEDDED OPEN SCHEDULING WIDGET
+   ========================================================================== */
+
+body.embedded #content {
+    overflow: visible;
+}
+
+body.embedded div.openingsData .plain .slotslist a.slotdetailaction {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+body.embedded div.setOfStepsContainer > div.slider div.stepContainer {
+    margin: auto;
+}
+
+.embedded .filterFrame {
+    width: 100%;
+}
+
+.embedded div.openingsData::-webkit-scrollbar {
+    background-color: $common-bg;
+    width: 10px;
+}
+
+.embedded div.openingsData::-webkit-scrollbar-thumb {
+    background-color: $dk-blue;
+}
+
+
+/* STEP ONE - CHOOSE PROVIDER, LOCATION AND DAY/TIME ======= */
+body.embedded {
+    box-shadow: none;
+    margin: 0px auto;
+    padding: 0px;
+    background: $dk-blue;
+    border: none;
+    max-width: 1170px;
+    font-size: 14px;
+
+    div.stepContainer {
+        text-align: left;
+
+        .scrollTableWrapper {
+            border-color: transparent;
+
+            .header {
+                color: $dk-gray;
+            }
+        }
+    }
+
+    div.openingsData {
+
+        a:hover {
+            color: $white !important;
+            text-decoration: none;
+        }
+
+        a:focus {
+            text-decoration: none;
+        }
+
+        .plain .expandSlots {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0px;
+        }
+
+        .slotslist .slotdetailaction {
+            background-color: $dk-blue;
+            border-radius: $border-radius;
+
+            &:hover, &.selected {
+                background-color: $dk-navy;
+            }
+        }
+
+        .expandSlots a {
+            background-color: $dk-blue;
+            display: inline-block;
+            color: $white;
+            padding: 9px 20px;
+            font-size: 1.2em;
+            border-radius: $border-radius;
+            font-weight: $sharp-weight-regular;
+
+            &:hover {
+                background-color: $dk-blue;
+            }
+        }
+
+        .card {
+            padding: 1rem;
+
+            > .header {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .stepContainer .openingsControls {
+        .filterControlContainer {
+            position: relative;
+            padding-left: 0px;
+
+            p:first-child {
+                display: none;
+            }
+        }
+    }
+
+    .filterControl {
+        width: 33.333%;
+        display: inline-block;
+        padding: 15px;
+        text-align: left;
+        margin: 0px;
+        height: auto;
+
+        .filterName {
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            line-height: 2em;
+            display: block;
+        }
+
+        span {
+            color: $dk-gray;
+        }
+
+        a {
+            display: inline-block;
+            border-radius: $border-radius;
+            font-size: 14px;
+        }
+
+        a.filterValue {
+            border: $form-field-border;
+            background-image: url("../images/rowopen.gif");
+            background-repeat: no-repeat;
+            background-position: top 13px right 13px;
+            background-size: 13px;
+            width: 100%;
+            padding: 10px;
+            box-shadow: none;
+
+            span {
+                color: $dk-gray;
+                font-weight: $sharp-weight-regular;
+            }
+        }
+
+        div.optionsgroup {
+            padding: 15px 25px 25px;
+            right: 0px;
+            width: calc(100% - 30px);
+        }
+
+        label {
+            padding-left: 10px;
+        }
+
+        input {
+            margin: 0px;
+            height: 16px;
+        }
+
+        .departmentDetails {
+            font-size: 16px;
+            line-height: 1.4em;
+        }
+
+        #locationGroup .departmentAddress {
+            padding-left: 10px;
+        }
+
+        .timeOfDay {
+            padding-top: 10px;
+        }
+
+        label.togglebutton {
+            background-color: $dk-blue;
+            color: $white;
+        }
+
+        .card input:checked + label.togglebutton[for] {
+            background-color: $dk-navy;
+            color: $white;
+        }
+
+        .card input.buttoncheck:checked + label.buttoncheck {
+            background-color: $dk-navy;
+            color: $white;
+        }
+
+        input:focus + label.togglebutton[for] {
+            text-decoration: none;
+        }
+
+        input + label.togglebutton[for]:hover {
+            text-decoration: none;
+            color: $white;
+            background-color: $dk-navy;
+        }
+
+        .prettycheck.container {
+            margin-left: -10px;
+        }
+
+        .button.inlinesave {
+            background-color: $dk-blue;
+        }
+
+        .button.inlinesave:focus {
+            background-color: $dk-blue;
+        }
+
+        .button.inlinesave:hover {
+            background-color: $dk-navy;
+        }
+
+        .membertab a:focus {
+            background-color: $tertiary-opaque-hover;
+        }
+
+        .membertab a:hover {
+            background-color: $tertiary-opaque-hover;
+        }
+
+        .card.hover a:focus {
+            background-color: $tertiary-opaque-hover;
+        }
+
+        .card.hover a:hover {
+            background-color: $tertiary-opaque-hover;
+        }
+
+        .list.hoverable a:focus {
+            background-color: $tertiary-opaque-hover;
+        }
+
+        .list.hoverable a:hover {
+            background-color: $tertiary-opaque-hover;
+        }
+    }
+}
+
+/* STEP TWO - VERIFY INFORMATION IS CORRECT ======= */
+
+body.embedded {
+
+    .stepContainer .slotDetailsContainer {
+        text-align: left;
+        margin-top: 10px;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    div.slotDetailsContainer {
+        .header {
+            color: $dk-gray;
+            position: absolute;
+        }
+
+        .hasProviderPhoto {
+            color: $dk-gray;
+            padding-left: 0px;
+
+            .providerPhoto {
+                margin-left: 0rem;
+            }
+
+            .providerName {
+                margin-left: 8rem;
+                min-height: 4rem;
+            }
+        }
+
+        div.apptDetailsControlsContainer {
+            width: 100%;
+            margin-left: 0;
+
+            .button {
+                width: 49%;
+            }
+
+            .prevMainStep, .completeworkflow {
+                padding: 11px 15px;
+                font-size: 14px;
+                border-radius: $border-radius;
+            }
+
+            .completeworkflow {
+                background-color: $md-teal;
+                text-transform: uppercase;
+                letter-spacing: .25px;
+
+                &:hover {
+                    background-color: $dk-blue;
+                }
+            }
+        }
+
+        .dateTime, .address {
+            display: block;
+            padding-left: 140px;
+
+            &:before {
+                background-image: none;
+            }
+        }
+
+        .address {
+            p {
+                display: block;
+                color: $dk-gray;
+                line-height: 1.3;
+            }
+        }
+
+        div.comments {
+            text-align: left;
+            width: 100%;
+        }
+
+        .comments textarea {
+            border: $form-field-border;
+            height: 120px;
+        }
+    }
+
+    .departmentName:hover {
+        background-color: initial !important;
+        color: $dk-blue !important;
+        font-weight: initial !important;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+
+    body.embedded div.slotDetailsContainer .hasProviderPhoto .providerName {
+        margin-left: 3.8rem;
+    }
+    body.embedded div.slotDetailsContainer .signup {
+        border-left: none;
+        margin-top: 0px;
+        padding: 25px 0px;
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body.embedded {
+        div.slotDetailsContainer {
+            div.comments {
+                width: 50%;
+                position: absolute;
+                right: 15px;
+                top: 40px;
+            }
+
+            div.apptDetailsControlsContainer {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body.embedded {
+        div.slotDetailsContainer {
+            div.comments {
+                top: 10px;
+            }
+
+            div.apptDetailsControlsContainer {
+                padding-top: 0px;
+            }
+        }
+    }
+}

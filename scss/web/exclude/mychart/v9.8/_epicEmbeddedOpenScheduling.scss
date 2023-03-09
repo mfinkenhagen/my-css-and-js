@@ -1,0 +1,1184 @@
+﻿/* DO NOT MODIFY - COPIED FROM EPIC */
+/* Page */
+
+body.embedded {
+    min-width: 0;
+    width: 700px;
+}
+
+body.embedded #main {
+    padding: 0;
+}
+
+body.embedded .setOfStepsContainer {
+    background: none;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: 700px;
+}
+
+body.embedded .setOfStepsContainer > .slider {
+    background: none;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: 1000%;
+}
+
+body.embedded .stepContainer {
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    height: 490px;
+    margin: 0.25rem;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    width: 690px;
+}
+
+body.embedded .stepContainer.scrollable {
+    overflow-y: auto;
+}
+
+body.embedded .stepContainer > h2 {
+    line-height: 1.5rem;
+    margin: 0 0.5%;
+    width: 99%;
+}
+
+/* Slots step */
+
+body.embedded .stepContainer .openingsContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body.embedded .stepContainer .openingsContainer > .pretext,
+body.embedded .stepContainer .openingsContainer > .posttext {
+    max-height: 150px; /* Don't allow pretext or posttext to take up more than ~33% of the entire widget */
+    overflow-y: auto;
+    padding: 0 0.5rem;
+    margin: 0;
+}
+
+body.embedded .stepContainer .openingsControls {
+    margin: 0;
+}
+
+body.embedded .stepContainer .openingsControls .filterControlContainer {
+    margin-top: 0;
+}
+
+body.embedded .stepContainer .scrollTableWrapper {
+    flex: 1; /* Slots should fill the remaining height of div.openingsContainer */
+}
+
+body.embedded .stepContainer .openingsData {
+    height: 100%;
+    padding: 0 0.25rem;
+}
+
+/* Details step */
+
+body.embedded .slotDetailsContainer .apptDetailsControlsContainer {
+    text-align: center;
+}
+
+body.embedded .slotDetailsContainer .apptDetailsControlsContainer .button {
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+body.embedded .slotDetailsContainer .apptDetailsControlsContainer .button:last-child {
+    margin: 0.5rem 0;
+}
+
+body.embedded .slotDetailsContainer .apptDetailsControlsContainer .prevMainStep {
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+/* Cards */
+
+body.embedded .loginSignupContainer h1,
+body.embedded .loginSignupContainer .lb_close {
+    display: none;
+}
+
+body.embedded .loginSignupContainer > .pretext,
+body.embedded .loginSignupContainer > .posttext {
+    margin: 0.5rem 0.5rem 0;
+    text-align: center;
+    width: calc(100% - 1rem);
+}
+
+body.embedded .signupContainer {
+    width: 690px;
+    z-index: 0;
+}
+
+body.embedded .signupContainer .signupStepsContainer {
+    margin: 0;
+    width: 690px;
+}
+
+body.embedded .signupContainer .signupStepsContainer .slider {
+    padding: 0;
+}
+
+body.embedded .signupContainer .signupStepsContainer .signupStep {
+    margin: 0.25rem 0.2%;
+    overflow: hidden;
+    width: 640px;
+}
+
+body.embedded .signupContainer .signupStepsContainer .signupStep .prevMainStep {
+    visibility: visible;
+}
+
+/* Log in or continue as a guest card (landing card) */
+
+body.embedded .signupContainer .signupStep.landing::after {
+    background: #FFF none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.5rem;
+    position: absolute;
+    width: calc(100% - 1rem);
+}
+
+body.embedded .signupContainer .signupStep.landing h2 {
+    display: inline-block;
+    margin: 5px 0 10px;
+    text-align: center;
+}
+
+body.embedded .signupContainer .signupStep.landing .content {
+    padding-bottom: 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .content::before {
+    border-right: 1px solid #CCC;
+    content: "";
+    display: block;
+    height: 100rem;
+    left: 50%;
+    margin-bottom: -100rem;
+    position: relative;
+    top: 0;
+    width: 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .content.noDivider::before {
+    display: none;
+}
+
+body.embedded .signupContainer .signupStep.landing .content > div {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    padding: 0 0.5rem;
+}
+
+body.embedded .signupContainer .signupStep.landing .content .pretext {
+    margin: 0 0 1rem;
+}
+
+body.embedded .signupContainer .signupStep.landing .content > .pretext {
+    background: #FFF none repeat scroll 0 0;
+    margin: 0;
+    padding: 0 0 1rem;
+    position: relative;
+}
+
+body.embedded .signupContainer .signupStep.landing .content .posttext {
+    text-align: center;
+    margin: 1rem 0 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .content > .posttext {
+    background: #FFF none repeat scroll 0 0;
+    margin: 0;
+    padding: 1rem 0 0;
+    position: relative;
+}
+
+body.embedded .signupContainer .signupStep.landing .content > .posttext::after {
+    background: #FFF none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 100rem;
+    margin-bottom: -100rem;
+    width: calc(100% - 1rem);
+}
+
+/* Login */
+
+body.embedded .signupContainer .signupStep.landing .loginContainer {
+    background: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+body.embedded .signupContainer .signupStep.landing .loginContainer .login {
+    text-align: center;
+}
+
+body.embedded .signupContainer .signupStep.landing .loginContainer .ghostInput {
+    margin: 0 0 0.25rem;
+    text-align: left;
+    width: 100%;
+}
+
+body.embedded .signupContainer .signupStep.landing .loginContainer .ghostInput.compact {
+    margin: 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .loginContainer .ghostInput input {
+    width: 100%;
+}
+
+body.embedded .signupContainer .signupStep.landing .loginContainer .ghostInput + .ghostInput input {
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+}
+
+body.embedded .signupContainer .signupStep.landing .loginContainer .button {
+    margin: 0.5rem 0;
+    width: 87.5%;
+}
+
+body.embedded .signupContainer .signupStep.landing .loginContainer .recovery {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0;
+    text-align: center;
+    width: 50%;
+}
+
+/* Proxy selection */
+
+body.embedded .signupContainer .signupStep.landing .content > div.proxylistcontainer {
+    width: 100%;
+}
+
+body.embedded .signupContainer .signupStep.landing .proxysection {
+    color: #246FB5; /* @color theme */
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 5px 0 10px;
+    padding: 0.75rem 0 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards {
+    padding: 0;
+}
+
+/* Duplicating styles from cards.css to prevent match heights based on .card */
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard {
+    box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.25rem;
+    margin: 0 0.5% 0.5rem;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+    width: 49.5%;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard:nth-of-type(odd) {
+    margin-left: 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard:nth-of-type(even) {
+    margin-right: 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard.selected:before {
+    background-color: #246FB5; /* @color theme */
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0.33rem;
+    z-index: 1;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard {
+    box-shadow: none;
+    opacity: 0.75;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard:hover,
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard:focus,
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard.selected {
+    box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a {
+    height: 100%;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a:focus,
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a:hover {
+    background-color: rgba(36, 111, 181, 0.1); /* @color theme tint */
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a > .proxyPhoto {
+    display: inline-block;
+    height: 3.75rem;
+    width: 3.75rem;
+    vertical-align: top;
+}
+
+body.embedded .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a > .proxyName {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    vertical-align: top;
+    width: calc(100% - 4.75rem);
+}
+
+body.embedded .signupContainer .signupStep.landing .formbuttons {
+    text-align: center;
+}
+
+/* Continue as a guest */
+
+body.embedded .signupContainer .orHolder {
+    display: none;
+}
+
+body.embedded .signupContainer .signupStep.landing .continueAsGuestContainer .signupheader {
+    margin: 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .continueAsGuestContainer .signupheader .header {
+    padding-right: 0;
+    width: 100%;
+}
+
+body.embedded .signupContainer .signupStep.landing .continueAsGuestContainer .navigation {
+    margin: 1.5rem 0 0.5rem;
+    position: static;
+    width: 100%;
+}
+
+body.embedded .signupContainer .signupStep.landing .continueAsGuestContainer .button {
+    margin: 0 0.5rem 0 0;
+    position: static;
+}
+
+body.embedded .signupContainer .signupStep.landing .continueAsGuestContainer .button:last-child {
+    margin-right: 0;
+}
+
+body.embedded .signupContainer .signupStep.landing .continueAsGuestContainer .button.prevMainStep {
+    display: inline-block;
+}
+
+/* Fields with a long label  need to use a slightly smaller font size when embedded */
+body.embedded .ghostInput:not(.ghosted) > label[for=NationalIdLast4] {
+    font-size: 0.85rem;
+}
+
+/* Insurance card */
+
+body.embedded .signupContainer .signupStep.insurance .sampleimage {
+    margin-left: 0;
+}
+
+body.embedded .signupContainer .signupStep.insurance .previmage,
+body.embedded .signupContainer .signupStep.insurance .nextimage {
+    margin: 5px 5px 0 0;
+}
+
+/* Other */
+
+.force_redraw {
+    border-color: transparent;
+}
+
+/* This is used because a blank iframe is added in Chrome and Safari when using reCAPTCHA. If removed, alignment will be messed up. */
+iframe[src="about:blank"] {
+    display: none;
+}
+
+/* Replaces what used to be achieved by float: left */
+body.embedded .signupContainer .slider,
+body.embedded .signupsection {
+    white-space: nowrap;
+}
+
+body.embedded .signupStep {
+    white-space: normal;
+}
+
+body.embedded .signupStep,
+body.embedded .signupsection,
+body.embedded .signupStep .column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* No cookies error styling */
+
+body.embedded #embeddedScheduleNoCookies .noCookies {
+    height: calc(100vh - 1rem);
+    max-height: 550px;
+    min-height: 10rem;
+    position: relative;
+}
+
+body.embedded #embeddedScheduleNoCookies .noCookies .verticalCenter {
+    margin: 0 1rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 2rem);
+}
+
+body.embedded #embeddedScheduleNoCookies .noCookies .icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 64px;
+    margin: auto;
+    width: 64px;
+}
+
+body.embedded #embeddedScheduleNoCookies #noCookies .icon {
+    display: none;
+}
+
+body.embedded #embeddedScheduleNoCookies #noCookiesError .icon {
+    background-image: url(../en-US/images/warning.png);
+}
+
+/* For Mobile-Optimized Widget */
+@media only screen and (max-width: 699px) /* This width is tied to the widget fixed width of 700px */
+{
+
+    /** GENERAL MOBILE OPTIMIZATION STYLING ************/
+
+    /* Prevent text resizing on iOS rotation */
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* Reset widths and centering */
+    body.embedded,
+    body.embedded div.setOfStepsContainer,
+    body.embedded div.setOfStepsContainer > div.slider,
+    body.embedded div.setOfStepsContainer > div.slider div.stepContainer,
+    body.embedded .progressbar,
+    body.embedded .lb_content,
+    body.embedded .errorpopup {
+        /* We really want width:100%, but in iOS Safari that results in the iframe being wider than 100% */
+        width: 50px; /* Must remain small for the iframe scenario */
+        min-width: 100%;
+    }
+
+    body.embedded .stepContainer.slotDetailsContainer .comments {
+        width: 100%;
+    }
+
+    body.embedded .lb_content {
+        left: 0;
+        margin: 0;
+    }
+
+    body.embedded div.setOfStepsContainer > div.slider div.stepContainer {
+        margin: 0;
+        display: block;
+    }
+
+
+    /* Reset heights and vertical layout */
+    html.embedded,
+    html.embedded > body.embedded,
+    html.embedded #main,
+    html.embedded .setOfStepsContainer,
+    html.embedded body.embedded div.setOfStepsContainer > div.slider,
+    html.embedded body.embedded div.setOfStepsContainer > div.slider div.stepContainer,
+    html.embedded body.embedded div.openingsData {
+        height: auto; /* For standalone version, to allow for natural scrolling to occur */
+    }
+
+    html.embedded.poppedOut,
+    html.embedded.poppedOut > body.embedded,
+    html.embedded.poppedOut #wrap,
+    html.embedded.poppedOut #content,
+    html.embedded.poppedOut #main,
+    html.embedded.poppedOut .setOfStepsContainer,
+    html.embedded.poppedOut body.embedded div.setOfStepsContainer > div.slider /* These selectors are for every ancestor of .slider up till the root */ {
+        height: 100%; /* For popped out version, so it fills up entire screen height and makes momentum scrolling possible */
+    }
+
+    body.embedded #wrap {
+        min-height: 100vh;
+    }
+
+    body.embedded #content,
+    body.embedded #main,
+    body.embedded .signupContainer .signupStep {
+        min-height: 0 !important;
+    }
+
+    body.embedded .stepContainer.scrollable {
+        overflow-y: inherit;
+    }
+
+    body.embedded .stepContainer .openingsContainer {
+        display: block;
+        height: auto;
+    }
+
+    body.embedded .stepContainer .openingsContainer > .pretext,
+    body.embedded .stepContainer .openingsContainer > .posttext {
+        max-height: none;
+    }
+
+
+    body.embedded .signupContainer .signupStep .content {
+        padding-bottom: 0;
+    }
+
+
+    /* Enable momentum scrolling on mobile */
+    html.embedded.poppedOut body.embedded div.setOfStepsContainer > div.slider:not(.nointernalscroll) {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+    }
+
+
+    /* Vertically center the "Sorry no slots" message */
+    html.embedded body.embedded div.openingsNoData {
+        min-height: 400px; /* fallback */
+        height: 100vh; /* Centers the message in the viewport, for supported browsers */
+    }
+
+
+    /* Hide filters and progress bar */
+    body.embedded div.openingsControls .filterControlContainer,
+    body.embedded .progressbar {
+        display: none;
+    }
+
+    body.embedded .stepContainer .scrollTableWrapper {
+        border: none; /* Without this, MOOSW incremental loading breaks! */
+    }
+
+
+    /* Fix slider behavior */
+    body.embedded div.setOfStepsContainer > div.slider {
+        left: 0 !important;
+    }
+
+    body.embedded div.setOfStepsContainer > div.slider div.stepContainer.offscreen {
+        display: none;
+    }
+
+
+    /* Reorder nav buttons */
+    body.embedded .stepContainer.slotDetailsContainer div.apptDetailsControlsContainer .button.prevMainStep,
+    body.embedded #main .signupContainer .signupStep.landing .proxylistcontainer .button#backtologin,
+    body.embedded #main .signupContainer .signupStep.landing .continueAsGuestContainer .button.prevMainStep {
+        margin-top: 3rem;
+    }
+
+    body.embedded .stepContainer.slotDetailsContainer div.apptDetailsControlsContainer .button.scheduleaction,
+    body.embedded #main .signupContainer .signupStep.landing .proxylistcontainer .button.nextstep,
+    body.embedded #main .signupContainer .signupStep.landing .continueAsGuestContainer .button.nextstep {
+        float: left;
+        margin-top: -5.75rem;
+        margin-bottom: 3rem;
+    }
+
+
+    /* Full-width buttons */
+    body.embedded .button,
+    body.embedded .stepContainer.slotDetailsContainer.scrollable .apptDetailsControlsContainer .button, /* Need these crazy selectors to override specific styling defined elsewhere */
+    body.embedded #main .signupContainer .signupStep.landing .continueAsGuestContainer .button,
+    body.embedded #main .signupContainer .signupStep.landing .content > div .button {
+        margin: 0.26em 0; /* ~5px 0 */
+        width: 100%;
+        padding: 0.522em 0.26em; /* ~10px ~5px */
+        line-height: 1.5rem;
+        display: inline-block;
+        /* #STYLING */
+        -webkit-appearance: none;
+        background-image: none; /* remove gradient */
+        border-radius: 0.125em;
+        border: none;
+        text-shadow: none;
+    }
+
+
+    /* Lighter button colors */
+    body.embedded .button:not(.disabled) {
+        background-color: #418be7;
+    }
+
+    body.embedded .nextstep:not(.disabled),
+    body.embedded .completeworkflow:not(.disabled) {
+        background-color: #73c55f;
+    }
+
+
+    /* Fix Android browser bug where spinner isn't fully visible */
+    .ajaxspinner {
+        -webkit-perspective: 1000;
+    }
+
+
+    /** STEP 1 (Choose a time) ************/
+    /* Get slot buttons all fitting in one row, and let the rows scroll horizontally */
+    body.embedded div.openingsData .slotslist {
+        overflow: hidden; /* we want overflow-x:auto on touch devices, but we add the 'ontouchdevice' class through JS */
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding: 0.1rem;
+    }
+
+    body.embedded div.openingsData .slotslist.ontouchdevice {
+        overflow-x: auto;
+    }
+
+    body.embedded div.openingsData .slotslist.onslowtouchdevice {
+        white-space: normal;
+    }
+
+    body.embedded div.openingsData .slotslist::-webkit-scrollbar {
+        display: none; /* Hide on Chrome */
+    }
+
+    body.embedded div.openingsData .slotslist > *,
+    body.embedded div.openingsData .slotslist .hiddenslots > * {
+        display: inline;
+    }
+
+    body.embedded div.openingsData .plain .slotslist,
+    body.embedded div.openingsData .plain .slotslist.wide {
+        width: 100%;
+    }
+
+
+    /* Adjust row spacing #STYLING */
+    body.embedded div.openingsData .plain .slotslist {
+        margin-bottom: 0.22em; /* ~3px */
+    }
+
+    body.embedded .departmentSlots {
+        padding-bottom: 0.25rem;
+    }
+
+
+    /* Scroll indicators */
+    body.embedded .departmentSlots {
+        position: relative;
+    }
+
+    body.embedded .departmentSlots .scrollIndicator {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        display: inline-block;
+        z-index: 1;
+        cursor: pointer;
+        /* #STYLING */
+        background: #fff;
+        width: 1.75em;
+    }
+
+    body.embedded .departmentSlots .scrollIndicator.left {
+        left: 0;
+        opacity: 0;
+        /* #STYLING */
+        box-shadow: 3px 0 2px -1px rgba(0,0,0,0.3);
+        background: linear-gradient(to right, rgba(255,255,255,1) 20%,rgba(255,255,255,.5) 100%);
+    }
+
+    body.embedded .departmentSlots .scrollIndicator.right {
+        right: 0;
+        opacity: 1;
+        /* #STYLING */
+        box-shadow: -3px 0 2px -1px rgba(0,0,0,0.3);
+        background: linear-gradient(to left, rgba(255,255,255,1) 20%,rgba(255,255,255,.5) 100%);
+    }
+
+    body.embedded .departmentSlots .scrollIndicator.left:before,
+    body.embedded .departmentSlots .scrollIndicator.right:before {
+        content: "";
+        display: inline-block;
+        border-style: solid;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.35em; /* equal to border width */
+        left: 50%;
+        margin-left: -0.175em;
+    }
+
+    body.embedded .departmentSlots .scrollIndicator.left:before {
+        /* left triangle #STYLING */
+        border-width: 0.35em 0.35em 0.35em 0; /* 4px */
+        border-color: transparent #888 transparent transparent;
+    }
+
+    body.embedded .departmentSlots .scrollIndicator.right:before {
+        /* right triangle #STYLING */
+        border-width: 0.35em 0 0.35em 0.35em; /* 4px */
+        border-color: transparent transparent transparent #888;
+    }
+
+    body.embedded div.openingsData .departmentSlots > div {
+        -webkit-tap-highlight-color: rgba(0,0,0,0); /* Don't show the iOS gray highlight on tap */
+    }
+
+
+    /* Remove 'more...' link */
+    body.embedded .stepContainer div.openingsData .plain .expandSlots,
+    body.embedded .stepContainer div.openingsData .moreslotslabel {
+        display: none !important;
+    }
+
+
+    /* Always show all slots */
+    body.embedded .stepContainer div.openingsData .plain .hiddenslots,
+    body.embedded .stepContainer div.openingsData .subslotslist,
+    body.embedded .stepContainer div.openingsData div.moreslots,
+    body.embedded .stepContainer div.openingsData div.moreslots .slotdetailaction,
+    body.embedded .stepContainer div.openingsData div.moreslots .slotdetailaction.dismissed {
+        display: inline-block !important;
+    }
+
+    body.embedded .stepContainer div.openingsData .plain .onslowtouchdevice .hiddenslots,
+    body.embedded .stepContainer div.openingsData .onslowtouchdevice .subslotslist,
+    body.embedded .stepContainer div.openingsData .onslowtouchdevice div.moreslots {
+        display: inline !important;
+    }
+
+    body.embedded .stepContainer div.openingsData .subslotslist {
+        width: auto;
+        height: auto;
+        max-width: none;
+        margin: 0;
+    }
+
+
+    /* Remove the hover styling for hidden slots */
+    body.embedded .stepContainer div.openingsData div.moreslots.hover {
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        position: static;
+        width: auto;
+    }
+
+
+    /* Button */
+    body.embedded div.openingsData .slotslist a.slotdetailaction {
+        width: auto;
+        min-width: 5.9em;
+        margin: 0 4px 4px 0;
+        position: static;
+        /* #STYLING */
+        padding: 0.441em 0.735em; /* ~6px ~10px */
+    }
+
+
+    /** STEP 2 (Confirm Details) ************/
+
+    /* Reset widths and page layout */
+    body.embedded div.setOfStepsContainer .stepContainer.slotDetailsContainer {
+        padding: 0.625em 0.625em 1.25em; /* ~10px 10px 20px */
+    }
+
+    body.embedded div.slotDetailsContainer div.apptDetailsControlsContainer {
+        margin-top: 2em;
+    }
+
+    body.embedded .slotDetailsContainer[class] .hasDepartmentPhoto,
+    body.embedded .slotDetailsContainer[class] .departmentPhoto,
+    body.embedded .slotDetailsContainer[class] .dateTime,
+    body.embedded .slotDetailsContainer[class] .address,
+    body.embedded .slotDetailsContainer[class] .instructions {
+        display: block;
+        margin: 0 0 0.75rem;
+        padding-left: 0;
+        height: auto;
+        width: 100%;
+    }
+
+
+    /* Remove card style */
+    body.embedded .slotDetailsContainer > .card,
+    body.embedded .slotDetailsContainer.card /* This one's for the confirmation step */ {
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+        box-shadow: none;
+    }
+
+
+    /* Re-align the content */
+    body.embedded .slotDetailsContainer[class] .card {
+        margin-top: 0.5rem;
+    }
+
+    body.embedded .slotDetailsContainer[class] .card .header {
+        min-height: 3rem;
+    }
+
+    body.embedded .slotDetailsContainer[class] .card > div:first-child > div:first-child:not(.hasProviderPhoto) .header {
+        margin-left: -2.5rem;
+        min-height: 0;
+    }
+
+    body.embedded .slotDetailsContainer[class] .card > div:first-child > div {
+        padding-left: 2.5rem;
+    }
+
+    body.embedded .slotDetailsContainer[class] .providerPhoto {
+        margin-left: -2.6rem;
+    }
+
+    body.embedded .slotDetailsContainer[class] .roundedimage {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    /** STEP 3 (Schedule It) ************/
+
+    /* Hide the spacer and navigation */
+    body.embedded .signupStep .spacer,
+    body.embedded .signupContainer > .navigation {
+        display: none;
+    }
+
+    /* Reset widths and layout */
+    body.embedded .signupContainer .signupStepsContainer,
+    body.embedded .signupContainer .signupStepsContainer .slider,
+    body.embedded .signupContainer .signupStepsContainer .signupStep,
+    body.embedded .signupContainer .signupStepsContainer .signupStep .column,
+    body.embedded .signupContainer .signupStep.landing .content > div {
+        width: 100%;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .content > div {
+        padding: 0;
+    }
+
+    body.embedded .signupsection .field-validation-error {
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+
+    body.embedded .signupStep .cardline.required {
+        display: block;
+        position: static;
+        text-align: inherit;
+    }
+
+
+    /* Eliminate slider behavior */
+    body.embedded .signupContainer .slider {
+        left: 0 !important; /*!important needed since we need to override what jQuery dynamically sets in the style attribute */
+    }
+
+    body.embedded .signupStep.offscreen {
+        display: none;
+    }
+
+
+
+    /* Format input fields #STYLING */
+    body.embedded .signupContainer input[type="text"],
+    body.embedded .signupContainer input[type="password"],
+    body.embedded .signupContainer input[type="tel"],
+    body.embedded .signupContainer input[type="email"],
+    body.embedded .signupContainer select,
+    body.embedded .signupContainer textarea,
+    body.embedded .signupContainer .radiocontainer label,
+    body.embedded .signupContainer .signupStepsContainer .signupStep .ghostInput input,
+    body.embedded .signupContainer .signupStepsContainer .signupStep .ghostInput select {
+        font-size: 1.3em;
+    }
+
+    body.embedded .signupContainer input[type="text"],
+    body.embedded .signupContainer input[type="password"],
+    body.embedded .signupContainer input[type="tel"],
+    body.embedded .signupContainer input[type="email"],
+    body.embedded .signupContainer select,
+    body.embedded .signupContainer textarea,
+    body.embedded .signupContainer .signupStepsContainer .signupStep .ghostInput input,
+    body.embedded .signupContainer .signupStepsContainer .signupStep .ghostInput select {
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+        position: relative;
+    }
+
+    body.embedded .signupContainer .signupStepsContainer .signupStep .column fieldset {
+        width: 100%;
+    }
+
+    body.embedded .signupContainer div > label,
+    body.embedded .signupContainer .column fieldset legend {
+        position: relative;
+        z-index: 1;
+    }
+
+    body.embedded .signupContainer select {
+        height: auto;
+    }
+
+    body.embedded .signupContainer .radiocontainer {
+        display: inline-block;
+        width: 100%;
+    }
+
+    body.embedded .signupContainer .radiocontainer input {
+        left: 0;
+    }
+
+    /* Error message layout */
+    body.embedded .signupContainer .validation-summary-errors,
+    body.embedded .signupContainer .errorcontainer {
+        float: left;
+        max-width: none;
+    }
+
+
+    /* Remove the card styling for the signup steps */
+    body.embedded .signupStep,
+    body.embedded .signupStep.landing {
+        background-image: none;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    body.embedded .signupStep:focus {
+        outline: none;
+    }
+
+
+    /* Add whitespace to any pretext */
+    body.embedded .loginSignupContainer > .pretext {
+        padding: 1rem 0.5rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+
+    /* Place errors above the navigation buttons*/
+    body.embedded .signupsection .content > .navigation > .validation-summary-errors:not(.hidden),
+    body.embedded .signupsection .content > .navigation > .errorcontainer:not(:empty) {
+        margin-top: -5.25em;
+    }
+
+    body.embedded .signupsection .content > .navigation > .validation-summary-errors:not(.hidden) ~ a.button,
+    body.embedded .signupsection .content > .navigation > .errorcontainer:not(:empty) ~ a.button {
+        margin-top: 3em;
+    }
+
+
+    /* Distinguish the navigation buttons from the rest of the fields #STYLING */
+    body.embedded .signupContainer .signupStepsContainer .signupStep .navigation {
+        height: auto;
+    }
+
+    body.embedded .signupContainer .signupStepsContainer .content > .navigation {
+        margin-top: 2em;
+        border-top: 1px solid #1b6dd1;
+        position: static;
+        display: inline-block;
+        width: 100%;
+    }
+
+
+    /* Back/next buttons */
+    body.embedded .signupsection .content > .navigation > a.button {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 49.2%; /* fallback */
+        width: calc(50% - 0.15em); /* 0.15em whitespace between buttons */
+        margin: 0.5em 0 0 0;
+        padding: 0.522em 0.26em; /* ~10px ~5px */
+        position: static;
+    }
+
+    body.embedded .signupsection .content > .navigation .button:first-child {
+        margin-right: 0.15em;
+    }
+
+
+    /* Always show the Back button if it takes the user to a previous main step, especially when login is disabled */
+    body.embedded .signupsection .prevMainStep {
+        visibility: inherit;
+    }
+
+
+    /* Step 3.1 (Login / Continue) */
+    /* Reset widths and layout */
+    body.embedded .signupStep.landing .content .loginContainer, /* login fields */
+    body.embedded .signupStep.landing .recovery, /* Forgot username/password links */
+    body.embedded .signupContainer .signupStep.landing .content,
+    body.embedded .signupStep.landing .username,
+    body.embedded .signupStep.landing .password,
+    body.embedded .signupStep.landing .orHolder,
+    body.embedded .signupStep.landing .signupheader, /* 'Continue as Guest' section */
+    body.embedded .signupStep.landing .proxylistcontainer,
+    body.embedded .signupStep.landing .proxylistcontainer .scheduleorcancel,
+    body.embedded .signupStep.landing .content > .navigation {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        border: none;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .content::before {
+        border-right: none;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .loginContainer .ghostInput {
+        width: 100%;
+    }
+
+
+    /* Cover the login fields initially */
+    body.embedded [id*='loginIntro'] {
+        display: block;
+        width: 100%;
+    }
+
+    body.embedded [id*='loginIntro'].hidden + [id*='loginfieldscontainer'],
+    body.embedded [id*='loginIntro'].hidden ~ .button.completeworkflow {
+        display: inline-block;
+    }
+
+    body.embedded [id*='loginIntro']:not(.hidden) + [id*='loginfieldscontainer'],
+    body.embedded [id*='loginIntro']:not(.hidden) ~ .button.completeworkflow {
+        display: none;
+    }
+
+
+    /* Fix ghostInput spacing */
+    body.embedded .signupContainer .signupStep.landing .loginContainer .ghostInput.compact {
+        margin-bottom: 1px;
+    }
+
+
+    /* Clean uo the proxy selection subview */
+    body.embedded .signupContainer .signupStep.landing .proxylistcontainer {
+        border: none;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .proxylistcontainer .button {
+        height: auto;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .proxysection {
+        margin: 0;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .cardlist .proxyLinkWrapper.buttonCard {
+        min-height: 0 !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .cardlist .proxyLinkWrapper.buttonCard a .proxyPhoto {
+        vertical-align: middle;
+    }
+
+    body.embedded .signupContainer .signupStep.landing .cardlist .proxyLinkWrapper.buttonCard a .proxyName {
+        vertical-align: middle;
+        display: inline-block;
+        max-width: calc(100% - 80px);
+    }
+
+
+    /* 'OR' divider #STYLING */
+    body.embedded .signupStep.landing .orHolder {
+        display: inline-block;
+        margin: 0.625em 0; /* ~10px 0 */
+        padding: 0.25rem;
+        font-weight: bold;
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+        text-align: center;
+    }
+
+    body.embedded .signupStep.landing .orHolder:before {
+        content: "";
+        display: block;
+        margin: 0.75em 0 -0.75em;
+        border-top: 1px solid #CCC;
+    }
+
+
+    /* When showing the proxyselection list, hide the 'Continue as Guest' section */
+    body.embedded .signupContainer .signupStep.landing .proxylistcontainer:not(.hidden) ~ .orHolder,
+    body.embedded .signupContainer .signupStep.landing .proxylistcontainer:not(.hidden) ~ .continueAsGuestContainer {
+        display: none;
+    }
+
+
+    /* Step 3.2 (Demographics) */
+
+
+    /* Step 3.3 (Insurance) */
+    /* Fit insurance images on a narrow screen */
+    body.embedded .signupContainer .signupStep.insurance .sampleimage {
+        display: block;
+        margin: 2em auto 0;
+        width: 100%;
+        max-width: 315px;
+        height: calc(60vw);
+        max-height: 200px;
+        background-size: 100% auto;
+        background-position: left top;
+    }
+
+
+    /* Step 3.4 (Validation) */
+
+
+    /* Step 3.5 (Confirmation) */
+    body.embedded [id*='confirmContainer'] {
+        padding: 0.5rem;
+    }
+
+    /* hide the signup button because the signup page has not been mobile-optimized*/
+    body.embedded .slotDetailsContainer .signup {
+        display: none;
+    }
+
+    /** End Mobile-optimization Styling ************/
+}

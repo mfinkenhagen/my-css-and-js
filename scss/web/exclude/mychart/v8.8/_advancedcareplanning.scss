@@ -1,0 +1,40 @@
+﻿@import "_new_variables.scss";
+
+/* ADVANCED CARE PLANNING
+========================================================================== */
+
+#doc-upload-container .card.addItem.hover .addmessage {
+    color: $white;
+}
+
+.card.addItem.hover .addmessage {
+    color: $white;
+}
+
+.acpContent .approvedDocBadge {
+    background-color: $dk-green;
+    border: none;
+    color: $white !important;
+}
+
+.qtnaire-card-content {
+    background: no-repeat;
+}
+
+.helpful-resource-elem .icon {
+    width: 25px;
+    height: 25px;
+}
+
+.helpful-resource-elem span {
+    margin-left: 40px;
+}
+
+.qtnaire-icon {
+    height: 34px;
+}
+
+/* Icons on landing page tiles */
+.qtnaire-card-content.forMe, .qtnaire-card-content.forDoc {
+    background-size: 35px;
+}

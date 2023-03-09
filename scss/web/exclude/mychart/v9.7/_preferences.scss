@@ -1,0 +1,181 @@
+﻿@import "_variables_mychart.scss";
+
+/* PREFERENCES
+   ========================================================================== */
+
+.settingsList {
+    .settingsGroup {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        .groupContainer {
+            padding-top: 3px;
+            padding-left: 0.25rem;
+        }
+
+        a.detailsButton {
+            color: $md-navy;
+            font-size: 0.8em;
+
+            span {
+                padding-right: 0.25rem;
+            }
+        }
+
+        .detailedList {
+            .listItem {
+                line-height: 1.5rem;
+                font-size: 0.8rem;
+                select {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+#personalForm {
+    #schedprefs {
+        legend {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+            color: $dk-gray;
+        }
+    }
+
+    #notifprefs {
+        p {
+            margin-bottom: $form-field-margin;
+        }
+
+        .label, legend {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+            color: $dk-gray;
+        }
+    }
+
+    #demogAddress {
+        .label {
+            padding-bottom: 0.5rem;
+            color: $dk-gray;
+        }
+    }
+}
+
+.leftcolumn .ticklername .paperlessicon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    margin-bottom: -2px;
+}
+
+/* MOBILE PREFERENCES
+   ========================================================================== */
+/* NOTIFICATIONS ====== */
+.mobile {
+    #commMethodSidebar {
+        margin-top: 0.5em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .mobile {
+        #commMethodSidebar {
+            text-align: center;
+        }
+
+        .settingsList .settingsGroup {
+            .groupContainer {
+                position: relative;
+
+                .groupName {
+                    width: 100%;
+
+                    p.groupTitle {
+                        width: calc(100% - 113px);
+                    }
+                }
+
+                a.detailsButton {
+                    position: absolute;
+                    top: -0.75em;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* SCHEDULE PREFERENCES ====== */
+.mobile {
+    #personalForm {
+        .section.indented > .header, .section .formsection > legend {
+            width: 100%;
+            margin-right: 0%;
+            margin-left: 0%;
+            padding-left: 0.5rem;
+        }
+
+        .section.indented > .content {
+            width: 100%;
+        }
+
+        #schedprefs {
+
+            .preftimes {
+                width: 100%;
+            }
+
+            .prefdays {
+                width: 100%;
+                margin-right: 0%;
+
+                .matchButtonWidths li {
+                    display: inline-block;
+                    width: 50%;
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+
+        #preftimes {
+            fieldset, .preftimesrow .col {
+                width: 50%;
+            }
+
+            > .toplabel.threecol.inlinefieldset {
+                padding-right: 0.5rem;
+            }
+
+            .btnColumn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        #personalForm {
+            #schedprefs {
+                .preftimes {
+                    width: 75%;
+                }
+
+                .prefdays {
+                    width: 22%;
+                    margin-right: 3%;
+
+                    .matchButtonWidths li {
+                        display: block;
+                        width: 100%;
+                        padding-right: 0rem;
+                    }
+                }
+            }
+        }
+    }
+}

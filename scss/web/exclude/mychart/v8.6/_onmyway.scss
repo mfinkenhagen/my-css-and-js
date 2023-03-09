@@ -1,0 +1,12 @@
+﻿@import "_variables.scss";
+
+/* ON MY WAY
+   ========================================================================== */
+
+.departmentMapStep .search_input_button {
+    background-image: url(../images/search_blue.png);
+}
+
+#onMyWayPopup .walkInButton:hover:not([disabled]), #onMyWayPopup .walkInButton:focus:not([disabled]) {
+    background-color: $md-navy;
+}

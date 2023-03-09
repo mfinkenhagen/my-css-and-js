@@ -1,0 +1,651 @@
+﻿@import "_variables.scss";
+
+/* VISITS
+   ========================================================================== */
+
+label.filterButton {
+    color: $md-navy;
+}
+
+label.clearButton {
+    color: $md-navy;
+}
+
+.Visits {
+    .filters {
+        padding: 10px 15px 10px 30px;
+
+        label {
+            margin: 0em 0.5em 0.5em 1em;
+            /**Removed By JBall(2018.10.30):  this is making filtering not work when visiting appts and visits.*/
+            /*display: none;*/
+        }
+
+        .subtlecolor {
+            color: $dk-teal;
+            font-weight: $sharp-weight-bold;
+        }
+
+        select {
+            border: $form-field-border;
+            box-shadow: none;
+            width: calc(100% - 33px);
+            margin-left: 1em;
+            max-width: 100%;
+            height: 36px;
+        }
+    }
+
+    .filterOptionsElement {
+        margin-left: 1em;
+    }
+
+    .spliter {
+        width: 100%;
+        border: 1px solid $border-grey;
+        height: 1px;
+        margin: 1rem 0rem;
+    }
+
+    .timeline {
+        font-size: 1.2rem;
+        color: $font-color-regular;
+    }
+
+    .listsection::before {
+        border-right-color: $border-dark-grey;
+    }
+
+    .visitcomponent {
+        .card {
+            .info {
+                .bold {
+                    line-height: 1em;
+                    padding-bottom: 0.4rem;
+                }
+            }
+        }
+    }
+
+    .date div, .visitdetails .date div {
+        color: $dk-teal;
+    }
+
+    tbody.optionsTableBody {
+        max-height: 10vh;
+    }
+}
+
+.date {
+    .dateofmonth {
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+
+    img.extraWide {
+        max-width: 100% !important;
+    }
+}
+
+/* FILTERS ====== */
+span.showFiltersButton {
+    margin-left: -1em;
+}
+
+div.filters.extendedBar {
+    height: 125px;
+}
+
+.canceledShiftedButton {
+    label {
+        margin-left: 0em !important;
+        margin-right: 1em !important;
+    }
+}
+
+.optionsRow > .optionCell > label {
+    padding: 0.1rem 1.5em 0.1rem .5em;
+}
+
+.dropdown-content tr:hover td.optionCell > label {
+    background-color: $md-navy;
+}
+
+/* OFFICE VISIT DETAILS ====== */
+.time {
+    background-size: 20px;
+}
+
+.md_visitdetails_index {
+    div.providerphotocontainer {
+        width: 52%;
+        vertical-align: middle;
+
+        div.providerphoto {
+            display: inline-block;
+            float: left;
+        }
+
+        div {
+            display: inline-block;
+            height: 4.1rem;
+            width: auto;
+            padding-left: 15px;
+            padding-top: 3%;
+        }
+    }
+
+    div.department {
+        margin-top: -0.25rem;
+        text-align: right;
+    }
+
+    div.addtocalendar {
+        margin: 10px 0px;
+    }
+
+    .addtocalicon {
+        padding: 0 0.5rem 5px 27px;
+    }
+
+    div.visitinformation {
+        padding: 0.5rem 0.6rem;
+        background-color: $info-bg;
+
+        .questionnaires .questionnaire div {
+            background-size: contain;
+        }
+    }
+}
+
+/* UPCOMING VISITS ====== */
+.visitactions {
+    font-size: 14px;
+
+    span {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.cancelicon {
+    background-size: .8rem;
+}
+
+.rescheduleicon {
+    background-size: 1rem;
+}
+
+/* UPCOMING TEST AND PROCEDURES ====== */
+.section {
+    .report {
+        border-radius: $border-radius;
+
+        table {
+            border-color: $border-grey !important;
+        }
+
+        .rz_a, .rz_f {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+
+        .rz_b, .rz_f {
+            border-top: $card-border !important;
+        }
+
+        .rz_c {
+            height: auto !important;
+        }
+
+        .rz_1 {
+            font-family: $default-font-family !important;
+            border-bottom: 3px solid $border-grey !important;
+
+            .rz_3 {
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+                vertical-align: middle !important;
+            }
+        }
+
+        .rz_4, .rz_5 {
+            font-family: $default-font-family !important;
+            color: $dk-teal !important;
+        }
+
+        .rz_5 {
+            color: $mid-dark-grey !important;
+        }
+
+        .rz_8, .rz_7 {
+            font-family: $default-font-family !important;
+            color: $font-color-regular !important;
+            vertical-align: middle !important;
+        }
+    }
+}
+
+/* SCHEDULE AN APPOINTMENT and ECHECK IN
+   ========================================================================== */
+
+/* VERIFY DEMOGRAPHICS ====== */
+#verifydemographics, #demogembedobj {
+    .content {
+        span.label {
+            display: inline-block;
+            width: 30%;
+            font-weight: $font-weight-bold;
+            line-height: 2rem;
+            font-size: 1rem;
+        }
+
+        .label + p {
+            display: inline-block;
+            width: 70%;
+            word-break: break-word;
+        }
+
+        .demoggroup {
+            margin-bottom: 2rem;
+        }
+
+        .messagedisplay {
+            min-height: 0rem;
+        }
+
+        input, select, textarea {
+            margin-bottom: $form-field-margin;
+        }
+
+        label[for] + input.phoneentry {
+            width: 60%;
+            height: $form-field-min-height;
+        }
+
+        .formsection fieldset.multifield input {
+            height: $form-field-min-height;
+        }
+
+        .inlinelabel {
+            line-height: $form-field-min-height;
+        }
+
+        .formsection fieldset legend {
+            padding-bottom: 0.4rem;
+        }
+    }
+}
+
+/* VERIFY INSURANCE ====== */
+#verifyinsurance, #insembedobj {
+    .content {
+        span.label {
+            display: inline-block;
+            font-weight: $font-weight-bold;
+            line-height: 2rem;
+            font-size: 1rem;
+        }
+
+        .card {
+            span.label {
+                line-height: 1rem;
+            }
+        }
+    }
+
+    p.required {
+
+        &:before {
+            margin-left: 0rem;
+        }
+    }
+
+    .helptext {
+        font-weight: normal;
+        margin-top: -($form-field-margin - 0.2rem);
+    }
+
+    .ghostInput label + input, .ghostInput label + select {
+        margin-bottom: $form-field-margin;
+    }
+
+    .formcontents input.date {
+        width: 50%;
+    }
+
+    textarea#comments {
+        margin-bottom: 1rem;
+    }
+}
+
+/* SELECT APPOINTMENT TIMES ====== */
+
+#schedulewithCard {
+    .card {
+        &.hover:not(.button) {
+            background-color: $tertiary-opaque-hover;
+
+            span {
+                color: $white;
+            }
+        }
+
+        &.selected {
+            background-color: $tertiary;
+
+            span {
+                color: $white;
+            }
+
+            &::before {
+                width: 0rem;
+            }
+        }
+    }
+}
+
+#providersform {
+    table thead tr th.center, .section table tbody tr.header td.center, .section table tbody tr.header th.center {
+        text-align: left;
+    }
+
+    #daytimetable {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        thead {
+            tr:first-child {
+                td:first-child {
+                    //border-top-left-radius: $border-radius;
+                }
+
+                th:last-child {
+                    //border-top-right-radius: $border-radius;
+                }
+            }
+        }
+
+        tbody {
+            tr:last-child {
+                td:first-child {
+                    //border-bottom-left-radius: $border-radius;
+                }
+
+                td:last-child {
+                    //border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+}
+
+#patprefs {
+    .card {
+        .provinfo {
+            span:first-child {
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}
+
+
+/* MOBILE
+   ========================================================================== */
+
+/* VISIT OPTIONS SELECTION ====== */
+
+.mobile {
+    .section .flexboxLayout > .tbContainer, .section .flexboxLayout > div > .tbContainer {
+        min-width: 100%;
+
+        .togglebutton {
+            margin-bottom: 15px !important;
+        }
+    }
+
+    .filterOptionsButtonsRow {
+        white-space: inherit;
+    }
+}
+
+@media screen and (min-width: 736px) {
+    .mobile {
+        .section .flexboxLayout > .tbContainer {
+            min-width: calc(50% - 0.5rem);
+        }
+    }
+}
+
+/* VISIT TIMELINE ====== */
+
+/*
+    Visit filters
+*/
+.mobile {
+    .Visits .component {
+        .filters {
+            margin-left: -0.5rem;
+            width: calc(100% + 1rem);
+        }
+    }
+}
+
+
+/*
+    Visit timeline
+*/
+.mobile {
+    .Visits .visitcomponent {
+        .timeline {
+            position: relative;
+            text-align: left;
+            left: 0;
+            width: 100%;
+
+            .timelinecircle {
+                display: none;
+            }
+        }
+    }
+}
+
+/* 
+    Visit details
+*/
+.mobile {
+    .Visits .visitcomponent {
+        .infosession {
+            width: 100%;
+        }
+
+        .listsection::before {
+            border-right: 0px;
+        }
+    }
+}
+
+/*
+    Visit Info
+*/
+
+.mobile {
+    .Visits .visitcomponent {
+        .visitwith {
+            width: 100% !important;
+            padding-bottom: 0.25rem;
+
+            > .subtle:first-child {
+                padding-bottom: 0.25rem;
+
+                span.bold {
+                    display: block;
+                }
+            }
+
+            .time {
+                background-size: 18px;
+            }
+        }
+
+        .soonvisits {
+            .visitinfo {
+                width: 71%;
+
+                .providerphoto {
+                    margin-left: 0rem;
+                }
+            }
+
+            .actions {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        .Visits .visitcomponent {
+            .visitwith {
+                width: 80% !important;
+
+                > .subtle:first-child {
+                    padding-bottom: 0rem;
+
+                    span.bold {
+                        display: inline;
+                    }
+                }
+            }
+
+            .soonvisits {
+                .visitinfo {
+                    .providerphoto {
+                        float: right;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        .Visits .visitcomponent {
+            .soonvisits {
+                .visitinfo {
+                    width: 65%;
+
+                    .providerphoto {
+                        float: none;
+                    }
+                }
+
+                .actions {
+                    width: 22%;
+                }
+            }
+
+            &.upcomingvisits {
+                .column3.latervisits {
+
+                    .date {
+                        width: 8%;
+                    }
+
+                    .info {
+                        width: 72%;
+                    }
+                }
+            }
+
+            &.pastvisits {
+                .column3 .pastvisit {
+
+                    .date {
+                        width: 8%;
+                    }
+
+                    .info {
+                        width: 72%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+    Visit date
+*/
+.mobile {
+    .Visits .visitcomponent {
+        .soonvisits .date {
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        .Visits .visitcomponent {
+            .soonvisits .date {
+                width: 8%;
+            }
+        }
+    }
+}
+
+/*
+    Upcoming orders report
+*/
+.mobile {
+    .section .report .rz_4 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        .section .report .rz_4 {
+            display: inline;
+        }
+    }
+}
+
+
+/* VISIT MEDICATIONS ====== */
+.mobile {
+    #medicationstemplate .medicationsdetails.component {
+        height: auto !important;
+    }
+}
+
+.mobile {
+    #pharmacieslistcomponent .PharmaciesList.component {
+        height: auto !important;
+    }
+}
+
+/* VISIT INFORMATION ====== */
+.mobile .md_visitdetails_index {
+    #main > div.title + div > .card {
+        display: block;
+    }
+
+    #main > div.title + div > .card.echeckin + .card {
+        display: none;
+    }
+
+    div.smallcards div.section.smallcard {
+        height: auto !important;
+        border-left: 0px;
+
+        div.content .buttoncontainer {
+            position: relative;
+        }
+    }
+}

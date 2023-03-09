@@ -1,0 +1,21 @@
+﻿@import "_variables.scss";
+
+/* CUSTOM
+   ========================================================================== */
+
+/* BACK TO MYBSWHEALTH BUTTON ====== */
+
+.blockbgclicks {
+    top: -1rem;
+}
+
+#btnReturnToBSWHealth {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    width: auto !important;
+    z-index: 50;
+}

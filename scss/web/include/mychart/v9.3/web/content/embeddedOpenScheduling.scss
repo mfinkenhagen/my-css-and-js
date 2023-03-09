@@ -1,0 +1,1081 @@
+﻿@import "../../../../../exclude/mychart/v9.3/_new_variables.scss";
+@import "../../../../../exclude/mychart/v9.3/_colors.scss";
+@import "../../../../../exclude/mychart/v9.3/_epicWP.scss";
+@import "../../../../../exclude/mychart/v9.3/_epicEmbeddedOpenScheduling.scss";
+
+
+/* EMBEDDED OPEN SCHEDULING WIDGET
+   ========================================================================== */
+html.embedded {
+    background-color: $white;
+}
+
+body.embedded {
+    width: 100%;
+    background: $white !important;
+    font-family: 'Source Sans Pro', Calibri, Arial, sans-serif;
+
+    #main {
+        padding: 0;
+        background-color: $white;
+    }
+
+    .card {
+        border-radius: $border-radius;
+        box-shadow: none;
+        border: 0px;
+    }
+
+    div.setOfStepsContainer {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        max-width: 1170px;
+        margin: 0px;
+        padding: 0px;
+        background: none;
+    }
+
+    div.setOfStepsContainer > div.slider div.stepContainer {
+        height: 700px;
+        width: 100vw;
+        max-width: 1170px;
+        background-color: transparent;
+    }
+
+    h1, h2, h3, .loginSignupContainer legend, .loginSignupContainer div.subheader {
+        color: $dk-blue;
+    }
+
+    .heading {
+        color: $dk-blue;
+        font-size: 24px;
+        line-height: 1.5rem;
+    }
+
+    table tr.hover, table tr td.selected, table.hoverable tr:hover, .section .content .hover:not(.button), .list.hoverable:not(.collapsible) a:not(.button):focus, .list.hoverable:not(.collapsible) a:not(.button):hover, .list.hoverable:not(.collapsible) li:focus, .list.hoverable:not(.collapsible) li:hover, .list.hoverable.collapsible a.collapsed:focus, .list.hoverable.collapsible a.collapsed:hover, .list.hoverable.collapsible li.collapsed:focus, .list.hoverable.collapsible li.collapsed:focus a, .list.hoverable.collapsible li.collapsed:hover, .list.hoverable.collapsible li.collapsed:hover a, .list.hoverable.collapsible li.collapsed a:focus, .list.hoverable.collapsible li.collapsed a:hover, .MessageList .SingleMessage.collapsed .inlinedelete:focus, .SingleIndicator.collapsed.hover {
+        background-color: $white;
+    }
+
+    .filterControl {
+        .card {
+            box-shadow: $card-box-shadow;
+            border: $card-border;
+        }
+
+        #locationGroup {
+
+            .departmentDetails label {
+                display: inline;
+                float: left;
+            }
+
+            .departmentAddress {
+                padding-left: 33px !important;
+            }
+        }
+    }
+
+    .button {
+        min-width: 150px;
+        background-color: $dk-blue;
+        padding: 11px 15px;
+        border-radius: $border-radius;
+        font-family: 'Source Sans Pro', Calibri, Arial, sans-serif;
+        font-size: 14px;
+
+        &.disabled {
+            background-color: $dk-blue !important;
+            opacity: 0.5;
+
+            &:hover {
+                background-color: $dk-blue !important;
+                cursor: default;
+            }
+        }
+
+        &:not(.disabled) {
+            background-color: $dk-blue !important;
+        }
+
+        &:hover {
+            background-color: $dk-navy !important;
+        }
+
+        &:focus {
+            background-color: $dk-blue;
+        }
+
+        &.nextstep {
+            height: 46px;
+        }
+    }
+
+    .ghostInput label {
+        color: $dk-gray;
+    }
+
+    select {
+        min-width: inherit;
+
+        &:focus {
+            border: 1px solid #ffc843;
+        }
+    }
+
+    input[type='text'] {
+        min-width: inherit;
+
+        &:focus {
+            border: 1px solid #ffc843;
+        }
+    }
+
+    input[type='password'] {
+        min-width: inherit;
+
+        &:focus {
+            border: 1px solid #ffc843;
+        }
+    }
+
+    textarea {
+        &.halfwidth {
+            min-width: inherit;
+        }
+
+        &:focus {
+            border: 1px solid #ffc843;
+        }
+    }
+
+    input.input-validation-error {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        border-color: $dk-red;
+        background-color: $white;
+    }
+
+    select.input-validation-error {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        border-color: $dk-red;
+        background-color: $white;
+    }
+
+    textarea.input-validation-error {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        border-color: $dk-red;
+        background-color: $white;
+    }
+
+    label.input-validation-error {
+        color: $dk-red;
+    }
+
+    .validation-summary-errors {
+        color: $dk-red;
+    }
+
+    .field-validation-error {
+        color: $dk-red;
+        position: absolute;
+        text-align: left;
+    }
+
+    .signupContainer .errorcontainer {
+        color: $dk-red;
+        display: inline-block;
+        width: auto;
+    }
+
+    .signupContainer .column fieldset legend.input-validation-error {
+        color: $dk-red;
+    }
+
+    .signupContainer .content .validation-summary-errors {
+        float: none;
+        width: auto;
+        color: $dk-red;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin-top: -30px;
+    }
+
+    .signupContainer > .navigation {
+        margin-top: 0px;
+    }
+
+    .signupStep .navigation {
+        bottom: 3rem;
+        width: 93%;
+    }
+
+    .signupContainer .navigation .stepindicator {
+        background-color: $white;
+        border: 0px;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+
+        &.current {
+            background-color: $dk-yellow;
+            box-shadow: none;
+        }
+    }
+
+    p.error-message {
+        color: $dk-gray;
+    }
+
+    :focus {
+        outline: none;
+    }
+}
+
+/* CHOOSE DAY / TIME ======= */
+
+body.embedded {
+    .stepContainer .openingsData {
+        .card {
+            margin: 0.25rem 15px;
+            border-bottom: 2px solid $common-bg;
+        }
+    }
+
+    .stepContainer .filterControls {
+        padding: 0rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .stepContainer .filterControl {
+        padding: 5px 15px 15px;
+
+        span.filterName {
+            color: $dk-gray;
+            font-weight: $sharp-weight-semi-bold;
+        }
+
+        .actionContainer {
+            text-align: left;
+        }
+    }
+
+    .filterControl .button.inlinesave {
+        background-color: $dk-blue;
+    }
+}
+
+/* REASON FOR VISIT ======= */
+
+body.embedded {
+    div .slotDetailsContainer .hasProviderPhoto .providerName {
+        color: $dk-blue;
+    }
+
+    .comments {
+        .field-validation-error {
+            width: 100%;
+            padding-top: 20px;
+            text-align: left;
+
+            @media screen and (min-width: 992px) {
+                padding-top: 0px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+/*  STEP 3 - YOU'RE ALMOST THERE ======= */
+
+body.embedded {
+    .loginSignupContainer {
+        width: 100vw;
+
+        .card {
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    .header {
+        color: $dk-blue;
+        padding-left: 11px;
+    }
+
+    .stepContainer h2 {
+        margin: 0 0 0 25px;
+        font-size: 36px;
+        font-weight: $sharp-weight-semi-light;
+
+        @media screen and (min-width: 768px) {
+            font-size: 45px;
+        }
+    }
+
+    .signupContainer {
+        width: 100%;
+        padding: 0px;
+        margin: 0 0;
+
+        .signupStepsContainer {
+            width: 100%;
+            height: auto;
+
+            .signupStep {
+                width: 95vw;
+                max-width: 1170px;
+
+                &.card {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .signupStep.landing {
+
+            h2 {
+                color: $dk-blue;
+
+                @media screen and (min-width: 768px) and (max-width: 1075px) {
+                    line-height: 1em;
+                }
+            }
+
+            .content > div {
+                padding: 37px 35px 0;
+            }
+
+            .loginContainer {
+                width: 50% !important;
+                padding: 0px 25px;
+                border-right: none;
+                margin: 0 1px;
+
+                .ghostInput input {
+                    border-style: solid !important;
+                    border: $form-field-border-new;
+                    border-width: 1px !important;
+                    margin: 0px;
+                }
+
+                .ghostInput + .ghostInput input {
+                    border-width: 1px !important;
+                    border-style: solid !important;
+                }
+
+                .button {
+                    width: 100%;
+                    height: 46px;
+                    margin-top: 25px;
+                    line-height: 1em;
+                    font-size: 14px;
+                }
+
+                .recovery {
+                    text-align: right;
+                    padding: 10px 25px 0 0;
+                    width: auto;
+                    margin: auto;
+
+                    a {
+                        color: $dk-blue;
+
+                        &:hover {
+                            color: $dk-blue;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .recovery:first-of-type {
+                    text-align: left;
+                }
+            }
+
+            .continueAsGuestContainer {
+                .button {
+                    width: 99%;
+                    padding: 11px 15px;
+                    font-size: 14px;
+
+                    &.prevMainStep {
+                        margin-bottom: 20px;
+                        background-color: $dk-blue;
+                    }
+                }
+            }
+        }
+
+        .continueAsGuestContainer {
+            float: right;
+            margin-top: -418px;
+        }
+
+        .signupStep.landing::after {
+            display: none;
+        }
+    }
+
+    .signupheader {
+        width: 90%;
+
+        .pretext {
+            color: $dk-gray;
+            font-size: $font-size-regular;
+            padding-top: 30px;
+            padding-bottom: 19px;
+        }
+    }
+
+    .loginContainer {
+        padding: 0 25px;
+
+        .ghostInput label {
+            margin-bottom: 0px;
+            width: auto;
+            transition: none;
+            margin-left: 0px;
+            margin-top: 20px;
+        }
+
+        .ghostInput.ghosted label {
+            font-size: 0.9rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            width: auto;
+            transition: none;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .field-validation-error {
+            padding-top: 0px;
+        }
+    }
+
+    div#D72B7F4E-B2DD-4A94-8A76-DC628995805C_signup_landing {
+        min-height: inherit !important;
+    }
+    //Proxy
+    div.proxylistcontainer div.openingsData a {
+        color: $dk-blue;
+    }
+
+    div.proxylistcontainer a * {
+        color: $dk-gray;
+    }
+
+    .signupContainer .signupStep.landing .proxysection {
+        color: $dk-blue;
+        padding-bottom: 20px;
+        line-height: 1.4em;
+    }
+
+    .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard {
+        box-shadow: none;
+        background-color: $common-bg;
+    }
+
+    .signupContainer .signupStep.landing .cardlist.buttonCards.selectionMade .buttonCard {
+        opacity: 0.5;
+
+        &:hover, &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard.selected {
+        background-color: $dk-navy;
+
+        a .proxyName {
+            color: $white;
+        }
+
+        &:before {
+            /*background-color: $primary;
+            width: 7px;*/
+            background-color: transparent;
+            width: 100%;
+            /*border-bottom: 5px solid #00539d;*/
+            border-bottom: 0px;
+        }
+    }
+
+    .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a:focus {
+        background-color: transparent;
+    }
+
+    .signupContainer .signupStep.landing .cardlist.buttonCards .buttonCard > a:hover {
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    body.embedded .stepContainer h2 {
+        line-height: 1.1em;
+    }
+}
+
+/* CONTINUE AS GUEST - PATIENT INFORMATION ======= */
+
+body.embedded {
+    .signupStep {
+
+        .signupStep .content > .navigation {
+            width: 91%;
+
+            .prevstep {
+                margin-left: 0px;
+            }
+        }
+
+        &.credentials .pretext {
+            color: $dk-gray;
+        }
+
+        &.userinfo, &.insurance {
+            margin-left: -70px;
+            padding: 0 30px;
+            min-height: auto !important;
+
+            .tbContainer {
+                margin-top: -20px;
+                width: 25%;
+
+                @media screen and (min-width: 992px) {
+                    width: 20%;
+                }
+
+                @media screen and (min-width: 1150px) {
+                    width: 15%;
+                }
+
+                &:first-of-type {
+                    margin-left: 50px;
+                }
+            }
+
+            .tbContainer label {
+                padding: 5px;
+                min-width: 150px;
+            }
+
+            .column {
+                width: 100%;
+
+                fieldset {
+                    width: calc(100% - 15px);
+                }
+            }
+
+            .ghostInput {
+                width: 50%;
+                display: inline-block;
+                margin-bottom: 15px;
+
+                label {
+                    position: absolute;
+                }
+
+                input[type='text'], input[type='tel'], input[type='email'], input[type='password'], select {
+                    width: calc(100% - 15px);
+                    border-radius: $border-radius;
+                    padding: 0.875rem 0.25rem 0;
+                    border: $form-field-border-new;
+
+                    &:focus {
+                        border: 1px solid #ffc843;
+                    }
+                }
+            }
+
+            label.togglebutton[for] {
+                background-color: $dk-blue;
+                color: $white;
+            }
+
+            input.buttoncheck + label.buttoncheck {
+                background-color: $dk-blue;
+                color: $white;
+            }
+
+            label.togglebutton[for]:hover {
+                background-color: $dk-navy;
+                text-decoration: none;
+            }
+
+            input:checked + label.togglebutton[for] {
+                background-color: $dk-navy !important;
+            }
+
+            input.buttoncheck:checked + label.buttoncheck {
+                background-color: $dk-navy !important;
+            }
+
+            input:focus + label.togglebutton[for] {
+                text-decoration: none;
+            }
+
+            input + label.togglebutton[for]:hover {
+                text-decoration: none;
+            }
+
+            label[for='AddressLine2'].clearlabel {
+                color: $dk-gray !important;
+                font-size: 0.9rem !important;
+                height: 2.5rem !important;
+                line-height: 2.5rem !important;
+                opacity: 1 !important;
+                margin: 0 0.5rem -2.5rem !important;
+                width: calc(100% - 1rem) !important;
+                transition: all .3s ease-in-out;
+            }
+
+            .ghosted {
+                label[for='AddressLine2'].clearlabel {
+                    font-size: 0.6rem !important;
+                    height: 1.25rem !important;
+                    line-height: 1.25rem !important;
+                    margin: 0 0.325rem -1.25rem !important;
+                    padding: 0 !important;
+                    width: calc(100% - 0.65rem) !important;
+                }
+            }
+
+            input#AddressLine2 {
+                border: 1px solid #cecece;
+            }
+        }
+
+        &.insurance {
+            padding-left: 15px;
+
+            .ghostInput select {
+                width: calc(100% - 15px) !important;
+            }
+
+            div[id*='signup_insurance_content'] .column {
+
+                > .ghostInput:nth-child(-n+2) {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            @media screen and (min-width: 700px) {
+                padding-left: 45px;
+                width: 100vw !important;
+            }
+
+            @media screen and (max-width: 699px) {
+                .ghostInput {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .signupsection {
+        max-width: 100vw;
+
+        .cardline.heading {
+            font-size: 28px;
+            font-weight: $sharp-weight-semi-light;
+        }
+
+        .button {
+            min-width: calc(50% - 10px);
+            margin-top: 30px;
+        }
+
+        .field-validation-error[data-valmsg-for='DateOfBirthStr'] {
+            text-align: left;
+            display: inherit;
+            width: auto;
+        }
+    }
+
+
+    .signupContainer {
+        .errorcontainer {
+            display: inline-block;
+        }
+
+        .column fieldset legend {
+            font-size: 0.9rem;
+            color: $dk-gray;
+            text-align: left;
+        }
+
+        .column {
+            fieldset.input-validation-error, fieldset.input-validation-error legend {
+                background-color: transparent;
+            }
+        }
+
+        .signupStepsContainer .signupStep .content {
+            padding-bottom: 5rem;
+        }
+
+        .signupStep.landing {
+
+            .continueAsGuestContainer {
+
+                .signupheader {
+                    margin: -10px 0 0;
+                    min-height: 206px;
+
+                    .header {
+                        margin-top: -17px;
+                        line-height: 0.93em;
+
+                        @media screen and (min-width: 768px) and (max-width: 860px) {
+                            margin-top: -70px;
+                        }
+                    }
+                }
+
+                .navigation {
+                    margin: 0 0 0.5rem;
+                }
+            }
+        }
+    }
+
+    .card .name.partial + .partial.right {
+        color: $dk-gray;
+        position: relative;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+/* FINAL STEP - VERIFICATION ======= */
+
+
+body.embedded {
+    .signupStep.credentials {
+        max-width: 1170px;
+        float: inherit;
+        margin-left: 33px !important;
+        padding: 0 30px;
+        min-height: auto !important;
+        padding-left: 50px;
+
+        .field-validation-error {
+            position: relative;
+            width: 100% !important;
+        }
+
+        #CAPTCHA {
+            padding-bottom: 170px;
+        }
+    }
+}
+
+/* CONFIRMATION ======= */
+
+
+/*body.embedded {
+    div[id*="confirmContainer"].stepContainer {
+        .slotDetailsContainer .signup {
+            display: none;
+        }
+    }
+}*/
+
+
+/* MOBILE - EMBEDDED OPEN SCHEDULING 
+   ========================================================================== */
+
+@media only screen and (max-width: 699px) {
+    html.embedded, html.embedded > body.embedded, html.embedded #main, html.embedded .setOfStepsContainer, html.embedded body.embedded div.setOfStepsContainer > div.slider, html.embedded body.embedded div.setOfStepsContainer > div.slider div.stepContainer, html.embedded body.embedded div.openingsData {
+        height: auto;
+    }
+
+    html.embedded body.embedded div.setOfStepsContainer > div.slider div.stepContainer {
+        height: 700px;
+
+        &.scrollable {
+            overflow-y: auto;
+        }
+    }
+
+    html.embedded body.embedded div.openingsData {
+        height: 700px;
+    }
+
+    div.slotDetailsContainer div.apptDetailsControlsContainer .button {
+        width: 100%;
+    }
+
+    .signupContainer {
+        margin: 0 0px;
+    }
+}
+
+/* STEP ONE - CHOOSE A TIME ======= */
+body.embedded {
+    div.openingsData {
+        background-color: $white;
+    }
+
+    div.openingsData .subslotslist.pm .slotdetailaction {
+        background-color: $md-teal;
+    }
+
+    div.openingsData .slotdetailaction.pm {
+        background-color: $md-teal;
+    }
+}
+
+/* STEP TWO - VERIFY INFORMATION IS CORRECT ======= */
+
+@media only screen and (max-width: 699px) {
+    body.embedded {
+        .header {
+            padding-left: 0px;
+        }
+
+        .button:not(.disabled) {
+            background-color: $dk-blue;
+        }
+
+        .slotDetailsContainer[class] .card > div:first-child > div {
+            padding-left: 0px;
+        }
+
+        .stepContainer.slotDetailsContainer .comments {
+            margin-top: 0;
+        }
+
+        div.slotDetailsContainer .comments textarea {
+            max-width: 100%;
+        }
+
+        div.setOfStepsContainer > div.slider div.slotDetailsContainer {
+            padding: 0;
+        }
+
+        .slotDetailsContainer[class] .card {
+            padding: 20px;
+        }
+    }
+}
+
+/* PROXY ====== */
+@media only screen and (max-width: 699px) {
+    body.embedded {
+        .signupContainer .signupStep.landing .cardlist .proxyLinkWrapper.buttonCard {
+            text-align: left;
+        }
+    }
+}
+
+/*  STEP THREE - YOU'RE ALMOST THERE ======= */
+
+@media only screen and (max-width: 699px) {
+    body.embedded {
+        width: auto !important;
+
+        .signupContainer {
+            width: 100%;
+
+            .signupStep.landing .continueAsGuestContainer .navigation {
+                margin: 0rem 0 0.5rem;
+            }
+
+            .signupStep.landing .content > div {
+                width: 100% !important;
+                margin-bottom: 40px;
+            }
+
+            .continueAsGuestContainer {
+                padding-top: 400px !important;
+            }
+        }
+
+        .signupStep.landing {
+            .orHolder {
+                text-shadow: 0 0 10px $skyblue, 0 0 10px $skyblue, 0 0 10px $skyblue, 0 0 10px $skyblue;
+                font-size: 1em;
+                margin-bottom: -20px;
+            }
+        }
+
+        .signupContainer .signupStepsContainer {
+            height: auto;
+        }
+
+        .field-validation-error {
+            padding-top: 25px;
+            text-align: left !important;
+        }
+    }
+}
+
+/* CONTINUE AS GUEST - PATIENT INFORMATION ======= */
+
+@media only screen and (max-width: 699px) {
+
+    body.embedded {
+        .loginSignupContainer {
+            width: 100%;
+            position: relative;
+            display: inline-block;
+        }
+
+        .signupsection {
+            margin-top: 0;
+            margin-left: 0px;
+            padding: 20px;
+
+            .content > .navigation {
+                text-align: left;
+
+                > a.button {
+                    width: 100%;
+                }
+
+                .button:first-child {
+                    margin-bottom: 20px;
+                }
+
+                > .validation-summary-errors:not(.hidden) ~ a.button {
+                    margin-top: 20px;
+                }
+
+                > .errorcontainer:not(:empty) ~ a.button {
+                    margin-top: 20px;
+                }
+
+                > .errorcontainer:not(:empty) {
+                    margin-top: 0;
+                }
+            }
+
+            .field-validation-error {
+                display: inline-block;
+                width: 100% !important;
+                position: relative;
+                padding-top: 5px;
+            }
+        }
+
+        .signupStep.userinfo {
+            padding: 0 30px 0 0;
+
+            .heading {
+                padding-bottom: 20px;
+            }
+
+            .ghostInput {
+                display: block;
+                width: 100%;
+
+                input[type='text'], input[type='tel'], input[type='email'], input[type='password'], select {
+                    width: 100%;
+                }
+            }
+
+            .tbContainer {
+                margin-top: 0px;
+                width: 100%;
+
+                &:first-of-type {
+                    margin-left: 0px;
+                }
+
+                label {
+                    width: 100%;
+                    margin: 10px 5px 0 0;
+                    padding: 9px 67px;
+                }
+            }
+        }
+
+        .signupContainer .signupStep .content {
+            fieldset {
+                float: left;
+                width: 100%;
+            }
+        }
+
+        .card .name.partial + .partial.right {
+            padding: 0 0 0 0px;
+            float: right;
+        }
+
+        .signupContainer {
+            .signupStepsContainer .signupStep {
+                overflow: visible;
+            }
+
+            .signupStepsContainer .content > .navigation {
+                border-top: none;
+            }
+
+            .content .validation-summary-errors {
+                margin-top: 0;
+            }
+
+            .field-validation-error {
+                display: block;
+                width: 100%;
+                position: relative;
+                text-align: right;
+                font-size: 15px;
+            }
+
+            .signupStep.landing .continueAsGuestContainer .signupheader .header {
+                margin-top: 65px;
+                margin-bottom: 0;
+            }
+        }
+
+        .signupsection .content > .navigation > .validation-summary-errors:not(.hidden) {
+            margin-top: -2.5em;
+        }
+    }
+}
+
+/* FINAL STEP - VERIFY CREDENTIALS ======= */
+
+@media only screen and (max-width: 699px) {
+
+    body.embedded {
+        .signupStep.credentials {
+            margin-left: 0 !important;
+            padding: 0 30px 0 0;
+
+            #CAPTCHA {
+                padding-bottom: 0px;
+            }
+        }
+    }
+}
+
+/* CONFIRMATION SCREEN W/ APPOINTMENT DETAILS ======= */
+
+@media only screen and (max-width: 699px) {
+
+    body.embedded .slotDetailsContainer[class] .hasDepartmentPhoto, body.embedded .slotDetailsContainer[class] .departmentPhoto, body.embedded .slotDetailsContainer[class] .dateTime, body.embedded .slotDetailsContainer[class] .address, body.embedded .slotDetailsContainer[class] .instructions {
+        padding-left: 60px;
+    }
+
+    body.embedded .slotDetailsContainer .signup {
+        display: block;
+    }
+}
+
+
+/* IE SPECIFIC STYLES ======= */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        body.embedded .signupsection {
+        margin-left: 1015px;
+    }
+}

@@ -1,0 +1,53 @@
+@import "_variables_mychart.scss";
+
+/* QUESTIONNAIRE
+   ========================================================================== */
+
+#questionnaireform {
+    legend {
+        margin-bottom: 0.5rem;
+    }
+
+    p.required:before, span.required:before, label.required:before, legend.required:before {
+        margin-left: 0rem;
+    }
+}
+
+.formcontents {
+    overflow: auto;
+}
+
+.assignedqnrs span.in_progress_badge {
+    border-radius: 6px;
+    border-color: $lt-yellow;
+    background: $lt-yellow;
+}
+
+.listpage .section.qnr_list_table .assignedqnrs div.qnr_card {
+    border: $card-border;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+    margin-left: 0.4rem;
+    margin-top: 0.8rem;
+    margin-right: 0.4rem;
+    width: auto;
+}
+
+@media print {
+    .listpage .section.qnr_list_table .assignedqnrs div.qnr_card {
+        border: $card-border;
+    }
+}
+
+.section table.history {
+    col.ques,
+    col.response {
+        @media screen and (max-width: $breakpoint-desktop) {
+            min-width: 0rem;
+        }
+    }
+}
+
+.section table.history td.response .togglebutton {
+    margin-bottom: 0.5rem;
+}

@@ -1,0 +1,124 @@
+﻿@import "_new_variables.scss";
+
+/* TEST RESULTS
+   ========================================================================== */
+.TestResultsList li.SingleResult {
+    border-bottom: none;
+    border-color: none;
+    margin-bottom: 5px;
+}
+
+.BeforeTestResultsList input {
+    max-width: none;
+}
+
+/* Show Label */
+.md_testresults_index {
+    .BeforeTestResultsList label {
+        width: 50px;
+    }
+}
+
+
+.BeforeTestResultsList input.SearchList {
+    opacity: 1;
+    box-shadow: $card-box-shadow;
+    border: $card-border;
+    height: $form-field-min-height;
+}
+
+.BeforeTestResultsList {
+    /* Search bar width */
+    .col-3 {
+        width: 100% !important;
+    }
+
+    .FilterWrapper, .BeforeTestResultsList .ToggleWrapper {
+        padding-left: 0px;
+        margin-top: 5px;
+    }
+
+    .ToggleInpatient {
+        margin-top: 5px;
+        margin-right: 0px;
+    }
+
+    .FilterWrapper > *, .ToggleWrapper > * {
+        height: 25px;
+    }
+    
+    input.ToggleInpatient {
+        margin-left: 0;
+        width: $form-checkbox-dimensions;
+        height: $form-checkbox-dimensions;
+        display: inline-block;
+        vertical-align: top; /* aligns show hospital checkbox*/
+    }
+
+    select.Filter {
+        border: 1px solid $border-dark-grey;
+        box-shadow: $card-box-shadow;
+        padding-left: 15px;
+    }
+}
+
+/* Test Results Popup - Plan of Care*/
+
+.trlarge.component.Popup.large {
+    @media screen and (max-width: 1300px) {
+        width: 95vw;
+        left: -10vw !important;
+    }
+}
+
+.TRPContent {
+    @media screen and (min-width: 768px) {
+        width: 75%;
+        padding-left: 30px !important;
+    }
+}
+
+/* Override GooGrid which makes the results too long */
+.TestResultsList .SingleResult {
+    width: 100% !important;
+}
+
+.TestResultsList li.SingleResult {
+    border-color: $white;
+}
+
+.ToggleWrapper {
+    margin-top: 15px;
+}
+
+ul.TestResultsList li.SingleResult.Header {
+    padding:0px;
+}
+
+/* MOBILE TEST RESULTS
+   ========================================================================== */
+.mobile {
+    .TestResultsList .SingleResult {
+        span.ListIcon {
+            width: 15%;
+        }
+
+        span.ResultNameWrapper {
+            width: 30%;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mobile {
+        .TestResultsList .SingleResult {
+            span.ListIcon {
+                width: 5%;
+            }
+
+            span.ResultNameWrapper {
+                width: 40%;
+            }
+        }
+    }
+}

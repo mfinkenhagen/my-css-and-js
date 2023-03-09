@@ -1,0 +1,21 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+
+
+pool:
+  name: Azure Pipelines
+  demands: azureps
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '15.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm sass --embed-sources scss/web/include/mychart/v10.1:dist
+  displayName: 'npm install and build'

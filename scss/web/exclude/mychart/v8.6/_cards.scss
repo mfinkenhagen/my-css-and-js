@@ -1,0 +1,160 @@
+﻿@import "_variables.scss";
+
+/* CARDS
+   ========================================================================== */
+.card {
+    border-radius: $card-border-radius;
+    padding: 1rem;
+}
+
+.card.addItem {
+    height: 12.7rem;
+}
+
+.card.addItem.hover {
+    box-shadow: $card-box-shadow;
+    background-color: $md-navy !important;
+    color: $white;
+}
+
+.card.addItem a:hover {
+    color: $white;
+}
+
+/* SELECTABLE CARDS ====== */
+
+/* Selected State: Billing CC, etc. */
+.cardlist.selectable {
+    .card.selected {
+        background-color: $selected-color;
+        box-shadow: $selected-shadow;
+
+        &::before {
+            width: 0rem;
+        }
+    }
+}
+
+/* Hover and click states*/
+.cardlist.selectable {
+    .card {
+
+        &.hover {
+            background-color: $md-navy;
+            color: $white;
+        }
+
+        &.hover:not(.button) {
+            background-color: $md-navy;
+            color: $white;
+
+            .label, label, .PaymentAmountValue, h4, span {
+                color: $white;
+            }
+        }
+
+        &.clickable {
+
+            &.hover {
+                background-color: $md-navy;
+            }
+
+            &:focus {
+                background-color: $md-navy;
+            }
+        }
+    }
+
+    a.card:not(.button):hover {
+        background-color: $bg-grey;
+    }
+
+    a.card.addItem:not(.button):hover {
+        background-color: $bg-grey;
+
+        span {
+            color: $white;
+        }
+    }
+}
+
+div.cardlist.shortcards.stackable {
+    display: flex;
+    box-sizing: border-box;
+    max-height: 100%;
+    flex-flow: row wrap;
+    //place-content: stretch center;
+    align-items: stretch;
+}
+
+/* MYCHART OPEN SCHEDULING DESKTOP ========== */
+
+.cardlist.buttonCards .card {
+    padding: 0px;
+    width: 23%;
+
+    span {
+        display: block;
+    }
+
+    img {
+        max-height: 50px;
+        margin-top: 10px;
+    }
+
+    a {
+        border: none;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+    /*&.selected {
+        background-color: ;
+    }*/
+}
+
+.md_openscheduling_index .cardlist.buttonCards .card:hover, 
+.md_openscheduling_index .cardlist.buttonCards .card:hover span, 
+.md_openscheduling_index .cardlist.buttonCards .card:hover label, 
+.md_openscheduling_index .cardlist.buttonCards .card.selected, 
+.md_openscheduling_index .cardlist.buttonCards .card.selected span,
+.md_openscheduling_index .cardlist.buttonCards .card.selected label {
+    background-color: $hover-tile;
+    color: $primary;
+}
+
+.md_openscheduling_index {
+    .zipSearch {
+        padding: 15px;
+
+        .button {
+            background-color: $secondary;
+        }
+    }
+    .zip {
+        font-family: $default-font-family;
+        width: 100%;
+        border-radius: 2px;
+        margin: 10px auto;
+    }
+}
+
+/* INSURANCE
+   ========================================================================== */
+
+.cardlist .card .cardline.name {
+    margin-bottom: 0.5rem;
+}
+
+/* MOBILE CARDS
+   ========================================================================== */
+.mobile {
+    .section .card {
+        h2 {
+            background-color: transparent;
+            margin-bottom: 0.5rem;
+            font-size: 1.2em;
+        }
+    }
+}

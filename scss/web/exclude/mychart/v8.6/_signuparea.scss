@@ -1,0 +1,369 @@
+﻿@import "_variables.scss";
+
+/* SIGN UP
+   ========================================================================== */
+
+body.md_standalone_signup {
+    width: 100%;
+}
+
+/* FORM ====== */
+
+body.md_standalone_signup {
+
+    .section .content {
+        label {
+            border: 0px;
+        }
+    }
+
+    p.required:before,
+    span.required:before,
+    label.required:before,
+    legend.required:before {
+        margin-left: 0rem !important;
+    }
+
+    .ghostInput {
+        position: relative;
+
+        label + input, label + select {
+            height: 3rem;
+        }
+
+        label {
+            line-height: 1.5rem !important;
+
+            &:before {
+                margin: -0.8rem 0 0rem !important;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    .ghostInput.ghosted {
+        label {
+            &:before {
+                margin: 0px 0 0rem !important;
+            }
+        }
+    }
+
+    .name, .City, .Email, .MRN, .Zip, .Last4SSN, .WorkPhone, .HomePhone, .MobilePhone, .DateOfBirth, .NationalID {
+        width: 100%;
+    }
+}
+
+/* 
+   Address
+*/
+body.md_standalone_signup {
+    #Address_Container {
+        .formcolumn.double {
+            width: 100% !important;
+        }
+    }
+
+    .ghostInput {
+        label + textarea.Street {
+            width: 100% !important;
+            margin-left: 0% !important;
+            background-color: transparent;
+            min-height: 3rem !important;
+        }
+    }
+}
+
+/*
+   Gender
+*/
+body.md_standalone_signup {
+    div[data-name='Gender'] {
+        .tbContainer {
+            min-height: 3rem;
+            width: 50%;
+
+            label.togglebutton {
+                width: calc(100% - 0.25rem);
+                line-height: 2rem;
+            }
+        }
+        .tbContainer:last-child {
+            label.togglebutton {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*
+    Other information
+*/
+
+body.md_standalone_signup {
+    #otherSection.formsection.column_3 {
+        .formcolumn {
+            width: 49%;
+        }
+    }
+}
+
+/*
+    Captcha
+*/
+body.md_standalone_signup {
+    .g-recaptcha {
+        min-height: 100px !important;
+
+        > div {
+            margin: 0px auto;
+            position: relative;
+            width: 100%;
+
+            > div {
+                margin: 0px auto;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                transform-origin: 50% 0%;
+                -webkit-transform: translateX(-50%);
+                -webkit-transform-origin: 50% 0%;
+                -ms-transform: translateX(-50%);
+                -ms-transform-origin: 50% 0%;
+            }
+        }
+    }
+}
+
+/* SIGNUP EXPERIAN THIRD PARTY QUESTIONS ====== */
+
+//#Signup_thirdpartyquestion {
+.thirdparty {
+    border: 0px;
+
+    .answers > label {
+        background-color: $primary !important;
+        border-radius: $border-radius;
+
+        &.selected, &.selected:hover {
+            background-color: $tertiary !important;
+        }
+    }
+
+    .button {
+        background-color: $tertiary !important;
+
+        &:hover {
+            background-color: $tertiary-opaque-hover !important;
+        }
+
+        &.disabled, &.disabled:hover {
+            background-color: $disabled-bg-color !important;
+        }
+    }
+}
+//}
+
+/* MOBILE SIGN UP
+   ========================================================================== */
+
+/* FORM ====== */
+
+.mobile {
+    body.md_standalone_signup {
+        #main .title h1 {
+            height: auto;
+            min-height: 1.5em;
+        }
+
+        .onlineSignupContainer {
+            width: 100%;
+        }
+
+        .formsection .formrow {
+            margin-bottom: 0rem;
+
+            .alert {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .alert {
+            background-color: transparent;
+        }
+
+        .section .content .formsection > legend {
+            font-size: 1.1em !important;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ghostInput {
+            padding-bottom: 0.5rem;
+
+            label + input, label + select {
+                width: 100%;
+                background-color: transparent;
+                padding: 1em 0.4em 0.1em;
+            }
+
+            label {
+                position: absolute;
+                background-color: transparent;
+                line-height: 1rem !important;
+
+                &.required:before {
+                    margin: -1rem 0 0rem 0.135rem !important;
+                }
+            }
+        }
+
+        .ghostInput.ghosted {
+            label + input, label + select {
+                height: 3rem;
+            }
+
+            label {
+                margin: 0.2rem 0.325rem -1.25rem;
+                padding: 0rem 0.25rem;
+                font-size: 0.8em;
+
+                &.required:before {
+                    margin: 0px 0 0rem -0.235rem !important;
+                }
+            }
+        }
+
+        .button:not(.buttoncheck) {
+            line-height: 2rem !important;
+            border-radius: $border-radius !important;
+        }
+    }
+}
+
+/*
+    Street
+*/
+.mobile {
+    body.md_standalone_signup {
+        #Address_Container {
+            .ghostInput {
+                label + textarea.Street {
+                    padding: 1em 0.4em 0.1em;
+                    margin-top: 0px;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+}
+
+/*
+   Gender
+*/
+.mobile {
+    body.md_standalone_signup {
+        div[data-name='Gender'] {
+            min-height: 3.5rem;
+            margin-bottom: 0.5rem;
+
+            input:checked + label.togglebutton[for]:hover {
+                background-color: $tertiary;
+            }
+        }
+    }
+}
+
+/* 
+    Other Information
+*/
+.mobile {
+    body.md_standalone_signup {
+        #otherSection.formsection.column_3 {
+            .formcolumn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* SIGNUP EXPERIAN THIRD PARTY QUESTIONS ====== */
+
+.mobile {
+    .thirdparty {
+        padding: 50px 0px 20px;
+
+        > img {
+            clip: auto;
+            left: 0;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .questionContainer > * {
+            padding: 15px 0px;
+        }
+
+        .answers > label {
+            line-height: 2rem;
+            border-radius: $border-radius;
+        }
+
+        .answers > input[type="radio"] {
+            border: 0px;
+            -moz-appearance: none;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+}
+
+/* EXPERIAN SIGNUP LIGHTBOX ====== */
+.mobile {
+    body.md_standalone_signup {
+        #lightbox.lb_content {
+            width: 90%;
+            margin: 0px auto;
+            left: 0;
+            right: 0;
+            top: 20vh !important;
+            max-width: 50em;
+
+            h1 {
+                line-height: 1em;
+                text-align: center;
+            }
+
+            .leftimage {
+                float: none;
+                margin: 0px auto;
+                height: 100px;
+                width: 100px;
+                min-height: 1px;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 667px) {
+    .mobile {
+        body.md_standalone_signup {
+            #lightbox.lb_content {
+                h1 {
+                    text-align: left;
+                }
+                .leftimage {
+                    float: left;
+                    height: 197px;
+                    width: 197px;
+                    min-height: 192px;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+}

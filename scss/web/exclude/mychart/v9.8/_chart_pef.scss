@@ -1,0 +1,215 @@
+﻿@import "_variables_mychart.scss";
+
+/* CHARTS
+   ========================================================================== */
+
+.section .content .PEF .headerrow {
+    background-color: $dk-teal;
+    color: $white;
+}
+
+.section .content .PEF {
+    overflow: auto;
+    white-space: nowrap;
+
+    .prompts,
+    fieldset.reading {
+        min-width: 25%;
+        width: auto;
+    }
+}
+
+div.seriessel input.chkbx {
+    margin: 2px 9px -2px 0px;
+    width: 21px;
+    height: 21px;
+}
+
+div.seriessel {
+    input.radio + label, input.chkbx + label {
+        width: auto;
+    }
+}
+
+div.seriessel input.button {
+    margin: 5px; 
+}
+
+#pefread1date {
+    input.date.withCalendar ~ .calendar {
+        margin: 0.25rem 0 0;
+    }
+}
+
+/* MEDICAL TOOLS CHARTS ====== */
+#graphServerControlForm img {
+    height: auto !important;
+    width: 100% !important;
+    min-width: auto !important;
+    min-height: auto !important;
+}
+
+/* MOBILE
+   ========================================================================== */
+
+.mobile {
+    fieldset.clearfieldset {
+        width: 100%;
+    }
+}
+
+/* CALENDER DATE INPUT WITH OPTIONS ====== */
+
+.mobile {
+    fieldset.clearfieldset {
+        input.date.withCalendar {
+            width: calc(87% - 2rem);
+            margin-bottom: 0.5rem;
+        }
+
+        span.inlineinput {
+            min-width: 32px;
+        }
+
+        .button.inlineinput.otherbutton {
+            margin-top: 0.5em;
+        }
+
+        + div.seriessel {
+            top: 72px;
+            right: -5px;
+            width: 40%;
+        }
+    }
+
+    fieldset.reading {
+        input.date.withCalendar {
+            width: calc(100% - 2rem);
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        input.date.withCalendar ~ a.calendar {
+            line-height: 2.25rem;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        fieldset.clearfieldset {
+            input.date.withCalendar {
+                width: calc(43% - 2rem);
+                margin-bottom: 0.5rem;
+            }
+
+            span.inlineinput {
+                min-width: 1px;
+            }
+
+            .button.inlineinput.otherbutton {
+                margin-top: 1em;
+            }
+
+            + div.seriessel {
+                top: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .mobile {
+        fieldset.clearfieldset {
+            input.date.withCalendar {
+                width: calc(26% - 2rem);
+            }
+
+            .button.inlineinput.otherbutton {
+                margin-top: 1.5em;
+            }
+
+            + div.seriessel {
+                top: 22px;
+            }
+        }
+    }
+}
+
+/* Track my health mobile calendar time range */
+.mobile .md_pefltdtl fieldset.clearfieldset span.inlineinput {
+    display: block;
+}
+
+.mobile .md_fshreport .dataselect .col-9, .mobile .md_pefltdtl .dataselect .col-9 {
+    width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .mobile .md_pefltdtl fieldset.clearfieldset input.date.withCalendar {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .mobile .md_pefltdtl fieldset.clearfieldset input.date.withCalendar {
+        width: 90%;
+    }
+}
+
+/* Track my health more optiions */
+
+.mobile .md_fshreport .dataselect .col-3, .mobile .md_pefltdtl .dataselect .col-3 {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mobile .md_fshreport .dataselect .col-3 div.seriessel .corner, .mobile .md_pefltdtl .dataselect .col-3 div.seriessel .corner {
+    float: none;
+}
+
+
+/* TABLE HEADINGS ====== */
+.section .content .PEF .grouper.prompt {
+    background-color: $banner-bg-color;
+    color: $banner-font-color;
+}
+
+.mobile {
+    .section .content .PEF .grouper.prompt {
+        background-color: $banner-bg-color;
+        color: $banner-font-color;
+    }
+}
+
+/* ADD DATA READING TIME ====== */
+.mobile {
+    .reading.time {
+        .timeentry label + input[type='text'] {
+            width: calc(50% - 0.5rem);
+            display: inline-block;
+        }
+
+        input.time.hour {
+            margin-right: 0.25rem;
+        }
+
+        input.time.min {
+            margin-left: 0.25rem;
+        }
+
+        label.togglebutton[for] {
+            padding: 0.5rem;
+        }
+    }
+}
+
+/* ADD DATA ENTRY ====== */
+.mobile {
+    #PEF-Table #pefprompts.prompts {
+        .prompt {
+            overflow-y: hidden;
+        }
+    }
+}
+

@@ -1,0 +1,142 @@
+﻿@import "_variables.scss";
+
+/* CLINICAL
+   ========================================================================== */
+
+div.cardlist.matchHeights {
+    display: flex;
+    box-sizing: border-box;
+    max-height: 100%;
+    flex-flow: row wrap;
+    //place-content: stretch center;
+    align-items: stretch;
+}
+
+/* INFO ICONS ON HEALTH SUMMARY */
+img.contentimg {
+    margin-top: 4px;
+}
+
+div.hmt-item-card div.hmt-learnmore img {
+    vertical-align: top;
+    margin-top: 5px; 
+}
+
+.expanded #searchnearlabel {
+    font-size: 1rem;
+}
+
+.lookup #results.results.list.hoverable {
+    a.resultelement {
+        &:hover:not(.button) {
+            background-color: $md-navy;
+            color: $white;
+
+            .label, label, h4, span {
+                color: $white;
+            }
+        }
+
+        &.selected {
+            background-color: $md-navy;
+            color: $white;
+
+            label, .label, h4, span {
+                color: $white;
+            }
+
+            &::before {
+                width: 0rem;
+            }
+        }
+    }
+}
+
+.lookup .searchinputs::after {
+    background: $md-navy;
+}
+
+.lookup input.imgbutn {
+    top: 5px;
+}
+
+div.medbottom {
+    width: calc(100% + 4.5rem);
+    max-width: calc(100% + 4.5rem);
+}
+
+
+.PharmacyContainer {
+    .cardlist.selectable .card.hover:not(.button) .label, .cardlist.selectable .card.hover:not(.button) label, .cardlist.selectable .card.hover:not(.button) .PaymentAmountValue, .cardlist.selectable .card.hover:not(.button) h4, .cardlist.selectable .card.hover:not(.button) span {
+        background-color: $md-navy;
+    }
+
+    .cardlist.selectable a.card:not(.button):hover {
+        background-color: $md-navy;
+    }
+}
+
+/* ECHECKIN ADD PHARMACY ======= */
+
+.expanded #searchimg {
+    background: $md-navy;
+}
+
+.phrcard-container #phrcard-additem {
+    height: 96%;
+}
+
+/* PRINT MEDICATIONS LIST ====== */
+@media print {
+    .medicationcontainer {
+        div.cardlist.matchHeights {
+            display: inline;
+        }
+    }
+}
+/* MOBILE CLINICAL
+   ========================================================================== */
+.mobile {
+    .lookup .searchcontainer input.imgbutn {
+        height: auto;
+        width: 1.3rem;
+    }
+
+    .lookup img.startoverimg {
+        width: 1.3rem;
+        height: auto;
+    }
+
+    .medcard {
+        .medbottom {
+            padding-bottom: 4.5em;
+        }
+
+        .medinfocolumn {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .mobile {
+        .medcard .medinfocolumn {
+            width: 50%;
+        }
+    }
+}
+/* Health Summary lookup and add medications */
+.lookupcontainer .formrow .leftcol {
+    @media screen and (max-width: $breakpoint-mobile) {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* eCheckin pharmacy cards on medications */
+.phrcard-container {
+    @media screen and (max-width: $breakpoint-desktop) {
+        width: 100%;
+    }
+}

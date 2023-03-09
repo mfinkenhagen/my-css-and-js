@@ -1,0 +1,28 @@
+﻿@import "_variables_mychart.scss";
+
+
+
+div.pocdefaultpopup .goalsoverallcontainer .goalsleft {
+    @media screen and (max-width: $breakpoint-tablet-max) {
+        display: none;
+    }
+}
+
+body.md_registries_index {
+    #main .title {
+        min-height: auto;
+
+        h1.header {
+            display: none !important;
+        }
+    }
+}
+
+body.md_registries_index #content.hasSidebar {
+    @media screen and (max-width: $breakpoint-tablet-max) {
+        /*#region CSS Grid Layout*/
+        grid-template-columns: 100%;
+        -ms-grid-columns: 100%;
+        grid-template-areas: "main" "sidebar" "footer";
+    }
+}

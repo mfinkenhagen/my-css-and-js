@@ -1,0 +1,37 @@
+﻿@import "_variables_mychart.scss";
+
+/* COMMUNITY - HAPPY TOGETHER
+   ========================================================================== */
+
+/* Unlink button state */
+
+.md_manage_communitymanage {
+    #organizationList .button.cancelworkflow {
+        border: 1px solid #d9545b !important;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #d9545b;
+        }
+    }
+}
+
+.md_manage_communitymanage {
+    .activityicon img {
+        max-height: 1.2rem;
+    }
+
+    .organizationSearchIcon {
+        margin-left: -30px;
+        width: 20px;
+        min-width: 20px;
+    }
+}
+
+/* Terms and conditions icons */
+
+.md_manage_communitymanage {
+    span.termsicon {
+        display: block;
+    }
+}

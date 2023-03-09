@@ -1,0 +1,1368 @@
+﻿@import "_variables_mychart.scss";
+
+/* DATA TILES STYLES
+   ========================================================================== */
+
+/* DT TYPOGRAPHY ====== */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+
+$dt-font: 'Montserrat';
+
+.datatile {
+
+    body {
+        font-family: $font-family;
+        font-weight: $sharp-weight-regular;
+        overflow-y: auto;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, #sidebar .titlebar, #sidebar > h2, .heading, legend, .header {
+        font-family: $dt-font;
+        font-weight: $sharp-weight-semi-bold;
+    }
+
+    .h1, h1, .isPrelogin #main .title h1 {
+        font-size: 20px;
+
+        @media screen and (min-width: $breakpoint-mobile) {
+            font-size: 24px;
+        }
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            font-size: 32px;
+        }
+    }
+    /*Hide headings on pages w/other content using 'Health Records' heading */
+    .md_communications_manage, /*Notifications*/
+    .md_personalize, /*Personalize*/
+    .md_oauth_review, /*Linked Apps & Devices */
+    .md_personalinformation_index, /*Demographics*/
+    .md_patinfo, /*Administrative Info*/
+    .md_medadvice, /*Send a Message*/
+    .md_eligibility, /* Covg Details Eligible*/
+    .md_referrals, /* Covg Details Referrals */
+    .md_visitslist_index /* Appointments */ {
+        h1 {
+            display: none !important;
+        }
+
+        #main .title {
+            height: 0px;
+        }
+    }
+
+    .md_personalinformation_index .relationship-content {
+        h1 {
+            display: inline-block !important;
+        }
+    }
+
+    .md_personalinformation_index #main .relationship-content {
+
+        &.title {
+            height: 3.5em;
+        }
+    }
+
+    #main {
+        .qtnaire-icon {
+            display: none;
+        }
+    }
+}
+
+/* LAYOUT ====== */
+/* align dt and sidebar with mybswh content */
+#main {
+    padding: 0.5rem 0;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 0.5rem 1.25rem 0.5rem 0;
+    }
+
+    &.withSidebar {
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 75%
+        }
+    }
+}
+
+#sidebar {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        &:not(:empty) {
+            display: inline-block;
+            width: 25%;
+        }
+    }
+
+    @media only screen and (max-width: 1300px) {
+        max-width: calc(25% - 2rem);
+
+        #localeswitch {
+            text-align: center;
+        }
+    }
+    /* Make buttons wrap in sidebar */
+    .button.autowidth {
+        display: block;
+        max-width: max-content;
+    }
+}
+
+/* DT BUTTONS ======= */
+.datatile {
+    a, .linkcolor, .subtle.linkcolor, .rpt a {
+        transition: none;
+        color: $md-navy;
+    }
+
+    .button, .button.nextstep, .button.nextstep:focus, label.togglebutton[for], #main .title .headerlink .button, .slot {
+        border-radius: 0px;
+        min-width: 100px;
+        font-size: 13px;
+    }
+
+    /* Print */
+    #main .title img.assistiveicon, #sidebar .assistiveicon {
+        padding: 3px 0 20px 0.125rem;
+    }
+    /* Hide these print buttons to replace w custom ones */
+    .md_snapshot, /* Health Summary */
+    .md_healthissues_list,
+    .md_medications_list,
+    .md_allergies_list,
+    .md_immunizations_index {
+        #main .title #assistiveicons div.assistiveicon, #sidebar div.assistiveicon {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+    /* Show print headers on these data tiles */
+    .md_healthissues_list,
+    .md_medications_list,
+    .md_allergies_list,
+    .md_immunizations_index {
+        .printheader {
+            display: inline-block;
+            position: absolute;
+
+            @media print {
+                margin-top: 20px;
+            }
+        }
+
+        #main {
+            @media print {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .md_healthadvisories_index {
+        .printheader {
+            @media screen and (min-width: $breakpoint-tablet) {
+                display: inline-block;
+                position: absolute;
+            }
+        }
+    }
+    /* Hide print bar on health summary print view */
+    .md_snapshot {
+        #printbar {
+            display: none !important;
+        }
+    }
+    /* Back to Message Options Button */
+    .md_medadvice {
+        #main .back .button {
+            display: none;
+        }
+    }
+}
+
+/* HIDE ALL BACK TO HOME BUTTONS ====== */
+.datatile {
+
+    .md_showrep, /* Upcoming tests and procedures - back to previous btn */
+    .md_caredecision_index, /* Advance directives */
+    .md_mychartquestionnaire_questionnaires /* Questionnaires */ {
+        #main .back .button {
+            display: none;
+        }
+    }
+
+    .md_schedotherprefs, /* Preferences cancel button  */
+    .md_medadvice /* New Message - Ask a medical question cancel button*/ {
+        .button.cancelworkflow {
+            display: none;
+        }
+    }
+}
+
+/* FORMS ====== */
+.datatile {
+    /* Form container */
+    .formsection.halfwidth {
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
+    }
+    /* Form inputs */
+    .formsection.halfwidth input, .formsection.halfwidth select, .formsection.halfwidth textarea, .section .content label[for] + input.phoneentry {
+        width: 90%;
+    }
+}
+
+/* DT CARDS ====== */
+.datatile {
+    .cardlist {
+        &.column_2 > .card:nth-of-type(even) {
+            margin-left: 0px;
+
+            @media screen and (min-width: $breakpoint-desktop) {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .card {
+        @media screen and (min-width: $breakpoint-desktop) {
+            margin: 5px 5px;
+        }
+
+        .cardline {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .name {
+            font-size: 18px;
+        }
+
+        .cardline.halfwidth, .contact-information-content .header.name.icon + .cardline.halfwidth, .other-information-content .header.name.icon + .cardline.halfwidth {
+            width: 100%;
+        }
+    }
+
+    .card.addItem .addlabel {
+        font-weight: $sharp-weight-bold;
+    }
+
+    .card.addItem .addlabel:before {
+        font-size: 28px;
+        margin-top: 2px;
+        height: 24px;
+        width: 24px;
+    }
+    /*Advanced Care Planning columns on main landing */
+    .two-column-container .section {
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 50%;
+        }
+    }
+}
+/* COLUMNS ====== */
+.datatile {
+    .cardlist.column_2 > .card {
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 49%;
+        }
+    }
+
+    .cardlist.column_3 > .card {
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 30%;
+        }
+    }
+}
+/* DT SIDEBAR ====== */
+.datatile {
+    /* Hide sidebars w/no info and extend body 100% */
+    .md_visitslist_index, /* Appointments and Visits*/
+    .md_scheduling_index, /*Schedule an Appointment*/
+    .md_evisit_index, /*Evisit*/
+    .md_echeckin, /*eCheck-in*/
+    .md_echeckin_index, /*eCheck-in 2019*/
+    .md_coverage, /*Coverage*/
+    .md_onmyway_postlogin, /*On My Way*/
+    .md_healthadvisories_index, /*Preventive Care*/
+    .md_snapshot, /*Health Summary*/
+    .md_healthissues_list, /* Current Health Issues */
+    .md_medications_list, /* Medications */
+    .md_allergies_list, /* Allergies */
+    .md_immunizations_index, /* Immunizations */
+    .md_histories, /*Medical History*/
+    .md_coverages_index, /*Insurance*/
+    .md_showrep, /*Upcoming Tests and Procdures*/
+    .md_letters, /*Letters*/
+    .md_mychartquestionnaire_questionnaires, /*Questionnaires*/
+    .md_schedotherprefs, /*Set Preferences*/
+    .md_oauth_review, /*Manage Linked Apps & Devices*/
+    .md_personalize, /*Personalize*/
+    .md_patinfo, /*Administrative Info*/
+    .md_landingpage_index, /*Documents*/
+    .md_audit, /*Who's Accessed My Record*/
+    .md_fshreportlist, /*Health Trends*/
+    .md_growthchart, /*Growth Charts*/
+    .md_pefltlst, /*Track My Health*/
+    .md_pefltdtl, /* Track My Health Details */
+    .md_walletcard, /*Wallet Card*/
+    .md_manage_communitymanage, /*Happy Together*/
+    .md_review_index, /*Messages*/
+    .md_personalinformation_index, /* Personal Info - sidebar links load page in page */
+    .md_labdetail, /* Test result details */
+    .md_medadvice, /* Send a Message */
+    .md_referrals, /* Covg Details Referrals */
+    .md_details_index /* Billing Details */ {
+
+        #sidebar {
+            display: none;
+        }
+
+        #main.withSidebar {
+            width: 100%;
+        }
+    }
+
+    #sidebar .titlebar, #sidebar > h2 {
+        border-bottom: none;
+    }
+    /* Calendar */
+    .calendar thead th {
+        color: $dk-gray;
+        font-size: 16px;
+        font-weight: $sharp-weight-semi-bold;
+    }
+
+    .highlight {
+        background-color: $dk-teal;
+    }
+}
+
+/* TABLES ====== */
+.datatile {
+    .section .chart .tableOverlay table tr th.fixed {
+        background: $dk-teal;
+    }
+}
+
+/* LANGUAGE LINK ====== */
+.datatile {
+    .language-link {
+        text-align: left;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            text-align: right;
+        }
+    }
+}
+
+/* PRINT AND INFO ICONS ====== */
+.datatile {
+    #main .title #assistiveicons {
+        display: none;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            display: inline-block;
+            z-index: 1;
+            position: absolute;
+            margin: 0;
+            right: 0;
+        }
+    }
+
+    .md_review_index, .md_visitslist_index {
+        #main .title .assistiveicon {
+            display: none;
+        }
+    }
+
+    .md_coverage {
+        #main .title #assistiveicons {
+            @media screen and (min-width: $breakpoint-tablet) {
+                margin-right: 150px;
+            }
+        }
+    }
+
+    .ImmunizationDetails {
+        ._container._PageTitle {
+            margin-top: 15px;
+        } 
+        
+        ._Command._actionable._command.printButton {
+            width: 120px;
+            color: $md-navy;
+
+            &:hover,
+            &:focus {
+                color: $dk-navy;
+                text-decoration: underline;
+            }
+
+            &:before {
+                content: "Print Details";
+            }
+
+            ._Icon {
+                display: none;
+            }
+        }
+    }
+}
+
+/* POPUPS ====== */
+.datatile {
+    /* Plan of care > test results popup bg*/
+    .component.Popup:not(.notificationreview) > .titlebar {
+        background: $dk-teal !important;
+    }
+
+    .Popup.large.component .titlebar .cancelworkflow,
+    .Popup.medium.component .titlebar .cancelworkflow {
+        display: inline-block;
+        margin: 2px 3px;
+
+        a img {
+            height: 28px;
+            width: 28px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        .component.Popup.small {
+            width: 97%;
+            min-width: 0;
+        }
+    }
+
+    #lightbox,
+    .component.Popup:not(.small):not(.sm-autosizedpopup):not(.esign):not(.documentpopup),
+    .component.Popup.medium:not(.sm-autosizedpopup):not(.esign):not(.documentpopup),
+    .component.Popup.large:not(.sm-autosizedpopup):not(.esign):not(.documentpopup),
+    .contentpopup.Popup.component.textlessTitle {
+        @media screen and (max-width: 1300px) {
+            height: auto;
+        }
+    }
+}
+
+/* DT eCHECK-IN ====== */
+.datatile {
+
+    a .description {
+        color: $dk-teal;
+    }
+
+    #paycreditcard .formcontents {
+        text-align: left;
+    }
+
+    legend {
+        padding-bottom: 20px;
+        font-size: 15px;
+    }
+    /* Timeline on mobile */
+    .md_echeckin_index {
+        .subway {
+            @media screen and (max-width: $breakpoint-desktop) {
+                overflow-x: scroll;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    }
+
+    [class*='question'] .header {
+        color: $dk-teal;
+    }
+
+    #payLaterSection.button:hover {
+        background-color: transparent;
+    }
+}
+
+/* DT VISIT DETAILS ====== */
+.datatile {
+    div.providerphotocontainer div.providerphoto {
+        border-color: $lt-gray;
+    }
+
+    div.addtocalendar {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .addtocalicon {
+        color: $md-navy;
+        font-size: 18px;
+    }
+}
+/* DT SCHEDULE AND APPOINTMENT ====== */
+.datatile {
+    /* Schedule workflow timeline */
+    .summary {
+        border-top: 4px solid rgba(0, 193, 222, 0.4);
+    }
+
+    .summaryInfo:before {
+        background-color: $dk-teal;
+    }
+
+    .summaryInfo.summaryActive .subtle.edit, .summaryInfo.summaryComplete .subtle, .summaryInfo.summaryIncomplete .subtle, a.summaryInfo {
+        color: $dk-gray;
+    }
+
+    .summaryInfo.summaryComplete:not(.summaryActive) .subtle.editText {
+        display: none;
+    }
+
+    a.summaryInfo:hover, a.summaryInfo.summaryActive {
+        background-color: $selected-bg-color;
+    }
+
+    .summaryInfo span {
+        font-size: 14px;
+    }
+
+    .summaryInfo:first-child {
+        padding-left: 5px !important;
+    }
+
+    a.summaryInfo {
+        padding: 5px !important;
+    }
+
+    .datatile .summaryInfo span {
+        padding-top: 0px;
+    }
+
+    .slotgroup {
+        width: 20%;
+    }
+
+    .rfvinfo .subtlecolor {
+        color: $md-gray;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .md_scheduling_index {
+
+        #providerworkflow {
+            .section .content .colorpreview {
+                margin-left: 0rem;
+            }
+        }
+
+        .summaryIcon {
+            width: 3rem;
+            background-size: 20px;
+            height: 23px;
+        }
+
+        .slotgroup {
+            @media screen and (max-width: 768px) {
+                width: 45%;
+            }
+        }
+
+        .slotgroup:nth-child(5n+0), .slotgroup {
+            @media screen and (max-width: 768px) {
+                margin-right: 5px;
+                margin: 5px;
+            }
+
+            @media screen and (min-width: 769px) {
+                margin-right: 5px;
+                margin: 5px;
+            }
+        }
+
+        .timepreferencecontainer.vertical .daytimetable .rangebuttons .timerange {
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width: 992px) {
+            #standardworkflowselector > .separator {
+                > p {
+                    display: none;
+                }
+
+                > .line {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .md_visitslist_index {
+        #main .title .headerlink {
+            display: none;
+        }
+    }
+}
+/* EVISIT ====== */
+.datatile {
+    .md_evisit_index {
+        .subway {
+            @media screen and (max-width: $breakpoint-desktop) {
+                overflow-x: scroll;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        /*Confirmation*/
+        .evisit-review-section .col-6 {
+            width: 100%;
+
+            @media screen and (min-width: $breakpoint-tablet) {
+                width: calc(50% - 12px);
+            }
+        }
+    }
+}
+
+/* FIX REQUIRED INDICATOR ON EVISITS AND SCHEDULING */
+.datatile {
+    .md_scheduling_index, .md_evisit_index {
+        legend.required:before, p.required:before {
+            margin-left: 0;
+        }
+    }
+}
+
+/* PERSONAL INFORMATION ====== */
+.datatile {
+    .contact-information-content .nameIconContainer svg,
+    .other-information-content .nameIconContainer svg {
+        display: none;
+    }
+
+    .relationship-section {
+        .pretext {
+            font-size: 0px;
+        }
+
+        .pretext:after {
+            font-size: 16px;
+            content: 'These people may be contacted in the event of an emergency.';
+        }
+    }
+}
+/* General Contact and Relationship */
+.datatile {
+    .relationship-content .iconLabel,
+    .contact-information-content .iconLabel {
+        width: 18px;
+        height: 18px;
+    }
+
+    div#contact_verification_alert {
+        background-color: rgba(255, 231, 133, 0.6);
+        border: none;
+        background-size: 32px;
+    }
+}
+
+/* TO DO */
+.datatile {
+    .trlarge > div {
+        box-shadow: none;
+    }
+}
+
+/* Questions */
+.datatile {
+    .section.questionsContainer .question .answers {
+        margin: 0;
+    }
+}
+
+/* ESTIMATES ====== */
+.datatile {
+    div.essBreakdownRow {
+        display: inline-block;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            display: flex;
+        }
+    }
+}
+
+/* PREFERENCES ====== */
+.datatile {
+    .md_schedotherprefs ul.matchButtonWidths li {
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: block;
+        }
+    }
+
+    .md_schedotherprefs .formcontents {
+        @media screen and (max-width: $breakpoint-mobile) {
+            text-align: left;
+        }
+    }
+
+    .md_schedotherprefs .section .matchButtonWidths p.buttoncheck {
+        @media screen and (max-width: $breakpoint-mobile) {
+            min-width: 200px;
+        }
+    }
+
+    .md_schedotherprefs #preftimes fieldset, .datatile .md_schedotherprefs #preftimes .preftimesrow .col {
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 100%;
+        }
+    }
+
+    .md_schedotherprefs #preftimes .btnColumn {
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* PROXY - WHO CAN VIEW MY ACCOUNT ====== */
+.datatile {
+    .md_personalize {
+        .uploaderbutton .photodelete img {
+            min-width: 20px;
+            margin-top: 20px !important;
+        }
+
+        .photo .button {
+            border: transparent !important;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+/* ON MY WAY ====== */
+.datatile {
+    .md_onmyway_postlogin {
+        .mapHolder iframe {
+            @media screen and (max-width: $breakpoint-tablet) {
+                height: 350px !important;
+            }
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                height: 250px !important;
+            }
+        }
+
+        .listHolder {
+            @media screen and (max-width: $breakpoint-tablet) {
+                top: 400px;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+            }
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                top: 300px !important;
+            }
+        }
+    }
+}
+
+/* BILLING ====== */
+.datatile {
+    .md_autopay_signup {
+        div.apFlexContainer {
+            display: inline-block;
+
+            @media screen and (min-width: $breakpoint-tablet) {
+                display: flex;
+            }
+        }
+
+        div.apFlexContainer.card div.apFlexContainerSegment:not(:last-of-type) {
+            border-right: none;
+
+            @media screen and (min-width: $breakpoint-tablet) {
+                border-right: 1px solid #eee;
+            }
+        }
+
+        .cardlist.column_2 .card_actions_container {
+            width: 100%;
+
+            @media screen and (min-width: 1000px) {
+                width: 49.5%;
+            }
+        }
+
+        .card_actions_container .Delete.button {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .pmtStep span.label {
+        font-weight: $sharp-weight-semi-black;
+    }
+
+    #verifyBillingInfo, #verifyAccountInfo {
+        display: block;
+
+        @media screen and (min-width: $breakpoint-mobile) {
+            display: inline-block;
+        }
+    }
+    /* Selectable cards */
+    .md_prevbalpayment_makepayment {
+        .cardlist.selectable .card.selected, .cardlist.selectable .card.hover:not(.button) {
+            .header, .pmtEmphasis, .subtle, .subtlecolor {
+                color: $white;
+            }
+        }
+    }
+    /* Temporarily remove Discover card image from payment page */
+    /*.md_prevbalpayment_makepayment{
+        #pmtMethodsAcceptedIcons {
+            img:last-of-type {
+                display: none;
+            }
+        }
+    }*/
+
+    /* Billing Details Past Pymts */
+    .ba_details_filter_custom_dates_container .ghostInput label {
+        position: absolute;
+    }
+}
+
+/* MESSAGES ====== */
+.datatile {
+    .BeforeList div.search {
+        width: 100%;
+        height: 3.5rem;
+        margin-bottom: 8px;
+        padding: 0px 15px;
+    }
+
+    .BeforeList select {
+        border: solid 2px #e8f0f2;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 5px 10px;
+        background: url(../images/down_chevron_blue.svg) no-repeat;
+        background-position: right 10px center;
+        background-size: 15px;
+        cursor: pointer;
+        background-color: $white;
+    }
+
+    .messageheader .filters select {
+        width: 80%;
+        height: 40px;
+        margin-bottom: 20px;
+        margin-left: 17px;
+
+        @media screen and (min-width: 600px) {
+            margin-left: 0px;
+        }
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            margin-bottom: 0px;
+        }
+
+        @media screen and (min-width: 1300px) {
+            width: unset;
+            margin-bottom: 0px;
+        }
+    }
+
+    .filters > label, .filters select {
+        float: left;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            float: none;
+        }
+    }
+
+    .ReviewMessages .messageheader .filters label {
+        width: 52px;
+        margin-left: 17px;
+
+        @media screen and (max-width: 600px) {
+            float: none;
+            display: block;
+        }
+    }
+
+    .MessageList .SingleMessage.collapsed, .MessageList .SingleMessage .head {
+        margin-bottom: 10px;
+    }
+
+    .ReviewMessages .messageheader .filters {
+        padding: 5px 15px 15px;
+    }
+    /* Reply Button */
+    .md_review_index {
+        ul.MessageList > li.SingleMessage {
+            transition-duration: 0s;
+        }
+    }
+    /* Hide Ask Question Button - Replace w Our Own*/
+    .md_review_index {
+        #main .title .headerlink {
+            display: none;
+
+            @media only screen and (max-width: 1300px) {
+                display: none;
+            }
+        }
+    }
+    /* Send a Message */
+    .md_medadvice {
+        @media screen and (max-width: 992px) {
+            #main .title img.assistiveicon {
+                display: none;
+            }
+        }
+    }
+}
+
+/* LETTERS ====== */
+.datatile {
+    .md_letters {
+        #main .title #assistiveicons {
+            margin-right: 125px;
+        }
+    }
+}
+
+/* TEST RESULTS ====== */
+.datatile {
+    .md_testresults_index {
+        #calendar table, ul.MessageList, ul.TestResultsList, .HPcell.component:not(.noinfo) > .content, .component.pocdefault > a.viewmore, .card {
+            border: none;
+        }
+
+        .BeforeTestResultsList .FilterWrapper, .BeforeTestResultsList .ToggleWrapper {
+            padding: 10px 2px;
+        }
+
+        .BeforeTestResultsList .ToggleInpatientString {
+            display: inline;
+            padding-left: 10px;
+        }
+
+        .TestResults .ColumnHeader.grid .grid > .row > .col-2, .TestResultsList .grid > .row > .col-2 {
+            @media screen and (max-width: $breakpoint-desktop) {
+                width: calc(16.66% - 12px);
+            }
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                width: 100%;
+            }
+        }
+
+        .TestResults .ColumnHeader.grid .grid > .row > .col-4,
+        .TestResultsList .grid > .row > .col-4 {
+            //@media screen and (max-width: $breakpoint-desktop) {
+               // width: calc(33.33% - 12px);
+            //}
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                width: 100%;
+            }
+        }
+
+        .TestResults .ColumnHeader.grid .grid > .row > .col-6,
+        .TestResultsList .grid > .row > .col-6 {
+            @media screen and (max-width: $breakpoint-desktop) {
+                width: calc(50% - 12px);
+            }
+
+            @media screen and (max-width: $breakpoint-tablet) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* INSURANCE ====== */
+
+/* Add Insurance Card Photo and During Scheduling Process ------ */
+.datatile {
+    .md_coverages_index, .md_scheduling_index {
+        /* Card hover */
+        .section .content .card.hover {
+            background-color: $white;
+        }
+
+        .section .content .card.hasActions.hover {
+            background-color: $white;
+        }
+        /* Add insurance card photo white hover text */
+        .card.addItem {
+            height: auto;
+
+            a {
+                padding: 15px 10px 10px;
+            }
+        }
+
+        .card.addItem.hover a span {
+            color: $white;
+
+            &.addMessage {
+                color: $white;
+            }
+
+            &.addlabel {
+                color: $white;
+            }
+        }
+        /* Cardholder info grid */
+        #coverages-list, .insuranceVerification {
+            .grid > .row > .col-3 {
+                width: 39%;
+            }
+
+            .grid > .row > .col-9 {
+                width: 55%;
+            }
+        }
+    }
+
+    .md_coverages_index {
+        #main .title {
+            height: auto;
+
+            h1.header {
+                display: none;
+            }
+        }
+    }
+    /* Make coverage detail info full width on mobile */
+    div > .coverage-information {
+        @media screen and (max-width: $breakpoint-tablet) {
+            width: 100%;
+        }
+    }
+}
+
+/*COVERAGE DETAILS ====== */
+.datatile .md_benefitdetail {
+    @media screen and (min-width: 992px) {
+        #content {
+            width: 74%;
+            display: inline-block;
+        }
+
+        #main.withSidebar {
+            width: 100%;
+        }
+    }
+}
+
+/* UPCOMING TESTS AND PROCEDURES ====== */
+
+.datatile {
+    .UpcomingOrders .HideReminderCheckbox .buttoncheck._Choice ._input + ._DataEntryLabel {
+        display: none;
+    }
+
+    .UpcomingOrders .OrderHeader .indexCounterString {
+        color: $dk-teal;
+    }
+
+    .UpcomingOrders .OrderGroup {
+        border: none;
+        background: $BSWH_Light_Teal;
+    }
+}
+
+/* TRACK MY HEALTH ====== */
+
+.datatile {
+    .md_pefltdtl {
+        .formcontents {
+            //text-align: left;
+        }
+
+        .section .content .PEF .reading .ampm, .section .content .PEF .reading.date.odd {
+            label.togglebutton[for], input.buttoncheck + label.buttoncheck, .button {
+                margin-left: 7px;
+                min-width: auto;
+                padding: 0.5rem 0.75rem 0.3rem;
+
+                @media screen and (max-width: $breakpoint-mobile) {
+                    min-width: 50px;
+                    max-width: 50px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+        /* Start - Fitness tracking - enter data */
+        .messagedisplay:empty {
+             display: none;
+        }
+        input[type='text']:empty {
+            margin-bottom: 0px;
+         }
+        /* End - Fitness tracking - enter data */
+    }
+    
+    .md_fshreport .dataselect .col-9, .md_pefltdtl .dataselect .col-9 {
+        width: 100%;
+    }
+
+    .md_fshreport .dataselect .col-3, .md_pefltdtl .dataselect .col-3 {
+        width: 100%;
+        text-align: right;
+    }
+
+    .md_fshreport, .md_pefltdtl {
+        div.seriessel > div.content {
+            width: auto;
+            text-align: left;
+        }
+    }
+}
+
+/* NOTIFICATIONS ====== */
+.datatile {
+    .md_communications_manage {
+        .cardlist.column_2 > .card {
+            @media screen and (min-width: $breakpoint-tablet) {
+                width: 70%;
+            }
+        }
+    }
+}
+
+/* PAY AS GUEST ====== */
+.datatile {
+    .md_guestpay_payasguest, .md_guestpay_showresults {
+        &.isPrelogin {
+            #main.withSidebar {
+                box-shadow: none;
+                padding-right: 20px;
+
+                @media screen and (max-width: 1300px) {
+                    width: 99%;
+                    padding-right: 0px;
+                }
+            }
+
+            #main .title h1 {
+                @media screen and (max-width: 992px) {
+                    padding-bottom: 33px;
+                }
+            }
+
+            #sidebar {
+                @media screen and (max-width: 1300px) {
+                    position: initial;
+                    max-width: 98%;
+                    padding: 5px 15px 25px;
+                    margin: 20px 0px;
+
+                    &:before {
+                        border-left: none;
+                    }
+
+                    > * {
+                        max-width: 100%;
+                    }
+
+                    #localeswitch {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        text-align: left;
+                        z-index: 5;
+                        width: 98%;
+                    }
+                }
+
+                @media screen and (max-width: 992px) {
+                    max-width: 100%;
+                }
+            }
+
+            #footer .mainStyle .links {
+                width: 100%;
+                text-align: left;
+                padding-top: 10px;
+            }
+
+            #footer .sidebarStyle .copyright {
+                text-align: left;
+                padding-top: 10px;
+            }
+        }
+
+        .PaymentEntryField {
+            input[type='text'] {
+                min-height: 2.9rem;
+            }
+        }
+
+        select, input[type='text'], input[type='password'], textarea.halfwidth {
+            min-width: unset;
+            width: 100%;
+        }
+
+        .formsection.column_4 .formcolumn {
+            width: 99%;
+
+            @media screen and (min-width: 768px) {
+                width: 49%;
+            }
+        }
+
+        #divQuickPayVerify {
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+
+        #AddressEntryFields input, #AddressEntryFields select {
+            width: 100%;
+        }
+
+        .label, #CardEntry-CardholderName-Label, #CardEntry-CardNumber-Label {
+            font-weight: $sharp-weight-semi-black;
+        }
+
+        .button.nextstep, .button.cancelworkflow {
+            display: inline;
+
+            @media screen and (min-width: $breakpoint-mobile) {
+                width: 49%;
+            }
+        }
+
+        .button.previousstep, .button.completeworkflow {
+            @media screen and (min-width: $breakpoint-mobile) {
+                width: 49%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* HEALTH SUMMARY ====== */
+.datatile {
+    .hmt-item-card .hmt-hide-reminder input.prettycheck + label {
+        display: none;
+    }
+}
+
+/* PREVENTIVE CARE ====== */
+.datatile {
+    .md_healthadvisories_index {
+        #calendar {
+            margin-top: 240px !important;
+            box-shadow: $card-box-shadow;
+        }
+    }
+}
+
+/* ADVANCE CARE PLANNING ====== */
+.datatile {
+    #main .qnr-container .title {
+        height: auto;
+
+        h1 {
+            white-space: pre-wrap;
+        }
+    }
+}
+
+/* HAPPY TOGETHER ====== */
+.datatile {
+    .md_manage_communitymanage {
+        /* Organization headers */
+        .header span {
+            font-size: 20px;
+
+            @media screen and (min-width: $breakpoint-mobile) {
+                font-size: 24px;
+            }
+
+            @media screen and (min-width: $breakpoint-tablet) {
+                font-size: 32px;
+            }
+        }
+        /* Intro graphics */
+        #community_container .sm-only.iconIntro {
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: inline-block;
+            }
+        }
+        /* Link account popup*/
+        .contentpopup.Popup.component {
+            #challengeQuestions {
+                .challengequestiondiv {
+                    label#ChallengeQuestionLabel {
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+        /* Organizations list */
+        #community_container {
+            #organizationList {
+
+                .sm-alignCenter {
+                    @media screen and (max-width: 992px) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    /* Learn more about linking account - FAQ */
+    .md_shared_displayfaq {
+        &.isPrelogin #main .title h1 {
+            height: auto;
+
+            @media screen and (max-width: 768px) {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+/* MY CONDITIONS ====== */
+.datatile {
+    .md_mycondition {
+        .mycondsec {
+            overflow: auto;
+        }
+    }
+}
