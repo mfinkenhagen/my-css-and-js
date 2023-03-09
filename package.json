@@ -8,7 +8,9 @@
     "build-css-prod": "sass --embed-sources scss/web/include/mychart:dist/prod/mychart --style=compressed",
     "build-css-mobile": "sass --embed-sources scss/web/include/mychart/v10.1:dist/mobile ",
     "build-css-mobile-prod": "sass --embed-sources src/scss/web/include/mychart:dist/prod/mychart --style=compressed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "webpack --mode development --output-path dist",
+    "build-js-prod": "webpack --mode production --output-path dist"
   },
   "repository": {
     "type": "git",
